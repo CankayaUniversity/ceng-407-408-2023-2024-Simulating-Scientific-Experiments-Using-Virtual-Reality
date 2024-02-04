@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ceng-407-408-2023-2024-Simulating-Scientific-Experiments-Using-Virtual-Reality.iml" filepath="$PROJECT_DIR$/.idea/ceng-407-408-2023-2024-Simulating-Scientific-Experiments-Using-Virtual-Reality.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrevolution-backend/ws.iml" filepath="$PROJECT_DIR$/vrevolution-backend/ws.iml" />
     </modules>
   </component>
 </project>

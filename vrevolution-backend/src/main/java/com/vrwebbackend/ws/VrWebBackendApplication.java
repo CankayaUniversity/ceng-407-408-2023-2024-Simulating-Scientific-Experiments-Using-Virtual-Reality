@@ -25,6 +25,7 @@ public class VrWebBackendApplication
                         .allowedMethods("*")
                         .allowedOrigins("http://localhost:3000");
             }
+
         };
     }
 }
