@@ -1,6 +1,7 @@
 import {Navigate, Route, Routes} from 'react-router-dom'
-import SignUp from "../pages/SignUp";
-import Login from "../pages/Login";
+import SignUp from "./SignUp";
+import Login from "./Login";
+// @ts-ignore
 import {AuthLayout} from "../../modules/auth/AuthLayout";
 import React from "react";
 
