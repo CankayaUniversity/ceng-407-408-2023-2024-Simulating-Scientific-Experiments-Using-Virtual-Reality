@@ -19,15 +19,15 @@ class VideoViewModel: ObservableObject{
                       quizTime: 60,
                       question: [
                         QuestionModel(
-                            questionTitle: "Soru1",
+                            questionContent: "Soru1",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "B Şıkkı",
+                            questionSelectedAnswer: "B Şıkkı",
                             questionCorrectAnswer: "C Şıkkı"
                         ),
                         QuestionModel(
-                            questionTitle: "Soru 2",
+                            questionContent: "Soru 2",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "C Şıkkı",
+                            questionSelectedAnswer: "C Şıkkı",
                             questionCorrectAnswer: "A Şıkkı")
             ])
         ]),
@@ -37,15 +37,15 @@ class VideoViewModel: ObservableObject{
                       quizTime: 60,
                       question: [
                         QuestionModel(
-                            questionTitle: "Soru1",
+                            questionContent: "Soru1",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "B Şıkkı",
+                            questionSelectedAnswer: "B Şıkkı",
                             questionCorrectAnswer: "C Şıkkı"
                         ),
                         QuestionModel(
-                            questionTitle: "Soru 2",
+                            questionContent: "Soru 2",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "C Şıkkı",
+                            questionSelectedAnswer: "C Şıkkı",
                             questionCorrectAnswer: "A Şıkkı")
             ])
         ]),
@@ -55,15 +55,15 @@ class VideoViewModel: ObservableObject{
                       quizTime: 60,
                       question: [
                         QuestionModel(
-                            questionTitle: "Soru1",
+                            questionContent: "Soru1",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "B Şıkkı",
+                            questionSelectedAnswer: "B Şıkkı",
                             questionCorrectAnswer: "C Şıkkı"
                         ),
                         QuestionModel(
-                            questionTitle: "Soru 2",
+                            questionContent: "Soru 2",
                             questionOptions: ["A Şıkkı", "B Şıkkı", "C Şıkkı", "D Şıkkı"],
-                            questionAnswer: "C Şıkkı",
+                            questionSelectedAnswer: "C Şıkkı",
                             questionCorrectAnswer: "A Şıkkı")
             ])
         ])

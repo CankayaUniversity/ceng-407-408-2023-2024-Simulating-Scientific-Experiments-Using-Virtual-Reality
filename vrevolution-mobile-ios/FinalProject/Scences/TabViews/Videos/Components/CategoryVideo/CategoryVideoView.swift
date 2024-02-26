@@ -15,7 +15,7 @@ struct CategoryVideoView: View {
     @State private var selectedVideo: VideoModel?
     @State private var detens: PresentationDetent = .medium
     
-    var videoCategoryList = ["Uzay","Coğrafya","Hayvan Alemi"]
+    var videoCategoryList = ["5.Sınıf","6.Sınıf","7.Sınıf"]
     var body: some View {
         VStack(spacing: 40){
             HStack{

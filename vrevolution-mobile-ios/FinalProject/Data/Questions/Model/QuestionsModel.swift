@@ -9,10 +9,9 @@ import Foundation
 import SwiftUI
 
 struct QuestionModel: Identifiable, Codable, Hashable {
-    
     var id = UUID()
-    var questionTitle  : String
+    var questionContent : String
     var questionOptions: [String]
-    var questionAnswer : String
+    var questionSelectedAnswer : String?
     var questionCorrectAnswer : String
 }

@@ -17,7 +17,7 @@ struct SideMenu: View {
     var studentName : String
     let menuCategoryList = [
         (name: "All Videos" , image: "books.vertical"),
-        (name: "Testler"    , image: "folder"),
+        (name: "Classes"    , image: "folder"),
         (name: "Profile"    , image: "person"),
         (name: "Settings"   , image: "gear"),
     ]

@@ -33,4 +33,11 @@ extension Color{
         
         LinearGradient(colors: [Color("KategoriRenk1"), Color("KategoriRenk2"),Color("KategoriRenk2").opacity(0.9),Color("KategoriRenk2").opacity(0.7),Color("KategoriRenk2").opacity(0.5),Color("KategoriRenk2").opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)
     }
+    
+    public static var classesViewBackGroundColorButton: LinearGradient{
+        LinearGradient(colors: [Color("ClassesColor1").opacity(0.70),Color("ClassesColor2")], startPoint:.leading , endPoint: .trailing)
+    }
+    public static var classesViewBackGroundColorTittle: LinearGradient{
+        LinearGradient(colors: [Color("ClassesColor1").opacity(0.70),Color("ClassesColor2")], startPoint:.top , endPoint: .bottom)
+    }
 }

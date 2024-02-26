@@ -26,8 +26,8 @@ struct HomePage: View {
                 AllVideosView(studentName: studentName)
                     .tag("All Videos")
                 
-                Testler()
-                    .tag("Testler")
+                ClassesView()
+                    .tag("Classes")
                 
                 Profile()
                     .tag("Profile")
@@ -40,6 +40,7 @@ struct HomePage: View {
         }
         .frame(width: UIScreen.main.bounds.width)
         .navigationBarHidden(true)
+        
         //SHOW DRAWER AKTIF OLDUĞU ZAMAN YANDAN PANEL ACILACAK
         .offset(x: menuData.showDrawer ? 125 : -125)
         .overlay(
