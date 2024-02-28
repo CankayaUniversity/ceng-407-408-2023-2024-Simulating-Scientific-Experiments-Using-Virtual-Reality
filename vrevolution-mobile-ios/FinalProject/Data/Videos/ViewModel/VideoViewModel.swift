@@ -12,6 +12,8 @@ import SwiftUI
 class VideoViewModel: ObservableObject{
     
     ///ALL COURSE( LIBRARY COURSE)
+    
+    /*
     @Published var videoList: [VideoModel] = [
         VideoModel(videoTitle: "Uzay ve Gezegenler", videoImageName: "gezegen2", videoDescription: "Uzay ve güneş sistemimizdeki gezegenler hakkında bilgilerin yer aldığı , bu bilgileri interaktif bir şekilde öğrenebileceğimiz VR video gösterimi yer alıyor.", quiz: [
             QuizModel(quizName: "Quiz 1",
@@ -68,4 +70,5 @@ class VideoViewModel: ObservableObject{
             ])
         ])
     ]
+     */
 }

@@ -20,10 +20,6 @@
 		147196582B836DA4009201D3 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147196572B836DA4009201D3 /* QuizView.swift */; };
 		1471965A2B849113009201D3 /* ClassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147196592B849113009201D3 /* ClassButton.swift */; };
 		1471965F2B85E166009201D3 /* ClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471965E2B85E166009201D3 /* ClassesView.swift */; };
-		1498929D2B8888A000639C05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1498929C2B8888A000639C05 /* GoogleService-Info.plist */; };
-		149892A02B88896E00639C05 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1498929F2B88896E00639C05 /* FirebaseAuth */; };
-		149892A22B88896E00639C05 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 149892A12B88896E00639C05 /* FirebaseFirestore */; };
-		149892A42B88896E00639C05 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 149892A32B88896E00639C05 /* FirebaseFirestoreSwift */; };
 		14AAB7F52B2C96E600045D25 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AAB7F42B2C96E600045D25 /* RegisterView.swift */; };
 		14AC62512B4D982100B9B012 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC62502B4D982100B9B012 /* SearchBar.swift */; };
 		14AC62572B4E8ACE00B9B012 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC62562B4E8ACE00B9B012 /* QuizModel.swift */; };
@@ -90,7 +86,6 @@
 		147196572B836DA4009201D3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		147196592B849113009201D3 /* ClassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassButton.swift; sourceTree = "<group>"; };
 		1471965E2B85E166009201D3 /* ClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesView.swift; sourceTree = "<group>"; };
-		1498929C2B8888A000639C05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14AAB7F42B2C96E600045D25 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		14AC62502B4D982100B9B012 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		14AC62562B4E8ACE00B9B012 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
@@ -128,9 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149892A02B88896E00639C05 /* FirebaseAuth in Frameworks */,
-				149892A22B88896E00639C05 /* FirebaseFirestore in Frameworks */,
-				149892A42B88896E00639C05 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +162,6 @@
 		14425F752B07CA1B00F973A4 = {
 			isa = PBXGroup;
 			children = (
-				1498929B2B88889200639C05 /* FireBase */,
 				14425F802B07CA1B00F973A4 /* FinalProject */,
 				14425F912B07CA1D00F973A4 /* FinalProjectTests */,
 				14425F9B2B07CA1D00F973A4 /* FinalProjectUITests */,
@@ -242,14 +233,6 @@
 			children = (
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		1498929B2B88889200639C05 /* FireBase */ = {
-			isa = PBXGroup;
-			children = (
-				1498929C2B8888A000639C05 /* GoogleService-Info.plist */,
-			);
-			path = FireBase;
 			sourceTree = "<group>";
 		};
 		14AAB7E92B2C741400045D25 /* Product */ = {
@@ -646,9 +629,6 @@
 			);
 			name = FinalProject;
 			packageProductDependencies = (
-				1498929F2B88896E00639C05 /* FirebaseAuth */,
-				149892A12B88896E00639C05 /* FirebaseFirestore */,
-				149892A32B88896E00639C05 /* FirebaseFirestoreSwift */,
 			);
 			productName = FinalProject;
 			productReference = 14425F7E2B07CA1B00F973A4 /* FinalProject.app */;
@@ -723,7 +703,6 @@
 			);
 			mainGroup = 14425F752B07CA1B00F973A4;
 			packageReferences = (
-				1498929E2B88896E00639C05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 14425F7F2B07CA1B00F973A4 /* Products */;
 			projectDirPath = "";
@@ -743,7 +722,6 @@
 			files = (
 				14CBA8982B1213EF0095BF76 /* Colors.xcassets in Resources */,
 				14CBA89A2B1214060095BF76 /* Image.xcassets in Resources */,
-				1498929D2B8888A000639C05 /* GoogleService-Info.plist in Resources */,
 				14425F892B07CA1D00F973A4 /* Preview Assets.xcassets in Resources */,
 				14425F862B07CA1D00F973A4 /* Assets.xcassets in Resources */,
 			);
@@ -1126,35 +1104,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1498929E2B88896E00639C05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1498929F2B88896E00639C05 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1498929E2B88896E00639C05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		149892A12B88896E00639C05 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1498929E2B88896E00639C05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		149892A32B88896E00639C05 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1498929E2B88896E00639C05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14425F762B07CA1B00F973A4 /* Project object */;
 }
