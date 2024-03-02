@@ -10,8 +10,8 @@ import SwiftUI
 
 struct QuestionModel: Identifiable, Codable, Hashable {
     var id = UUID()
-    var questionContent : String
-    var questionOptions: [String]
+    var questionContent: String
+    var questionOptions: [String : String]
     var questionSelectedAnswer : String?
     var questionCorrectAnswer : String
 }
