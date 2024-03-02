@@ -7,6 +7,16 @@ const apiClient = axios.create
     }
 );
 
+export const getTest1Grade5 = () =>
+{
+    return apiClient.get("/api/questions/test1grade5")
+};
+
+export const getTest2Grade5 = () =>
+{
+    return apiClient.get("/api/questions/test2grade5")
+};
+
 export const signUpApi = (body) =>
 {
     return apiClient.post(`/api/v1/users`,body);
