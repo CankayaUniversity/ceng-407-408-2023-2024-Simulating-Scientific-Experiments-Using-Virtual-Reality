@@ -2,7 +2,6 @@ import React, {lazy, FC, Suspense} from 'react'
 import {Route, Routes, Navigate} from 'react-router-dom'
 import {MasterLayout} from '../MasterLayout'
 import TopBarProgress from 'react-topbar-progress-indicator'
-import {DashboardWrapper} from '../pages/DashboardWrapper'
 import {getCSSVariableValue} from '../../../_metronic/assets/ts/_utils'
 import {WithChildren} from '../../../_metronic/helpers'
 import Video1 from "../pages/vr/simulation-videos/Video1";
@@ -19,6 +18,7 @@ import Test2Grade7 from "../pages/vr/tests/7-th/Test2Grade7";
 import WhatIsVR from "../pages/about/WhatIsVR";
 import OurPlatform from "../pages/about/OurPlatform";
 import AccountSettings from "../components/header/profile/AccountSettings";
+import {DashboardWrapper} from "../pages/vr/DashboardWrapper";
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../components/header/profile/ProfilePage'))

@@ -1,9 +1,8 @@
 import {Navigate, Route, Routes} from 'react-router-dom'
 import SignUp from "./SignUp";
 import Login from "./Login";
-// @ts-ignore
-import {AuthLayout} from "../../modules/auth/AuthLayout";
 import React from "react";
+import {AuthLayout} from "../../../modules/auth/AuthLayout";
 
 const AuthPage = () => (
     <Routes>

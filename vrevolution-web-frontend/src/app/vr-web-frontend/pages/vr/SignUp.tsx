@@ -1,9 +1,9 @@
 import React, {useEffect, useMemo, useState} from "react";
-import {signUpApi} from "../api/ApiService";
-import Input from "../components/Input";
-import {Button} from "../components/Button";
-import {toAbsoluteUrl} from "../../../_metronic/helpers";
 import {Link} from "react-router-dom";
+import {signUpApi} from "../../api/ApiService";
+import {toAbsoluteUrl} from "../../../../_metronic/helpers";
+import Input from "../../components/Input";
+import {Button} from "../../components/Button";
 
 const SignUp = () => {
     const [username, setUsername] = useState<string | undefined>();
