@@ -25,5 +25,27 @@ public class QuestionController
         return questionService.getTest2Grade5();
     }
 
-    //other questions will be here
+    @GetMapping("/test3grade5")
+    public ResponseEntity<Object> getTest3Grade5()
+    {
+        return questionService.getTest3Grade5();
+    }
+
+    @GetMapping("/test4grade5")
+    public ResponseEntity<Object> getTest4Grade5()
+    {
+        return questionService.getTest4Grade5();
+    }
+
+    @GetMapping("/test5grade5")
+    public ResponseEntity<Object> getTest5Grade5()
+    {
+        return questionService.getTest5Grade5();
+    }
+
+    @GetMapping("/test6grade5")
+    public ResponseEntity<Object> getTest6Grade5()
+    {
+        return questionService.getTest6Grade5();
+    }
 }
