@@ -48,4 +48,22 @@ public class QuestionController
     {
         return questionService.getTest6Grade5();
     }
+
+    @GetMapping("/test7grade5")
+    public ResponseEntity<Object> getTest7Grade5()
+    {
+        return questionService.getTest7Grade5();
+    }
+
+    @GetMapping("/test8grade5")
+    public ResponseEntity<Object> getTest8Grade5()
+    {
+        return questionService.getTest8Grade5();
+    }
+
+    @GetMapping("/test9grade5")
+    public ResponseEntity<Object> getTest9Grade5()
+    {
+        return questionService.getTest9Grade5();
+    }
 }

@@ -367,4 +367,184 @@ public class QuestionService
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
 
+    public ResponseEntity<Object> getTest7Grade5()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Kuvvet nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Cisimleri ağırlıkla doldurma\", \"text\": \"Cisimleri ağırlıkla doldurma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Duran bir cismi hareket ettirme veya hareket eden bir cismi durdurma etkisi\", \"text\": \"Duran bir cismi hareket ettirme veya hareket eden bir cismi durdurma etkisi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Işığın yansıması\", \"text\": \"Işığın yansıması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sesin yayılması\", \"text\": \"Sesin yayılması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Hangisi kuvvetin cisimler üzerindeki etkilerinden biri değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Cismin dönmesini sağlayabilir.\", \"text\": \"Cismin dönmesini sağlayabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin rengini değiştirebilir.\", \"text\": \"Cismin rengini değiştirebilir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hareket eden cismi durdurabilir.\", \"text\": \"Hareket eden cismi durdurabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin şeklini değiştirebilir.\", \"text\": \"Cismin şeklini değiştirebilir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Kuvvetin birimi nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Volt\", \"text\": \"Volt\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ampul\", \"text\": \"Ampul\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Newton\", \"text\": \"Newton\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kilogram\", \"text\": \"Kilogram\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Dinamometre hangi fiziksel büyüklüğü ölçer?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hacim\", \"text\": \"Hacim\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ağırlık\", \"text\": \"Ağırlık\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sıcaklık\", \"text\": \"Sıcaklık\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Basınç\", \"text\": \"Basınç\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Hangisi esnek bir cisim değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\":\"Yay\", \"text\": \"Yay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sünger\", \"text\": \"Sünger\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kağıt\", \"text\": \"Kağıt\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Lastik\", \"text\": \"Lastik\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest8Grade5()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Bir cismi hareket ettiren etkiye ne denir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"İvmelenme\", \"text\": \"İvmelenme\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hızlanma\", \"text\": \"Hızlanma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kuvvet\", \"text\": \"Kuvvet\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sürtünme\", \"text\": \"Sürtünme\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Dinamometrelerde hangi özellik kuvvet ölçümünde etkilidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yayın rengi\", \"text\": \"Yayın rengi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yayın kalınlığı\", \"text\": \"Yayın kalınlığı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yayın uzunluğu\", \"text\": \"Yayın uzunluğu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yayın esnekliği\", \"text\": \"Yayın esnekliği\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Esnek bir cisim hangi durumda şeklini değiştirebilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kuvvet uygulanırken\", \"text\": \"Kuvvet uygulanırken\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kuvvet uygulanmadığı zaman\", \"text\": \"Kuvvet uygulanmadığı zaman\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sabit bir hızda hareket ederken\", \"text\": \"Sabit bir hızda hareket ederken\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dururken\", \"text\": \"Dururken\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Dinamometreler hangi fiziksel ilkeye dayanarak çalışır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Elektromanyetizma\", \"text\": \"Elektromanyetizma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Optik prensipler\", \"text\": \"Optik prensipler\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kuvvetin etkisi\", \"text\": \"Kuvvetin etkisi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Esneklik prensibi\", \"text\": \"Esneklik prensibi\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Kuvvetin birimi olan Newton, aşağıdaki fizikçilerden hangisinin adını taşır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Albert Einstein\", \"text\": \"Albert Einstein\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Isaac Newton\", \"text\": \"Isaac Newton\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Galileo Galilei\", \"text\": \"Galileo Galilei\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Nikola Tesla\", \"text\": \"Nikola Tesla\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest9Grade5()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Hangisi doğru bir ifadedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kuvvet, sadece cisimleri durdurabilir, hareket ettiremez.\", \"text\": \"Kuvvet, sadece cisimleri durdurabilir, hareket ettiremez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dinamometrelerin içinde bulunan yay, ne kadar kalınsa o kadar esnektir.\", \"text\": \"Dinamometrelerin içinde bulunan yay, ne kadar kalınsa o kadar esnektir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Esnek cisimler, kuvvet uygulandığında kesinlikle şekillerini değiştirirler.\", \"text\": \"Esnek cisimler, kuvvet uygulandığında kesinlikle şekillerini değiştirirler.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dinamometre, ağırlık ölçmek için kullanılırken, kuvvetin büyüklüğünü ölçmek için kullanılmaz.\", \"text\": \"Dinamometre, ağırlık ölçmek için kullanılırken, kuvvetin büyüklüğünü ölçmek için kullanılmaz.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Bir cismi durduran kuvvetin miktarını ölçmek için hangisi kullanılır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Termometre\", \"text\": \"Termometre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Barometre\", \"text\": \"Barometre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dinamometre\", \"text\": \"Dinamometre\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hidrometre\", \"text\": \"Hidrometre\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Esnek cisimlerin özelliği aşağıdakilerden hangisiyle açıklanabilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sürtünme kuvveti\", \"text\": \"Sürtünme kuvveti\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Esneklik prensibi\", \"text\": \"Esneklik prensibi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kütle çekimi\", \"text\": \"Kütle çekimi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Basınç\", \"text\": \"Basınç\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Hangi durumda bir cismin hızını değiştiren kuvvet uygulanmış olabilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Cismin yönü değişirken\", \"text\": \"Cismin yönü değişirken\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Cisim dururken\", \"text\": \"Cisim dururken\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin ağırlığı artarken\", \"text\": \"Cismin ağırlığı artarken\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin şekli değişirken\", \"text\": \"Cismin şekli değişirken\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Bir dinamometrede yayın kalınlığı arttıkça ne olur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ölçülen kuvvet artar\", \"text\": \"Ölçülen kuvvet artar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ölçülen kuvvet azalır\", \"text\": \"Ölçülen kuvvet azalır\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ölçülen kuvvet değişmez\", \"text\": \"Ölçülen kuvvet değişmez\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dinamometre bozulur\", \"text\": \"Dinamometre bozulur\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
 }
