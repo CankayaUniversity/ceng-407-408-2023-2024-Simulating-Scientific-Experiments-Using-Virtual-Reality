@@ -23,61 +23,67 @@ import Test3Grade5 from "../pages/vr/tests/5-th/Test3Grade5";
 import Test4Grade5 from "../pages/vr/tests/5-th/Test4Grade5";
 import Test5Grade5 from "../pages/vr/tests/5-th/Test5Grade5";
 import Test6Grade5 from "../pages/vr/tests/5-th/Test6Grade5";
+import Test7Grade5 from "../pages/vr/tests/5-th/Test7Grade5";
+import Test8Grade5 from "../pages/vr/tests/5-th/Test8Grade5";
+import Test9Grade5 from "../pages/vr/tests/5-th/Test9Grade5";
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../components/header/profile/ProfilePage'))
   const AccountPage = lazy(() => import('../../modules/accounts/AccountPage'))
 
   return (
-    <Routes>
-      <Route element={<MasterLayout />}>
-        <Route path='auth/*' element={<Navigate to='/dashboard' />} />
+      <Routes>
+        <Route element={<MasterLayout />}>
+          <Route path='auth/*' element={<Navigate to='/dashboard' />} />
 
-        <Route path='dashboard' element={<DashboardWrapper />} />
+          <Route path='dashboard' element={<DashboardWrapper />} />
 
-        <Route path={'vr/simulation-videos/video-1'} element={<Video1/>}></Route>
-        <Route path={'vr/simulation-videos/video-2'} element={<Video2/>}></Route>
-        <Route path={'vr/simulation-videos/video-3'} element={<Video3/>}></Route>
-        <Route path={'vr/simulation-videos/video-4'} element={<Video4/>}></Route>
-        <Route path={'vr/simulation-videos/video-5'} element={<Video5/>}></Route>
+          <Route path={'vr/simulation-videos/video-1'} element={<Video1/>}></Route>
+          <Route path={'vr/simulation-videos/video-2'} element={<Video2/>}></Route>
+          <Route path={'vr/simulation-videos/video-3'} element={<Video3/>}></Route>
+          <Route path={'vr/simulation-videos/video-4'} element={<Video4/>}></Route>
+          <Route path={'vr/simulation-videos/video-5'} element={<Video5/>}></Route>
 
-        <Route path={'vr/what-is-vr'} element={<WhatIsVR/>}></Route>
-        <Route path={'vr/our-platform'} element={<OurPlatform/>}></Route>
+          <Route path={'vr/what-is-vr'} element={<WhatIsVR/>}></Route>
+          <Route path={'vr/our-platform'} element={<OurPlatform/>}></Route>
 
-        <Route path={'tests/grade-5/test-1'} element={<Test1Grade5/>}></Route>
-        <Route path={'tests/grade-5/test-2'} element={<Test2Grade5/>}></Route>
-        <Route path={'tests/grade-5/test-3'} element={<Test3Grade5/>}></Route>
-        <Route path={'tests/grade-5/test-4'} element={<Test4Grade5/>}></Route>
-        <Route path={'tests/grade-5/test-5'} element={<Test5Grade5/>}></Route>
-        <Route path={'tests/grade-5/test-6'} element={<Test6Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-1'} element={<Test1Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-2'} element={<Test2Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-3'} element={<Test3Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-4'} element={<Test4Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-5'} element={<Test5Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-6'} element={<Test6Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-7'} element={<Test7Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-8'} element={<Test8Grade5/>}></Route>
+          <Route path={'tests/grade-5/test-9'} element={<Test9Grade5/>}></Route>
 
-        <Route path={'tests/grade-6/test-1'} element={<Test1Grade6/>}></Route>
-        <Route path={'tests/grade-6/test-2'} element={<Test2Grade6/>}></Route>
+          <Route path={'tests/grade-6/test-1'} element={<Test1Grade6/>}></Route>
+          <Route path={'tests/grade-6/test-2'} element={<Test2Grade6/>}></Route>
 
-        <Route path={'tests/grade-7/test-1'} element={<Test1Grade7/>}></Route>
-        <Route path={'tests/grade-7/test-2'} element={<Test2Grade7/>}></Route>
+          <Route path={'tests/grade-7/test-1'} element={<Test1Grade7/>}></Route>
+          <Route path={'tests/grade-7/test-2'} element={<Test2Grade7/>}></Route>
 
-        <Route path={'account/settings'} element={<AccountSettings/>}></Route>
+          <Route path={'account/settings'} element={<AccountSettings/>}></Route>
 
-        <Route
-          path='crafted/pages/profile/*'
-          element={
-            <SuspensedView>
-              <ProfilePage />
-            </SuspensedView>
-          }
-        />
-        <Route
-          path='crafted/account/*'
-          element={
-            <SuspensedView>
-              <AccountPage />
-            </SuspensedView>
-          }
-        />
-        <Route path='*' element={<Navigate to='/error/404' />} />
-      </Route>
-    </Routes>
+          <Route
+              path='crafted/pages/profile/*'
+              element={
+                <SuspensedView>
+                  <ProfilePage />
+                </SuspensedView>
+              }
+          />
+          <Route
+              path='crafted/account/*'
+              element={
+                <SuspensedView>
+                  <AccountPage />
+                </SuspensedView>
+              }
+          />
+          <Route path='*' element={<Navigate to='/error/404' />} />
+        </Route>
+      </Routes>
   )
 }
 
