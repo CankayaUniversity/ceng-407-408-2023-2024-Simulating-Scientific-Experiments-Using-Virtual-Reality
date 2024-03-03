@@ -37,6 +37,21 @@ export const getTest6Grade5 = () =>
     return apiClient.get("/api/questions/test6grade5")
 };
 
+export const getTest7Grade5 = () =>
+{
+    return apiClient.get("/api/questions/test7grade5")
+};
+
+export const getTest8Grade5 = () =>
+{
+    return apiClient.get("/api/questions/test8grade5")
+};
+
+export const getTest9Grade5 = () =>
+{
+    return apiClient.get("/api/questions/test9grade5")
+};
+
 export const signUpApi = (body) =>
 {
     return apiClient.post(`/api/v1/users`,body);
@@ -44,12 +59,12 @@ export const signUpApi = (body) =>
 
 export const login = (credentials) =>
 {
-  return apiClient.post("/api/v1/auth",credentials);
+    return apiClient.post("/api/v1/auth",credentials);
 };
 
 export const getUserCountApi = () =>
 {
-  return apiClient.get("/api/v1/user-count");
+    return apiClient.get("/api/v1/user-count");
 };
 
 export const getUsersWithEmailAndUsernameApi = () =>
