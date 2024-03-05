@@ -547,4 +547,363 @@ public class QuestionService
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
 
+    public ResponseEntity<Object> getTest1Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Güneş tutulması hangi olay sonucunda gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ay'ın Dünya'nın gölgesine girmesi\", \"text\": \"Ay'ın Dünya'nın gölgesine girmesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ay'ın Dünya ile aynı hizada olması\", \"text\": \"Ay'ın Dünya ile aynı hizada olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dünya'nın Güneş'e en yakın olduğu an\", \"text\": \"Dünya'nın Güneş'e en yakın olduğu an\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ay'ın Dünya'ya en yakın olduğu an\", \"text\": \"Ay'ın Dünya'ya en yakın olduğu an\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Güneş tutulmasında hangi gökyüzü olayı gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Gündüz vakti gök karanlıklaşır\", \"text\": \"Gündüz vakti gök karanlıklaşır\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gece vakti gök daha aydınlık olur\", \"text\": \"Gece vakti gök daha aydınlık olur\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yıldızlar belirgin şekilde görünür\", \"text\": \"Yıldızlar belirgin şekilde görünür\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hava daha sıcak olur\", \"text\": \"Hava daha sıcak olur\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Ay tutulması hangi evrede gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yeni ay\", \"text\": \"Yeni ay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dolunay\", \"text\": \"Dolunay\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"İlk dördün\", \"text\": \"İlk dördün\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Son dördün\", \"text\": \"Son dördün\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Güneş tutulmasını izlemek için ne tür gözlük kullanılmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Güneş gözlüğü\", \"text\": \"Güneş gözlüğü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Normal gözlük\", \"text\": \"Normal gözlük\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş tutulma gözlüğü\", \"text\": \"Güneş tutulma gözlüğü\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gece görüş gözlüğü\", \"text\": \"Gece görüş gözlüğü\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Güneş tutulması kaç yılda bir aynı yerde tekrar gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"365 yıl\", \"text\": \"365 yıl\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"200 yıl\", \"text\": \"200 yıl\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"150 yıl\", \"text\": \"150 yıl\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"375 yıl\", \"text\": \"375 yıl\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest2Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Güneş tutulması için ideal süre ne kadardır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"5 dakika\", \"text\": \"5 dakika\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"10 dakika\", \"text\": \"10 dakika\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"7.5 dakika\", \"text\": \"7.5 dakika\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"15 dakika\", \"text\": \"15 dakika\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Güneş tutulmasının gerçekleşmesi için Ay'ın yörüngesinin ne kadar eğik olması gerekir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"10°\", \"text\": \"10°\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"15°\", \"text\": \"15°\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"5°\", \"text\": \"5°\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"20°\", \"text\": \"20°\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Güneş tutulması hangi gölge türü ile gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Tam gölge\", \"text\": \"Tam gölge\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yarı gölge\", \"text\": \"Yarı gölge\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Geçici gölge\", \"text\": \"Geçici gölge\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sabit gölge\", \"text\": \"Sabit gölge\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Güneş tutulması hangi türde gözlemlenir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Gündüz\", \"text\": \"Gündüz\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gece\", \"text\": \"Gece\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Şafak vakti\", \"text\": \"Şafak vakti\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Akşamüstü\", \"text\": \"Akşamüstü\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Güneş tutulmasının 'Küçük Tutulma' olarak adlandırılan bir türü vardır. Bu türde, Güneş'in yüzeyinin kenarında bir halka şeklinde görünüm meydana gelir. Bu tutulma türüne ne ad verilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hibrid güneş tutulması\", \"text\": \"Hibrid güneş tutulması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Parçalı güneş tutulması\", \"text\": \"Parçalı güneş tutulması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yüzük tutulması\", \"text\": \"Yüzük tutulması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Tam güneş tutulması\", \"text\": \"Tam güneş tutulması\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest3Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Ay tutulması sırasında, Ay'ın neden kırmızıya dönüştüğünü açıklayan fenomen hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kızılötesi ışık yansıması\", \"text\": \"Kızılötesi ışık yansıması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş ışınlarının atmosferde kırılması\", \"text\": \"Güneş ışınlarının atmosferde kırılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ay'ın yüzeyindeki demir oksit varlığı\", \"text\": \"Ay'ın yüzeyindeki demir oksit varlığı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dünya'nın atmosferindeki kırmızıya yakın renkli ışığın kırılması\", \"text\": \"Dünya'nın atmosferindeki kırmızıya yakın renkli ışığın kırılması\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Güneş ve Ay tutulmaları arasındaki en önemli benzerlik nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Her ikisi de Dünya'nın gölgesi sonucu oluşur\", \"text\": \"Her ikisi de Dünya'nın gölgesi sonucu oluşur\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Her ikisi de her ay düzenli olarak meydana gelir\", \"text\": \"Her ikisi de her ay düzenli olarak meydana gelir\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Her ikisi de astronomik olaylardır ve gezegenler arasındaki konumlarına bağlıdır\", \"text\": \"Her ikisi de astronomik olaylardır ve gezegenler arasındaki konumlarına bağlıdır\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Her ikisi de insanların sağlık üzerindeki etkileri konusunda uyarılarda bulunur\", \"text\": \"Her ikisi de insanların sağlık üzerindeki etkileri konusunda uyarılarda bulunur\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Güneş tutulmasının farklı türleri arasındaki ana fark nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Güneş tutulmasının türleri, sadece Güneş'in görünümünde değişiklikler gösterir, etkileri aynıdır\", \"text\": \"Güneş tutulmasının türleri, sadece Güneş'in görünümünde değişiklikler gösterir, etkileri aynıdır\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Farklı türlerde, Güneş'in yüzeyinin farklı oranlarda gölgelendiği ve bu durumun gökyüzünde oluşturduğu görüntülerde farklılıklar bulunur\", \"text\": \"Farklı türlerde, Güneş'in yüzeyinin farklı oranlarda gölgelendiği ve bu durumun gökyüzünde oluşturduğu görüntülerde farklılıklar bulunur\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Farklı türler, Dünya'nın Güneş'e olan mesafesine bağlı olarak ortaya çıkar ve bu nedenle görüntülerde değişiklikler olur\", \"text\": \"Farklı türler, Dünya'nın Güneş'e olan mesafesine bağlı olarak ortaya çıkar ve bu nedenle görüntülerde değişiklikler olur\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Farklı türler, Güneş sistemi içindeki diğer gezegenlerin konumlarına göre belirlenir ve bu durumun etkileri değişiktir\", \"text\": \"Farklı türler, Güneş sistemi içindeki diğer gezegenlerin konumlarına göre belirlenir ve bu durumun etkileri değişiktir\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Güneş ve Ay tutulmalarının dünya üzerindeki gözlemlenen etkilerini inceleyen bilim dalına ne ad verilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Etnoloji\", \"text\": \"Etnoloji\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Astrofizik\", \"text\": \"Astrofizik\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kriptoloji\", \"text\": \"Kriptoloji\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Meteoroloji\", \"text\": \"Meteoroloji\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Güneş tutulmasının farklı türlerini ayırt etmek için kullanılan terim hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Saros Döngüsü\", \"text\": \"Saros Döngüsü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kepler Yasaları\", \"text\": \"Kepler Yasaları\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fotosferik Halka\", \"text\": \"Fotosferik Halka\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ekuatör Hattı\", \"text\": \"Ekuatör Hattı\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest1Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi uzay araştırmalarının nedenleri arasında yer almaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Dünya dışında yaşam olup olmadığının araştırılması\", \"text\": \"Dünya dışında yaşam olup olmadığının araştırılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tıp, fizik, kimya gibi alanlara katkı sağlaması.\", \"text\": \"Tıp, fizik, kimya gibi alanlara katkı sağlaması.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dünya yer üstü ve yer altı kaynaklarının bulunması\", \"text\": \"Dünya yer üstü ve yer altı kaynaklarının bulunması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dünya'nın enerji ihtiyacının karşılanması\", \"text\": \"Dünya'nın enerji ihtiyacının karşılanması\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Gökyüzünün incelenmesinde teleskobu kullanan ilk bilim insanı kimdir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Galileo Galilei\", \"text\": \"Galileo Galilei\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Edison\", \"text\": \"Edison\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ali Kuşçu\", \"text\": \"Ali Kuşçu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Neil Armstrong\", \"text\": \"Neil Armstrong\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Uzayı araştırmak için gönderilen uzaktan kumandayla çalışan insansız uzay aracına ne denir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Uzay sondası\", \"text\": \"Uzay sondası\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Uzay roketi\", \"text\": \"Uzay roketi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay mekiği\", \"text\": \"Uzay mekiği\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay istasyonu\", \"text\": \"Uzay istasyonu\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisi bir teleskop çeşidi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Optik teleskop\", \"text\": \"Optik teleskop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş teleskop\", \"text\": \"Güneş teleskop\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"X-ışını teleskop\", \"text\": \"X-ışını teleskop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Radyo teleskop\", \"text\": \"Radyo teleskop\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Astronomi alanında çalışmalar ve araştırmalar yapan bilim insanlarına ne denir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Astronot\", \"text\": \"Astronot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kozmonot\", \"text\": \"Kozmonot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Astronom\", \"text\": \"Astronom\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Astrolog\", \"text\": \"Astrolog\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest2Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Yapay uydular hangi amaçla kullanılır? (I. Haberleşme,II. Meteoroloji, III. Askeri alan)\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yalnız I\", \"text\": \"Yalnız I\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"I ve II\", \"text\": \"I ve II\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"II ve III\", \"text\": \"II ve III\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"I, II ve III\", \"text\": \"I, II ve III\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Uzaya giden ilk insan kimdir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yuri Gagarin\", \"text\": \"Yuri Gagarin\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Neil Armstrong\", \"text\": \"Neil Armstrong\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Edwin Aldrin\", \"text\": \"Edwin Aldrin\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Aleksey Leonov\", \"text\": \"Aleksey Leonov\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi uzay araştırmaları sırasında geliştirilen araçlardan birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Teflon\", \"text\": \"Teflon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tükenmez kalem\", \"text\": \"Tükenmez kalem\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Alüminyum tencere\", \"text\": \"Alüminyum tencere\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Alüminyum folyo\", \"text\": \"Alüminyum folyo\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisi uzay kirliliğine neden olmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Meteorlar\", \"text\": \"Meteorlar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Görevi biten yapay uydular\", \"text\": \"Görevi biten yapay uydular\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay aracı parçaları\", \"text\": \"Uzay aracı parçaları\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzayda kalan yakıt tankları\", \"text\": \"Uzayda kalan yakıt tankları\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Uzay yolculuğuna çıkan astronotlar özel kıyafetler kullanırlar. Aşağıdakilerden hangisi uzay kıyafetlerinin özelliklerinden birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Güneş'ten gelen zararlı ışınlardan korumak\", \"text\": \"Güneş'ten gelen zararlı ışınlardan korumak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sıvı basıncını dengelemek\", \"text\": \"Sıvı basıncını dengelemek\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hava basıncını dengelemek\", \"text\": \"Hava basıncını dengelemek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Vücut sıcaklığını sabit tutmak\", \"text\": \"Vücut sıcaklığını sabit tutmak\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest3Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Uzay araştırmaları ile ilgili olarak verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Uzay araştırmalarında teleskobun icadı ile birlikte çalışmalar hızlanmıştır.\", \"text\": \"Uzay araştırmalarında teleskobun icadı ile birlikte çalışmalar hızlanmıştır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay araştırmaları her geçen gün artarak devam etmektedir.\", \"text\": \"Uzay araştırmaları her geçen gün artarak devam etmektedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay araştırmalarında ülkeler birbirine destek olmazlar.\", \"text\": \"Uzay araştırmalarında ülkeler birbirine destek olmazlar.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Uzay araştırmaları sayesinde mutfakta kullanılan birçok malzeme geliştirilmiştir.\", \"text\": \"Uzay araştırmaları sayesinde mutfakta kullanılan birçok malzeme geliştirilmiştir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Uzay araştırmalarında kullanılan aşağıdaki araçlardan hangisi uzaya fırlatıldıktan sonra tekrar Dünya'ya gelerek kullanılabilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Uzay sondası\", \"text\": \"Uzay sondası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yapay uydu\", \"text\": \"Yapay uydu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay teleskobu\", \"text\": \"Uzay teleskobu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzay mekiği\", \"text\": \"Uzay mekiği\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Ülkemizin uzaya gönderdiği aşağıdaki uydulardan hangisi kullanılmamaktadır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Türksat 3A\", \"text\": \"Türksat 3A\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Türksat 4A\", \"text\": \"Türksat 4A\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Türksat 1C\", \"text\": \"Türksat 1C\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Göktürk-2\", \"text\": \"Göktürk-2\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Rasathaneler kurulması için ışık kirliliğinin ve yerleşimin az olduğu yerler tercih edilmektedir.Aşağıdaki yerleşim yerlerinden hangisi rasathane kurmak için uygundur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"İstanbul Çamlıca tepesi\", \"text\": \"İstanbul Çamlıca tepesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Antalya Toros dağının zirvesi\", \"text\": \"Antalya Toros dağının zirvesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Bursa Uludağ\", \"text\": \"Bursa Uludağ\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ankara Elmadağ\", \"text\": \"Ankara Elmadağ\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Soru 15: Uzay teleskobunun uzayda bulunma sebebi nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Işık kirliğinden etkilenmemesi\", \"text\": \"Işık kirliğinden etkilenmemesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yer çekimsiz ortamda bulunması\", \"text\": \"Yer çekimsiz ortamda bulunması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kontrol edilmesinin kolay olması\", \"text\": \"Kontrol edilmesinin kolay olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Astronotların kolaylıkla ulaşabilmesi\", \"text\": \"Astronotların kolaylıkla ulaşabilmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
 }

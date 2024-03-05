@@ -66,4 +66,40 @@ public class QuestionController
     {
         return questionService.getTest9Grade5();
     }
+
+    @GetMapping("/test1grade6")
+    public ResponseEntity<Object> getTest1Grade6()
+    {
+        return questionService.getTest1Grade6();
+    }
+
+    @GetMapping("/test2grade6")
+    public ResponseEntity<Object> getTest2Grade6()
+    {
+        return questionService.getTest2Grade6();
+    }
+
+    @GetMapping("/test3grade6")
+    public ResponseEntity<Object> getTest3Grade6()
+    {
+        return questionService.getTest3Grade6();
+    }
+
+    @GetMapping("/test1grade7")
+    public ResponseEntity<Object> getTest1Grade7()
+    {
+        return questionService.getTest1Grade7();
+    }
+
+    @GetMapping("/test2grade7")
+    public ResponseEntity<Object> getTest2Grade7()
+    {
+        return questionService.getTest2Grade7();
+    }
+
+    @GetMapping("/test3grade7")
+    public ResponseEntity<Object> getTest3Grade7()
+    {
+        return questionService.getTest3Grade7();
+    }
 }
