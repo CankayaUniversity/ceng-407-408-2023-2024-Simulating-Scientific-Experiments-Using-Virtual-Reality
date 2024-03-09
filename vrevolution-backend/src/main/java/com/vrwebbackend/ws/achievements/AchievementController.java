@@ -31,6 +31,30 @@ public class AchievementController
         return achievementService.getUnit3Grade5Achievement();
     }
 
+    @GetMapping("/unit4grade5achievement")
+    public ResponseEntity<Object> getUnit4Grade5Achievement()
+    {
+        return achievementService.getUnit4Grade5Achievement();
+    }
+
+    @GetMapping("/unit5grade5achievement")
+    public ResponseEntity<Object> getUnit5Grade5Achievement()
+    {
+        return achievementService.getUnit5Grade5Achievement();
+    }
+
+    @GetMapping("/unit6grade5achievement")
+    public ResponseEntity<Object> getUnit6Grade5Achievement()
+    {
+        return achievementService.getUnit6Grade5Achievement();
+    }
+
+    @GetMapping("/unit7grade5achievement")
+    public ResponseEntity<Object> getUnit7Grade5Achievement()
+    {
+        return achievementService.getUnit7Grade5Achievement();
+    }
+
     @GetMapping("/unit1grade6achievement")
     public ResponseEntity<Object> getUnit1Grade6Achievement()
     {
