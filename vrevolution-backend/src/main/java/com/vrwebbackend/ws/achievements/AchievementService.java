@@ -148,6 +148,120 @@ public class AchievementService
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
 
+    public ResponseEntity<Object> getUnit2Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Support and Movement System\", " +
+                "\"topic1Achievement1\": \"Explains the structures of the support and movement system with examples.\", " +
+                "\"topic1Achievement2\": \"Cartilage, bone and bone types, joints and joint types, muscles and muscle types\", " +
+                "\"topic2\": \"Digestive system\", " +
+                "\"topic2Achievement1\": \"Explains the functions of the structures and organs that make up the digestive system using models.\", " +
+                "\"topic2Achievement2\": \"It deduces that nutrients must undergo physical (mechanical) and chemical digestion in order to pass into the blood.\", " +
+                "\"topic2Achievement3\": \"Explains the functions of digestive organs.\", " +
+                "\"topic3\": \"The circulatory system\", " +
+                "\"topic3Achievement1\": \"Explains the functions of the structures and organs that make up the circulatory system using models.\", " +
+                "\"topic3Achievement2\": \"It is stated that the Moon rotates.\", " +
+                "\"topic3Achievement3\": \"Examines the large and small blood circulation on a diagram and explains their functions.\", " +
+                "\"topic4\": \"Respiratory system\", " +
+                "\"topic4Achievement1\": \"Structures and organs that make up the respiratory system, lungs\", " +
+                "\"topic4Achievement2\": \"Explains the functions of the structures and organs that make up the respiratory system using models.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit3Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Resultant Force\", " +
+                "\"topic1Achievement1\": \"It shows by drawing the direction, direction and magnitude of the force acting on an object.\", " +
+                "\"topic1Achievement2\": \"Observes by experimenting with more than one force acting on an object.\", " +
+                "\"topic1Achievement3\": \"Compares balanced and unbalanced forces by observing the motion of objects.\", " +
+                "\"topic2\": \"Constant Speed Motion\", " +
+                "\"topic2Achievement1\": \"Defines speed and expresses its unit.\", " +
+                "\"topic2Achievement2\": \"It shows the relationship between distance, time and speed on a graph.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit4Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Particulate Structure of Matter\", " +
+                "\"topic1Achievement1\": \"Substances; It indicates that it has a granular, void and mobile structure.\", " +
+                "\"topic1Achievement2\": \"The concepts of vibration, translation and rotation related to the moving structure are mentioned.\", " +
+                "\"topic1Achievement3\": \"He compares by experimenting that the space between the particles of the substance and the mobility of the particles change depending on the change of state.\", " +
+                "\"topic2\": \"Density, unit of density\", " +
+                "\"topic2Achievement1\": \"Defines density.\", " +
+                "\"topic2Achievement2\": \"He calculates the densities of various substances as a result of the experiments he designs.\", " +
+                "\"topic2Achievement3\": \"Compares the densities of liquids that are insoluble in each other by experimenting.\", " +
+                "\"topic3\": \"Matter and Heat\", " +
+                "\"topic3Achievement1\": \"Classifies substances in terms of heat conduction.\", " +
+                "\"topic3Achievement2\": \"It determines the selection criteria for thermal insulation materials used in buildings.\", " +
+                "\"topic3Achievement3\": \"Discusses the importance of thermal insulation in buildings in terms of family and national economy and effective use of resources.\", " +
+                "\"topic4\": \"Fuels\", " +
+                "\"topic4Achievement1\": \"It classifies fuels as solid, liquid and gaseous fuels and gives examples of commonly used fuels.\", " +
+                "\"topic4Achievement2\": \"Discusses the effects of using different types of fuels for heating purposes on humans and the environment.\", " +
+                "\"topic4Achievement3\": \"Researches and reports the precautions to be taken regarding stove and natural gas poisoning.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit5Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Propagation of Sound\", " +
+                "\"topic1Achievement1\": \"Propagation of sound in solids, propagation of sound in liquids, propagation of sound in gases\", " +
+                "\"topic1Achievement2\": \"Predicts the environments in which sound can propagate and tests its predictions.\", " +
+                "\"topic2\": \"Hearing Sound Differently in Different Environments\", " +
+                "\"topic2Achievement1\": \"Difference in sounds produced by different objects, the same sound being heard differently in different environments\", " +
+                "\"topic2Achievement2\": \"He discovers through experimentation that sounds are heard differently when the sound source changes.\", " +
+                "\"topic2Achievement3\": \"He discovers through experimentation that sound is heard differently when the environment in which it propagates changes.\", " +
+                "\"topic3\": \"Speed of Sound\", " +
+                "\"topic3Achievement1\": \"Compares the speed of sound in different environments.\", " +
+                "\"topic3Achievement2\": \"It is stated why sound does not propagate in space.\", " +
+                "\"topic3Achievement3\": \"It is mentioned that sound is a type of energy.\", " +
+                "\"topic4\": \"Interaction of Sound with Matter\", " +
+                "\"topic4Achievement1\": \"Understands the situations that may occur as a result of the interaction of sound with matter.\", " +
+                "\"topic4Achievement2\": \"It makes predictions and tests its predictions to prevent the spread of sound.\", " +
+                "\"topic4Achievement3\": \"Explains the importance of sound insulation and gives examples of technological and architectural applications developed for sound insulation.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit6Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Controller and Regulatory Systems\", " +
+                "\"topic1Achievement1\": \"Explains the nervous system and the functions of the central and peripheral nervous system on a model.\", " +
+                "\"topic1Achievement2\": \"Recognizes the importance of endocrine glands for the body.\", " +
+                "\"topic1Achievement3\": \"Explains the physical and psychological changes that occur in the transition from childhood to adolescence.\", " +
+                "\"topic2\": \"Sense organs\", " +
+                "\"topic2Achievement1\": \"Sense organs, structures of sense organs, health of sense organs, relationship between sense organs, technology\", " +
+                "\"topic2Achievement2\": \"Explains the structures of the sense organs by showing them on the model.\", " +
+                "\"topic2Achievement3\": \"Discusses the precautions to be taken to protect the health of the sensory organs.\", " +
+                "\"topic3\": \"Health of Systems\", " +
+                "\"topic3Achievement1\": \"Discusses what needs to be done for the health of the systems, based on research data.\", " +
+                "\"topic3Achievement2\": \"The harms of unconscious drug use are emphasized.\", " +
+                "\"topic3Achievement3\": \"Basic information about first aid is given.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit7Grade6Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Conductors and Insulators\", " +
+                "\"topic1Achievement1\": \"Conductive materials, insulating materials, areas of use of conductive and insulating materials\", " +
+                "\"topic1Achievement2\": \"Using the electrical circuit he designed, he classifies substances according to their ability to conduct electricity.\", " +
+                "\"topic1Achievement3\": \"Explain with examples for what purposes the electrical conductivity and insulation properties of materials are used in daily life.\", " +
+                "\"topic2\": \"Electrical Resistance and Factors It Depends On\", " +
+                "\"topic2Achievement1\": \"Electrical resistance, factors on which electrical resistance depends (cross-sectional area, length, type of conductor)\", " +
+                "\"topic2Achievement2\": \"Defines electrical resistance.\", " +
+                "\"topic2Achievement3\": \"He realizes that the wire inside the bulb has a resistance.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
     public ResponseEntity<Object> getUnit1Grade7Achievement()
     {
         String jsonString = "{\"topic1\": \"Satellite, space pollution, sky observation tools\", " +

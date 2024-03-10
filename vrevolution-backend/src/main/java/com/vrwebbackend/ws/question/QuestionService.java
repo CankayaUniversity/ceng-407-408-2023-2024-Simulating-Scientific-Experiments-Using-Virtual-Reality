@@ -1447,6 +1447,1086 @@ public class QuestionService
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
 
+    public ResponseEntity<Object> getTest4Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Erol masada duran bardağındaki suyu alarak içiyor. Erol'un suyu içerken parmak kaslarında nasıl bir değişim görülür?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sürekli kasılma\", \"text\": \"Sürekli kasılma\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sürekli gevşeme\", \"text\": \"Sürekli gevşeme\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Önce gevşeme sonra kasılma\", \"text\": \"Önce gevşeme sonra kasılma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Önce kasılma sonra gevşeme\", \"text\": \"Önce kasılma sonra gevşeme\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdakilerden hangisi vücudumuzdaki çizgili kaslara örnekler verilebilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bacaklarımızdaki kaslarda\", \"text\": \"Bacaklarımızdaki kaslarda\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Damarlarımızdaki kaslar\", \"text\": \"Damarlarımızdaki kaslar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Midemizdeki kaslar\", \"text\": \"Midemizdeki kaslar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bağırsağımızdaki kaslar\", \"text\": \"Bağırsağımızdaki kaslar\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"İskeletin görevine örnek vermek isteyen öğrenci aşağıdakilerden hangisini söylerse, yanlış bilgi vermiş olur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Vücuda şekil verir.\", \"text\": \"Vücuda şekil verir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hareket etmemizi sağlar.\", \"text\": \"Hareket etmemizi sağlar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kan hücresi üretir.\", \"text\": \"Kan hücresi üretir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kanın temizlenmesini sağlar\", \"text\": \"Kanın temizlenmesini sağlar\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"İskelet kasının çalışma hızı fazladır fakat çabuk yorulur. Aşağıda verilenlerden hangisinin yapısında iskelet kası bulunmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Pazı kası\", \"text\": \"Pazı kası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bacak kası\", \"text\": \"Bacak kası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bağırsak kası\", \"text\": \"Bağırsak kası\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Parmak kası\", \"text\": \"Parmak kası\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıda verilen kaslardan hangisi istemli çalışır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kalp kası\", \"text\": \"Kalp kası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mide kası\", \"text\": \"Mide kası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bağırsak kası\", \"text\": \"Bağırsak kası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çene kası\", \"text\": \"Çene kası\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest5Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıda verilenlerden hangisi sindirim sistemine yardımcı bir organdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Karaciğer\", \"text\": \"Karaciğer\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mide\", \"text\": \"Mide\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Anüs\", \"text\": \"Anüs\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yutak\", \"text\": \"Yutak\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıda verilen organlardan hangisinde kimyasal sindirim gerçekleşmez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ağız\", \"text\": \"Ağız\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mide\", \"text\": \"Anüs\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İnce bağırsak\", \"text\": \"İnce bağırsak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalın bağırsak\", \"text\": \"Kalın bağırsak\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Sindirim hangi organda tamamlanır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ağız\", \"text\": \"Ağız\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İnce bağırsak\", \"text\": \"İnce bağırsak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kalın bağırsak\", \"text\": \"Kalın bağırsak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Anüs\", \"text\": \"Anüs\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda verilen organların hangileri karbonhidratların kimyasal sindirimini gerçekleştirir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ağız - mide\", \"text\": \"Ağız - mide\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ağız - mide - ince bağırsak\", \"text\": \"Ağız - mide - ince bağırsak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ağız - ince bağırsak\", \"text\": \"Ağız - ince bağırsak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ağız - kalın bağırsak\", \"text\": \"Ağız - kalın bağırsak\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Sindirim sisteminin amacı aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Karnımızı doyurmak\", \"text\": \"Karnımızı doyurmak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Besinlerin tadını almak\", \"text\": \"Besinlerin tadını almak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Besinleri hücrelere geçebilecek kadar küçültmek\", \"text\": \"Besinleri hücrelere geçebilecek kadar küçültmek\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Besinleri bulamaç haline getirmek\", \"text\": \"Besinleri bulamaç haline getirmek\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest6Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi dolaşım sistemini oluşturan yapılardan biri değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kan\", \"text\": \"Kan\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalp\", \"text\": \"Kalp\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kas\", \"text\": \"Kas\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Damarlar\", \"text\": \"Damarlar\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Kanın yapısında aşağıdaki kan hücrelerinden hangisi en fazla bulunur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Alyuvar\", \"text\": \"Alyuvar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Akyuvar\", \"text\": \"Akyuvar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kan pulcukları\", \"text\": \"Kan plazması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalın bağırsak\", \"text\": \"Kalın bağırsak\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Kalbin yapısı ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kalp dört odacıklıdır.\", \"text\": \"Kalp dört odacıklıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalbin sol tarafında temiz kan vardır.\", \"text\": \"Kalbin sol tarafında temiz kan vardır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalp kanın pompalanmasını sağlar.\", \"text\": \"Kalp kanın pompalanmasını sağlar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalbin dakikadaki atış sayısına tansiyon denir.\", \"text\": \"Kalbin dakikadaki atış sayısına tansiyon denir.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki damarların hangisinde kirli kan bulunur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Aort atardamarı\", \"text\": \"Aort atardamarı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Akciğer toplardamarı\", \"text\": \"Akciğer toplardamarı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Akciğer atardamarı\", \"text\": \"Akciğer atardamarı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Böbrek atardamarı\", \"text\": \"Böbrek atardamarı\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Vücut hücrelerine besin ve oksijen taşınmasını sağlayan, çok küçük damar aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Atardamar\", \"text\": \"Atardamar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Toplardamar\", \"text\": \"Toplardamar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Akciğer toplardamarı\", \"text\": \"Akciğer toplardamarı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kılcal damar\", \"text\": \"Kılcal damar\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest7Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Net kuvvet ile ilgili olarak aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"İki yada daha fazla kuvvetin etkisini tek başına yapan kuvvete net kuvvet denir.\", \"text\": \"İki yada daha fazla kuvvetin etkisini tek başına yapan kuvvete net kuvvet denir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Net kuvvet R sembolü ile gösteriler.\", \"text\": \"Net kuvvet R sembolü ile gösteriler.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Net kuvvet bulunurken her zaman kuvvetlerin toplamı ile bulunur.\", \"text\": \"Net kuvvet bulunurken her zaman kuvvetlerin toplamı ile bulunur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Net kuvvetin diğer adı bileşke kuvvettir.\", \"text\": \"Net kuvvetin diğer adı bileşke kuvvettir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Dengelenmiş ve dengelenmemiş kuvvetler hakkında verilen bilgilerden hangisi doğrudur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Dengelenmemiş kuvvetlerin etkisindeki cisimler her zaman yavaşlayarak hareket eder.\", \"text\": \"Dengelenmemiş kuvvetlerin etkisindeki cisimler her zaman yavaşlayarak hareket eder.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dengelenmiş kuvvetler etkisindeki cisimler sadece dururlar.\", \"text\": \"Dengelenmiş kuvvetler etkisindeki cisimler sadece dururlar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yer çekimi kuvveti ile yere düşen bütün cisimler dengelenmiş kuvvet etkisindedir.\", \"text\": \"Yer çekimi kuvveti ile yere düşen bütün cisimler dengelenmiş kuvvet etkisindedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dengelenmiş kuvvetlerde net kuvvet her zaman sıfırdır.\", \"text\": \"Dengelenmiş kuvvetlerde net kuvvet her zaman sıfırdır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Yokuş aşağı inen bisiklet için aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Dengelenmiş kuvvetlerin etkisindedir.\", \"text\": \"Dengelenmiş kuvvetlerin etkisindedir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Dengelenmemiş kuvvetlerin etkisindedir.\", \"text\": \"Dengelenmemiş kuvvetlerin etkisindedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bileşke kuvvet sıfırdan farklıdır.\", \"text\": \"Bileşke kuvvet sıfırdan farklıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin sürati giderek artar.\", \"text\": \"Cismin sürati giderek artar.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Dengeleyici kuvvet ile ilgili verilen bilgilerden hangisi doğrudur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Net kuvvetle aynı yöndedir.\", \"text\": \"Net kuvvetle aynı yöndedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Etki ettiğinde net kuvvet sıfır olur.\", \"text\": \"Etki ettiğinde net kuvvet sıfır olur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Net kuvvetten büyüktür.\", \"text\": \"Net kuvvetten büyüktür.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Net kuvvetle doğrultuları farklıdır.\", \"text\": \"Net kuvvetle doğrultuları farklıdır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Limanda bağlı bir gemi için aşağıda verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Gemiye yer çekimi kuvveti etki etmez.\", \"text\": \"Gemiye yer çekimi kuvveti etki etmez.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gemi dengelenmiş kuvvetlerin etkisindedir.\", \"text\": \"Gemi dengelenmiş kuvvetlerin etkisindedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Geminin ağırlığı bir kuvvet meydana getirir.\", \"text\": \"Geminin ağırlığı bir kuvvet meydana getirir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gemi üzerinde net kuvvet sıfırdır.\", \"text\": \"Gemi üzerinde net kuvvet sıfırdır.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest8Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi sürat birimi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"km/sa\", \"text\": \"km/sa\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"m/sn\", \"text\": \"m/sn\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"km/sn\", \"text\": \"km/sn\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"km.sn\", \"text\": \"km.sn\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Ankara İstanbul arası 448 km'lik yolu 4 saatte giden otomobilin sürati kaç km/h'dir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"110 km/sa\", \"text\": \"110 km/sa\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"112 km/sa\", \"text\": \"112 km/sa\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"114 km/sa\", \"text\": \"114 km/sa\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"120 km/sa\", \"text\": \"120 km/sa\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıda verilen hangisi süratin tanımıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Herhangi bir zamanda alınan yoldur.\", \"text\": \"Herhangi bir zamanda alınan yoldur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yolda geçen zamandır.\", \"text\": \"Yolda geçen zamandır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Birim zamanda alınan yoldur.\", \"text\": \"Birim zamanda alınan yoldur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Alınan yolun ölçüsüdür.\", \"text\": \"Alınan yolun ölçüsüdür.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda sürat ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Aynı yolu daha kısa sürede alan daha yavaştır.\", \"text\": \"Aynı yolu daha kısa sürede alan daha yavaştır.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Aynı sürede daha fazla yol alan daha hızlıdır.\", \"text\": \"Aynı sürede daha fazla yol alan daha hızlıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"En kısa sürede en fazla yol giden en hızlıdır.\", \"text\": \"En kısa sürede en fazla yol giden en hızlıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"En kısa yol en kısa zamanda alınır.\", \"text\": \"En kısa yol en kısa zamanda alınır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdakilerden hangisi sabit süratli hareketi tanımlar?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sürati sürekli değişen cisimlerin hareketidir.\", \"text\": \"Sürati sürekli değişen cisimlerin hareketidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sürati zamanla değişmeyen hareketdir.\", \"text\": \"Sürati zamanla değişmeyen hareketdir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sürati zamanla beraber sürekli artan harekettir.\", \"text\": \"Sürati zamanla beraber sürekli artan harekettir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Süratin zamanla beraber azalan harekettir.\", \"text\": \"Süratin zamanla beraber azalan harekettir.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest9Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Bir cismin süratini bulmak için aşağıdaki işlemlerden hangisi yapılmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Alınan yol ve zaman çarpılmalıdır.\", \"text\": \"Alınan yol ve zaman çarpılmalıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Zaman ve alınan yol bölünmelidir.\", \"text\": \"Zaman ve alınan yol bölünmelidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Alınan yol zamana bölünmelidir.\", \"text\": \"Alınan yol zamana bölünmelidir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hızlanan bisiklet\", \"text\": \"Hızlanan bisiklet\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki örneklerden hangisinde cisim dengelenmiş kuvvetlerin etkisi altındadır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Masada duran kalem\", \"text\": \"Masada duran kalem\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yavaşlayan otomobil\", \"text\": \"Yavaşlayan otomobil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Daldan düşen elma\", \"text\": \"Daldan düşen elma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"120 km/sa\", \"text\": \"120 km/sa\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Sabit süratle giden bisiklete sonradan hareket yönünde 10 Newton'luk kuvvet uygulandığında aşağıdakilerden hangisi gerçekleşir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hızlanır\", \"text\": \"Hızlanır\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yavaşlar\", \"text\": \"Yavaşlar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sabit süratle gider\", \"text\": \"Sabit süratle gider\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Durur\", \"text\": \"Durur\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki örneklerden hangisinde cisim dengelenmiş kuvvetlerin etkisi altındadır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Masada duran kalem\", \"text\": \"Masada duran kalem\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yavaşlayan otomobil\", \"text\": \"Yavaşlayan otomobil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Daldan düşen elma\", \"text\": \"Daldan düşen elma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hızlanan bisiklet\", \"text\": \"Hızlanan bisiklet\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdakilerden hangisi kuvvetin özelliklerinden birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yönü\", \"text\": \"Yönü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Doğrultusu\", \"text\": \"Doğrultusu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Uzunluğu\", \"text\": \"Uzunluğu\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Büyüklüğü\", \"text\": \"Büyüklüğü\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest10Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi sıkıştırılamaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Pamuk\", \"text\": \"Pamuk\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hava\", \"text\": \"Hava\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Su\", \"text\": \"Su\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sünger\", \"text\": \"Sünger\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki cümlelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bütün maddeler taneciklerden oluşmuştur.\", \"text\": \"Bütün maddeler taneciklerden oluşmuştur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Maddeler bütünsel yapıya sahiptir.\", \"text\": \"Maddeler bütünsel yapıya sahiptir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gaz maddeler sıkıştırılabilir.\", \"text\": \"Gaz maddeler sıkıştırılabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütlesi ve hacmi olan her şey maddedir.\", \"text\": \"Kütlesi ve hacmi olan her şey maddedir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi madde değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Su\", \"text\": \"Su\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hava\", \"text\": \"Hava\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektrik\", \"text\": \"Elektrik\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Alkol\", \"text\": \"Alkol\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki cümlelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bütün maddeler gözle görülemeyecek kadar küçük taneciklerden oluşmuştur.\", \"text\": \"Bütün maddeler gözle görülemeyecek kadar küçük taneciklerden oluşmuştur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sıvı maddeler titreşim hareketi yapar.\", \"text\": \"Sıvı maddeler titreşim hareketi yapar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gaz maddeler bulundukları kabın her yerini doldurur.\", \"text\": \"Gaz maddeler bulundukları kabın her yerini doldurur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Katı maddeler akışkandır.\", \"text\": \"Katı maddeler akışkandır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki olaylardan hangisi maddenin tanecikli yapıda olduğunu ispatlamaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Suyun sıkıştırılamaması\", \"text\": \"Suyun sıkıştırılamaması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mürekkebin suda dağılması\", \"text\": \"Mürekkebin suda dağılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kokunun havada dağılması\", \"text\": \"Kokunun havada dağılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tuzun suda çözünmesi\", \"text\": \"Tuzun suda çözünmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest11Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Hacimleri birbirine eşit A maddesinin kütlesi 8 g, B maddesinin kütlesi 12 g ve C maddesinin kütlesi 20 g'dır. Bu maddelerin yoğunluklarını büyükten küçüğe sıralayınız?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"A > B > C\", \"text\": \"A > B > C\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"B > A > C\", \"text\": \"B > A > C\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"C > B > A\", \"text\": \"C > B > A\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"C > A > B\", \"text\": \"C > A > B\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Yoğunluk ile ilgili olarak verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kütle ve hacim doğru orantılıdır.\", \"text\": \"Kütle ve hacim doğru orantılıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütle ve yoğunluk ile değişmez.\", \"text\": \"Kütle ve yoğunluk ile değişmez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hacim ve yoğunluk ile değişmez.\", \"text\": \"Hacim ve yoğunluk ile değişmez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yoğunluk ve kütle ters orantılıdır.\", \"text\": \"Yoğunluk ve kütle ters orantılıdır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Hacimleri eşit, yoğunlukları da A > B > C olan maddeler için kütleleri arasındaki ilişki aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"A > B > C\", \"text\": \"A > B > C\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"B > A > C\", \"text\": \"B > A > C\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"C > B > A\", \"text\": \"C > B > A\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"C > A > B\", \"text\": \"C > A > B\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Kütlesi 10 gram olan plastik topun yoğunluğunu azaltabilmek için aşağıdakilerden hangisi yapılmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kütlesi değiştirilmeden hacmi azaltılmalıdır.\", \"text\": \"Kütlesi değiştirilmeden hacmi azaltılmalıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütlesi ve hacmi aynı oranda artırılmalıdır.\", \"text\": \"Kütlesi ve hacmi aynı oranda artırılmalıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütlesi değiştirilmeden hacmi artırılmalıdır.\", \"text\": \"Kütlesi değiştirilmeden hacmi artırılmalıdır.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hacmi değiştirilmeden kütlesi artırılmalıdır.\", \"text\": \"Hacmi değiştirilmeden kütlesi artırılmalıdır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıda verilen cümlelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yoğunluğu suyun yoğunluğundan fazla olan cisimler su içerisinde batar.\", \"text\": \"Yoğunluğu suyun yoğunluğundan fazla olan cisimler su içerisinde batar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yoğunluğu suyun yoğunluğundan az olan cisimler su içerisinde yüzer.\", \"text\": \"Yoğunluğu suyun yoğunluğundan az olan cisimler su içerisinde yüzer.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yoğunluğu suyun yoğunluğu ile eşit olan cisimler su içerisinde askıda kalır.\", \"text\": \"Yoğunluğu suyun yoğunluğu ile eşit olan cisimler su içerisinde askıda kalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yoğunluğu suyun yoğunluğu ile eşit olan cisimler su içerisinde batar.\", \"text\": \"Yoğunluğu suyun yoğunluğu ile eşit olan cisimler su içerisinde batar.\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest12Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi fosil yakıt değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğalgaz\", \"text\": \"Doğalgaz\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Odun\", \"text\": \"Odun\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Taş kömürü\", \"text\": \"Taş kömürü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Petrol\", \"text\": \"Petrol\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdakilerden hangisi yenilenebilir enerji kaynağıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kömür\", \"text\": \"Kömür\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Doğalgaz\", \"text\": \"Doğalgaz\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Nükleer yakıt\", \"text\": \"Nükleer yakıt\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Rüzgar\", \"text\": \"Rüzgar\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi katı yakıt değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Linyit\", \"text\": \"Linyit\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Odun kömürü\", \"text\": \"Odun kömürü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Motorin\", \"text\": \"Motorin\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Taş kömürü\", \"text\": \"Taş kömürü\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisi daha az çevre kirliliğine neden olur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğalgaz\", \"text\": \"Doğalgaz\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Motorin\", \"text\": \"Motorin\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fuel oil\", \"text\": \"Fuel oil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Linyit\", \"text\": \"Linyit\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Kullandığımız bütün enerjilerin kaynağı nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kömür\", \"text\": \"Kömür\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Petrol\", \"text\": \"Petrol\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş\", \"text\": \"Güneş\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Jeotermal\", \"text\": \"Jeotermal\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest13Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıda verilenlerden hangisi sesin gazlarda yayılmasına örnektir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Demir yolu raylarında treninin sesinin duyulması.\", \"text\": \"Demir yolu raylarında treninin sesinin duyulması.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Televizyonda film izlerken sesi duymamız\", \"text\": \"Televizyonda film izlerken sesi duymamız\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Su içerisinde birbirine vurulan taşların ses oluşturması\", \"text\": \"Su içerisinde birbirine vurulan taşların ses oluşturması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Plastik bardaklardan telefon yapılması\", \"text\": \"Plastik bardaklardan telefon yapılması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıda verilenlerden hangisi sesin katılarda yayıldığını gösterir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Güneş'te meydana gelen patlamaların Dünya'ya gelmemesi\", \"text\": \"Güneş'te meydana gelen patlamaların Dünya'ya gelmemesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Üst kattaki komşumuzun sesinin alt katta duyulması\", \"text\": \"Üst kattaki komşumuzun sesinin alt katta duyulması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gemilerde sonar cihazının kullanılması\", \"text\": \"Gemilerde sonar cihazının kullanılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yıldırım düştükten sonra sesin gelmesi\", \"text\": \"Yıldırım düştükten sonra sesin gelmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Elif sesin gazlarda yayılmasına örnekler verecektir, aşağıdaki verdiği örneklerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sınıfta oluşan seslerin koridorda duyulması\", \"text\": \"Sınıfta oluşan seslerin koridorda duyulması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Vadide bağırdığımızda yankı oluşması\", \"text\": \"Vadide bağırdığımızda yankı oluşması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Balinaların birbiri ile haberleşmesi\", \"text\": \"Balinaların birbiri ile haberleşmesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kafesteki papağanın sesimizi taklit etmesi\", \"text\": \"Kafesteki papağanın sesimizi taklit etmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Sokakta seyyar satıcının çıkardığı ses odamızda duyulmaktadır, bu olay sırasında ses hangi ortamlardan geçerek bize ulaşır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Gaz - Katı - Gaz\", \"text\": \"Gaz - Katı - Gaz\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Katı - Gaz\", \"text\": \"Katı - Gaz\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Katı - Gaz - Katı\", \"text\": \"Katı - Gaz - Katı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gaz - Gaz - Katı\", \"text\": \"Gaz - Gaz - Katı\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Ses maddesel ortamda yayılmaktadır, aşağıdaki ortamlardan hangisi sesin yayılmasını engeller?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ses kaynağını kalın duvar içerisine yerleştirmek.\", \"text\": \"Ses kaynağını kalın duvar içerisine yerleştirmek.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kaynağını sessiz bir ortama yerleştirmek.\", \"text\": \"Ses kaynağını sessiz bir ortama yerleştirmek.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kaynağını soğutmak\", \"text\": \"Ses kaynağını soğutmak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kaynağının etrafındaki maddesel ortamı kaldırmak\", \"text\": \"Ses kaynağının etrafındaki maddesel ortamı kaldırmak\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest14Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Kalemle camdan yapılmış su bardağı ile çay bardağına vuruluyor. Çıkan seslerin birbirinden farklı olduğu görülüyor. Aşağıdakilerden hangisi çıkan seslerin birbirinden farklı olmasının sebebidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kalemin tahtadan yapılmış olması\", \"text\": \"Kalemin tahtadan yapılmış olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bardakların şekillerinin farklı olması\", \"text\": \"Bardakların şekillerinin farklı olması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Bardakların camdan yapılmış olması\", \"text\": \"Bardakların camdan yapılmış olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kalemlerin vurulma hızlarının farklı olması\", \"text\": \"Kalemlerin vurulma hızlarının farklı olması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Su içerisinde gitarını çalan müzisyen, gitardan gelen seslerin farklı olduğunu duymuştur. Su içerisinde sesin havadakinden farklı çıkmasının sebebi aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Suyun içerisinde sesin daha hızlı yayılması\", \"text\": \"Suyun içerisinde sesin daha hızlı yayılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sesin havada daha yavaş yayılması\", \"text\": \"Sesin havada daha yavaş yayılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sesin yayıldığı ortamların birbirinden farklı olması\", \"text\": \"Sesin yayıldığı ortamların birbirinden farklı olması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Suyun taneciklerinin birbirine yakın olması\", \"text\": \"Suyun taneciklerinin birbirine yakın olması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdaki verilenlerden hangisinde ses, hava ortamından farklı bir şekilde duyulur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Demir yolu rayına kulağımızı dayadığımızda duyulan ses\", \"text\": \"Demir yolu rayına kulağımızı dayadığımızda duyulan ses\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Trampete kalın sopa ile vurulduğunda oluşan ses\", \"text\": \"Trampete kalın sopa ile vurulduğunda oluşan ses\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Plastik ve cam bardağa vurulunca çıkan sesler\", \"text\": \"Plastik ve cam bardağa vurulunca çıkan sesler\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kaynağına yakın olduğumuzda duyulan sesler\", \"text\": \"Ses kaynağına yakın olduğumuzda duyulan sesler\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Cam bardak ve plastik bardak aynı yere düştüğünde farklı sesler çıkarır, bardakların farklı sesler çıkarmasının sebebi nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yerin sert olması\", \"text\": \"Yerin sert olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bardakların düşme hızlarının farklı olması\", \"text\": \"Bardakların düşme hızlarının farklı olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cam bardağın kırılması\", \"text\": \"Cam bardağın kırılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bardakların yapıldıkları maddelerin birbirinden farklı olması\", \"text\": \"Bardakların yapıldıkları maddelerin birbirinden farklı olması\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Suda yüzen Cansu, başı su içerisindeyken taşları birbirine vuruyor. Taşlardan çıkan seslerin normalden farklı olduğunu duyuyor. Cansu'nun yaptığı bu deneyden hangi sonuç çıkarılabilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Taşlar her yerde aynı sesi çıkarır.\", \"text\": \"Taşlar her yerde aynı sesi çıkarır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kaynağından uzaklaştıkça sesin şiddeti azalır.\", \"text\": \"Ses kaynağından uzaklaştıkça sesin şiddeti azalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Farklı maddelerin çıkardıkları sesler de farklıdır\", \"text\": \"Farklı maddelerin çıkardıkları sesler de farklıdır\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ortamların farklı olması çıkan sesleri değiştirir\", \"text\": \"Ortamların farklı olması çıkan sesleri değiştirir\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest15Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki ortamların hangisinde sesin sürati daha fazladır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Su\", \"text\": \"Su\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hava\", \"text\": \"Hava\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Alkol\", \"text\": \"Alkol\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tahta\", \"text\": \"Tahta\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki olaylardan hangisi sesin enerji olduğunu göstermek için kullanılabilecek bir örnek değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Alçaktan uçan uçakların evlerin pencere camını kırması\", \"text\": \"Alçaktan uçan uçakların evlerin pencere camını kırması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Evlerde çift camlı pencere kullanılması\", \"text\": \"Evlerde çift camlı pencere kullanılması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Opera sanatçıların çıkardıkları sesle bardağı kırması\", \"text\": \"Opera sanatçıların çıkardıkları sesle bardağı kırması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hoparlör önüne yerleştirilen mumun sesle hareket etmesi\", \"text\": \"Hoparlör önüne yerleştirilen mumun sesle hareket etmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Sesle ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ses maddesel ortamda yayılır.\", \"text\": \"Ses maddesel ortamda yayılır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sesin hızı ışık hızından azdır.\", \"text\": \"Sesin hızı ışık hızından azdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses enerjisi elektrik enerjisine dönüşebilir.\", \"text\": \"Ses enerjisi elektrik enerjisine dönüşebilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ortamın sıcaklığının artması sesin hızını azaltır.\", \"text\": \"Ortamın sıcaklığının artması sesin hızını azaltır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki araçların hangisinde ses enerjisinin dönüşümü yoktur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Teleskop\", \"text\": \"Teleskop\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mikrofon\", \"text\": \"Mikrofon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kayıt cihazı\", \"text\": \"Ses kayıt cihazı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Telefon\", \"text\": \"Telefon\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Ses dalgalarının enerjisinden yararlanılarak çeşitli araçlar geliştirilmiştir. Bu araçlara aşağıdakilerden hangisi örnek verilebilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Radar\", \"text\": \"Radar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sonar\", \"text\": \"Sonar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Taş kırma cihazı\", \"text\": \"Taş kırma cihazı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses kayıt cihazı\", \"text\": \"Ses kayıt cihazı\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest16Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıda verilen reflekslerden hangisi sonradan kazanılan reflekstir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yüksek seste irkilme\", \"text\": \"Yüksek seste irkilme\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Limon görünce ağzın sulanması\", \"text\": \"Limon görünce ağzın sulanması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Loş ortamda göz bebeğinin küçülmesi\", \"text\": \"Loş ortamda göz bebeğinin küçülmesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elimize iğne batınca elimizi çekmemiz\", \"text\": \"Elimize iğne batınca elimizi çekmemiz\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Beyin kafatası içerisinde yer alan en önemli organlarımızdan birisidir. Aşağıda verilen bilgilerden hangisi beyinin görevlerinden birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kan basıncını ayarlamak\", \"text\": \"Kan basıncını ayarlamak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Vücut sıcaklığını ayarlamak\", \"text\": \"Vücut sıcaklığını ayarlamak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Acıkma ve susama durumlarını düzenlemek\", \"text\": \"Acıkma ve susama durumlarını düzenlemek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İç organların çalışmasını kontrol etmek\", \"text\": \"İç organların çalışmasını kontrol etmek\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Merkezi sinir sistemiyle ilgili olarak verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Beyin vücudumuzun hafıza ve denge merkezidir.\", \"text\": \"Beyin vücudumuzun hafıza ve denge merkezidir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Omurilik soğanı solunum, dolaşım, sindirim sistemlerinin çalışmasını sağlar.\", \"text\": \"Omurilik soğanı solunum, dolaşım, sindirim sistemlerinin çalışmasını sağlar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Beyincik kol ve bacak kaslarının uyumlu çalışmasını sağlar.\", \"text\": \"Beyincik kol ve bacak kaslarının uyumlu çalışmasını sağlar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Omurilik beyin ile diğer organların iletişimini sağlar.\", \"text\": \"Omurilik beyin ile diğer organların iletişimini sağlar.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda verilen olaylardan hangisi beyin tarafından gerçekleştirilmez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hayal kurmak\", \"text\": \"Hayal kurmak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fazla ışıkta göz bebeğinin küçülmesini sağlamak\", \"text\": \"Fazla ışıkta göz bebeğinin küçülmesini sağlamak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Vücut sıcaklığının ayarlanmasını sağlamak\", \"text\": \"Vücut sıcaklığının ayarlanmasını sağlamak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Öğrenilen bilgilerin hafızada saklanmasını sağlamak\", \"text\": \"Öğrenilen bilgilerin hafızada saklanmasını sağlamak\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Sinir sistemi hakkında verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sinir sistemi merkezi ve çevresel olarak ikiye ayrılır.\", \"text\": \"Sinir sistemi merkezi ve çevresel olarak ikiye ayrılır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Merkezi sinir sisteminin en gelişmiş organı beyindir.\", \"text\": \"Merkezi sinir sisteminin en gelişmiş organı beyindir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Beyin duyu merkezimizdir.\", \"text\": \"Beyin duyu merkezimizdir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Omurilik soğanı çalışmayan insan yaşayabilir.\", \"text\": \"Omurilik soğanı çalışmayan insan yaşayabilir.\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest17Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Duyu organları hakkında verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Duyu organları beş tanedir.\", \"text\": \"Duyu organları beş tanedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Deri vücut sıcaklığının ayarlanmasında görev alır.\", \"text\": \"Deri vücut sıcaklığının ayarlanmasında görev alır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Burun, dil ile beraber tat almada görevlidir.\", \"text\": \"Burun, dil ile beraber tat almada görevlidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dilin ucu sadece tatlı tadı algılar.\", \"text\": \"Dilin ucu sadece tatlı tadı algılar.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Elif, kitabında yazanları okumakta zorluk çekmekte, Ali de tahtada yazılanları göremediğini söylemektedir. Elif ve Ali'nin göz kusurları sırası ile aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Miyop, hipermetrop\", \"text\": \"Miyop, hipermetrop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hipermetrop, miyop\", \"text\": \"Hipermetrop, miyop\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Astigmat, hipermetrop\", \"text\": \"Astigmat, hipermetrop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Katarakt, miyop\", \"text\": \"Katarakt, miyop\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıda verilen göz kusurlarından hangisinin tedavisi yoktur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Miyop\", \"text\": \"Miyop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Renk körlüğü\", \"text\": \"Renk körlüğü\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hipermetrop\", \"text\": \"Hipermetrop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Katarakt\", \"text\": \"Katarakt\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Kulak sağlığını korumak için aşağıda verilenlerden hangisinin yapılması gerekir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kirli sularda yüzülmelidir.\", \"text\": \"Kirli sularda yüzülmelidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kulağımızı kulak çöpleri ile temizlenmelidir.\", \"text\": \"Kulağımızı kulak çöpleri ile temizlenmelidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yüksek sesle müzik dinlenmelidir.\", \"text\": \"Yüksek sesle müzik dinlenmelidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kulağımız soğuktan korunmalıdır.\", \"text\": \"Kulağımız soğuktan korunmalıdır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Duyu organlarının sağlığına dikkat eden kişi aşağıdakilerden hangisini yapmamalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Çok sıcak ve çok soğuk besinler tüketmemek\", \"text\": \"Çok sıcak ve çok soğuk besinler tüketmemek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneşte uzun süre kalmamak\", \"text\": \"Güneşte uzun süre kalmamak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Burnumuz kanadığında sırt üstü yatmak\", \"text\": \"Burnumuz kanadığında sırt üstü yatmak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Burun kıllarını koparmamak\", \"text\": \"Burun kıllarını koparmamak\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest18Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Sigara, alkol gibi bağımlılıklarla mücadele eden kuruluş aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kızılay\", \"text\": \"Kızılay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yeşilay\", \"text\": \"Yeşilay\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sağlık Bakanlığı\", \"text\": \"Sağlık Bakanlığı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Milli Eğitim Bakanlığı\", \"text\": \"Milli Eğitim Bakanlığı\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Denetleyici ve düzenleyici sistemlerin sağlığı için aşağıdakilerden hangisini yapmamız doğru olmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Düzenli uyumak\", \"text\": \"Düzenli uyumak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yağlı gıdaları az tüketmek\", \"text\": \"Yağlı gıdaları az tüketmek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Aşırı kafein tüketiminden uzak durmak\", \"text\": \"Aşırı kafein tüketiminden uzak durmak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Egzersizden uzak durmak\", \"text\": \"Egzersizden uzak durmak\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıda verilen davranışlardan hangisinin yapılması destek ve hareket sistemini olumsuz etkiler?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kemik gelişimi için süt ve süt ürünleri tüketmek\", \"text\": \"Kemik gelişimi için süt ve süt ürünleri tüketmek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kola tüketimini artırmak\", \"text\": \"Kola tüketimini artırmak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yaşımıza uygun sporlar yapmak\", \"text\": \"Yaşımıza uygun sporlar yapmak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ağır cisimler kaldırmamak\", \"text\": \"Ağır cisimler kaldırmamak\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda verilenlerden hangisi solunum sistemi hastalığıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Felç\", \"text\": \"Felç\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sarılık\", \"text\": \"Sarılık\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Zattüre\", \"text\": \"Zattüre\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Üremi\", \"text\": \"Üremi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıda verilen bezlerden hangisinin salgıladığı hormonun fazla salgılanması sonucu devlik hastalığı ortaya çıkar?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hipofiz\", \"text\": \"Hipofiz\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Tiroit\", \"text\": \"Tiroit\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Pankreas\", \"text\": \"Pankreas\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Testis\", \"text\": \"Testis\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest19Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki maddelerden hangisi yalıtkan maddedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bakır\", \"text\": \"Bakır\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Alüminyum folyo\", \"text\": \"Alüminyum folyo\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tuzlu su\", \"text\": \"Tuzlu su\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Silgi\", \"text\": \"Silgi\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki maddelerden hangisi iletken maddedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Şekerli su\", \"text\": \"Şekerli su\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kolonya\", \"text\": \"Kolonya\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kurşun kalem ucu\", \"text\": \"Kurşun kalem ucu\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hava\", \"text\": \"Hava\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdaki araçların hangisinde elektrik iletkeni ve yalıtkanı bir arada bulunmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ütü\", \"text\": \"Ütü\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Eldiven\", \"text\": \"Eldiven\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Elektrik sobası\", \"text\": \"Elektrik sobası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Televizyon\", \"text\": \"Televizyon\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Elektrik direklerinde kablolardaki elektriğin yalıtılması için aşağıdaki maddelerden hangisi kullanılmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Krom\", \"text\": \"Krom\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Cam\", \"text\": \"Cam\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Porselen\", \"text\": \"Porselen\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Plastik\", \"text\": \"Plastik\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Elektrik direklerinde ucuz ve hafif olması nedeni ile kullanılan metal aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Alümüniyum\", \"text\": \"Alümüniyum\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Bakır\", \"text\": \"Bakır\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gümüş\", \"text\": \"Gümüş\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Krom\", \"text\": \"Krom\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest20Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"İletken maddelerin elektriği iletmeleri aynı değildir. Aşağıdaki maddelerden hangisinin elektrik iletkenliği daha fazladır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bakır\", \"text\": \"Bakır\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kalem ucu\", \"text\": \"Kalem ucu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Plastik\", \"text\": \"Plastik\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Saf su\", \"text\": \"Saf su\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Elektrik iletimi ile ilgili olarak aşağıdaki verilen cümlelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Gazlar da iletken hale geçebilir.\", \"text\": \"Gazlar da iletken hale geçebilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yalıtkan maddeler her zaman yalıtkanlık özelliği göstermez.\", \"text\": \"Yalıtkan maddeler her zaman yalıtkanlık özelliği göstermez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İletken maddeler elektrik iletiminde gereklidir, yalıtkan maddelere ise gerek yoktur.\", \"text\": \"İletken maddeler elektrik iletiminde gereklidir, yalıtkan maddelere ise gerek yoktur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yıldırım ve şimşek gazların da iletken olabileceğini gösterir.\", \"text\": \"Yıldırım ve şimşek gazların da iletken olabileceğini gösterir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Elektik çarpan bir kişiye aşağıdakilerden hangisi yapılmamalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sigortaları kapatmak.\", \"text\": \"Sigortaları kapatmak.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektriğin çarptığı kişiyi elinden tutarak çekmek\", \"text\": \"Elektriğin çarptığı kişiyi elinden tutarak çekmek\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Giysi gibi yalıtkan yerlerinden tutarak çekmek\", \"text\": \"Giysi gibi yalıtkan yerlerinden tutarak çekmek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yetkili kişilere haber vermek\", \"text\": \"Yetkili kişilere haber vermek\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki elektrik devresinde ampulün yanması için kabloların ucuna aşağıdakilerden hangisi yerleştirilebilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Metal anahtar\", \"text\": \"Metal anahtar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kağıt\", \"text\": \"Kağıt\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cam\", \"text\": \"Porselen\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Plastik\", \"text\": \"Plastik\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki davranışlardan hangisi elektrik kazalarına sebep olabilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bir prize birden fazla fiş takmak.\", \"text\": \"Bir prize birden fazla fiş takmak.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kullanılan elektrikli araçların TSE belgeli olması\", \"text\": \"Kullanılan elektrikli araçların TSE belgeli olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yıpranmış fiş ve kablo kullanmamak.\", \"text\": \"Yıpranmış fiş ve kablo kullanmamak.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektrikli araçları banyoda kullanmamak.\", \"text\": \"Elektrikli araçları banyoda kullanmamak.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest21Grade6()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Bir maddenin elektrik enerjisinin iletimine karşı gösterdiği zorluğa ............... denir? Yukarıdaki cümle aşağıdaki kelimelerden hangisi ile doldurulmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Akım\", \"text\": \"Akım\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Direnç\", \"text\": \"Direnç\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Zorluk\", \"text\": \"Zorluk\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ohm\", \"text\": \"Ohm\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Direnç aşağıdaki araçlardan hangisi ile ölçülür?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ohmmetre\", \"text\": \"Ohmmetre\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ampermetre\", \"text\": \"Ampermetre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Metre\", \"text\": \"Metre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Voltmetre\", \"text\": \"Voltmetre\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Akkor filamanlı ampulün içerisinde bulunan telin direncinin fazla olması istenmektedir. Aşağıdakilerden hangisinin yapılması filamanın direncini artırmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Telin uzun yapılması\", \"text\": \"Telin uzun yapılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Telin ince yapılması\", \"text\": \"Telin ince yapılması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Telin kalın yapılması\", \"text\": \"Telin kalın yapılması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Telin tungstenden yapılması\", \"text\": \"Telin tungstenden yapılması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Ayarlanabilen dirençlere reosta denir. Aşağıdaki yerlerden hangisinde reosta kullanılmamıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Reostalı lamba\", \"text\": \"Reostalı lamba\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ses açma düğmesi\", \"text\": \"Ses açma düğmesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fırın\", \"text\": \"Fırın\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"El feneri\", \"text\": \"El feneri\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki cümlelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bütün elektrikli araçların direnci vardır.\", \"text\": \"Bütün elektrikli araçların direnci vardır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Basit elektrik devresinde elektrik direnci arttıkça ampul parlaklığı azalır.\", \"text\": \"Basit elektrik devresinde elektrik direnci arttıkça ampul parlaklığı azalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Telin kesiti azaltılınca direnç artar.\", \"text\": \"Telin kesiti azaltılınca direnç artar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Direnç, iletkenin boyu ile ters orantılıdır.\", \"text\": \"Direnç, iletkenin boyu ile ters orantılıdır.\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
     public ResponseEntity<Object> getTest1Grade7()
     {
         String jsonString = "[" +
