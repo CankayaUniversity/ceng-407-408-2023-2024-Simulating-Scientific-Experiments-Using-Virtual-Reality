@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    android:padding="16dp"
+    tools:context=".ui.quizUi.QuestionsFragment">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:padding="8dp"
+        android:text=""
+        android:textAlignment="center" />
+
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_indicator"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:progress="4"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:alignmentMode="alignMargins"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option_a"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:background="@drawable/text_border"
+            android:layout_margin="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option_b"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:background="@drawable/text_border"
+            android:layout_margin="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option_c"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_weight="1"
+            android:background="@drawable/text_border"
+            android:layout_margin="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option_d"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:background="@drawable/text_border"
+            android:layout_weight="1"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Continue"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginTop="5dp"
+        app:icon="@drawable/baseline_arrow_forward_24"
+        app:iconPadding="8dp"
+        app:elevation="8dp"
+        android:fontFamily="sans-serif-medium"
+        app:backgroundTint="#673AB7"
+        app:rippleColor="#AAFFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>
