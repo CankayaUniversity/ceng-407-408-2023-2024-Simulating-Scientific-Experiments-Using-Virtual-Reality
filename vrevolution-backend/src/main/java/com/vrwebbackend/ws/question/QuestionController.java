@@ -67,6 +67,78 @@ public class QuestionController
         return questionService.getTest9Grade5();
     }
 
+    @GetMapping("/test10grade5")
+    public ResponseEntity<Object> getTest10Grade5()
+    {
+        return questionService.getTest10Grade5();
+    }
+
+    @GetMapping("/test11grade5")
+    public ResponseEntity<Object> getTest11Grade5()
+    {
+        return questionService.getTest11Grade5();
+    }
+
+    @GetMapping("/test12grade5")
+    public ResponseEntity<Object> getTest12Grade5()
+    {
+        return questionService.getTest12Grade5();
+    }
+
+    @GetMapping("/test13grade5")
+    public ResponseEntity<Object> getTest13Grade5()
+    {
+        return questionService.getTest13Grade5();
+    }
+
+    @GetMapping("/test14grade5")
+    public ResponseEntity<Object> getTest14Grade5()
+    {
+        return questionService.getTest14Grade5();
+    }
+
+    @GetMapping("/test15grade5")
+    public ResponseEntity<Object> getTest15Grade5()
+    {
+        return questionService.getTest15Grade5();
+    }
+
+    @GetMapping("/test16grade5")
+    public ResponseEntity<Object> getTest16Grade5()
+    {
+        return questionService.getTest16Grade5();
+    }
+
+    @GetMapping("/test17grade5")
+    public ResponseEntity<Object> getTest17Grade5()
+    {
+        return questionService.getTest17Grade5();
+    }
+
+    @GetMapping("/test18grade5")
+    public ResponseEntity<Object> getTest18Grade5()
+    {
+        return questionService.getTest18Grade5();
+    }
+
+    @GetMapping("/test19grade5")
+    public ResponseEntity<Object> getTest19Grade5()
+    {
+        return questionService.getTest19Grade5();
+    }
+
+    @GetMapping("/test20grade5")
+    public ResponseEntity<Object> getTest20Grade5()
+    {
+        return questionService.getTest20Grade5();
+    }
+
+    @GetMapping("/test21grade5")
+    public ResponseEntity<Object> getTest21Grade5()
+    {
+        return questionService.getTest21Grade5();
+    }
+
     @GetMapping("/test1grade6")
     public ResponseEntity<Object> getTest1Grade6()
     {

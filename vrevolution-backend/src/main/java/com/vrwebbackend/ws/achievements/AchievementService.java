@@ -60,6 +60,76 @@ public class AchievementService
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
 
+    public ResponseEntity<Object> getUnit4Grade5Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Melting, freezing, boiling, condensation, evaporation, sublimation, frost\", " +
+                "\"topic1Achievement1\": \"She makes inferences based on the data obtained from her experiments regarding the fact that substances can change state under the influence of heat.\", " +
+                "\"topic1Achievement2\": \"The basic difference between evaporation and boiling is explained by stating that liquids evaporate at all temperatures but boil at a certain temperature.\", " +
+                "\"topic2\": \"Melting and freezing point, boiling point\", " +
+                "\"topic2Achievement1\": \"As a result of her experiments, she determines the melting, freezing and boiling points of pure substances.\", " +
+                "\"topic2Achievement2\": \"It is emphasized that melting, freezing and boiling points are distinguishing features.\", " +
+                "\"topic3\": \"Heat, temperature, heat exchange\", " +
+                "\"topic3Achievement1\": \"Explain the basic differences between heat and temperature.\", " +
+                "\"topic3Achievement2\": \"Conducts experiments on heat exchange as a result of mixing liquids with different temperatures and interprets the results.\", " +
+                "\"topic4\": \"Expansion, contraction\", " +
+                "\"topic4Achievement1\": \"He conducts experiments on the expansion and contraction of substances under the influence of heat and discusses the results of the experiments.\", " +
+                "\"topic4Achievement2\": \"Relates examples from daily life to expansion and contraction events\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit5Grade5Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Propagation of light\", " +
+                "\"topic1Achievement1\": \"It shows by observing and drawing that the light coming from a source follows a linear path in all directions.\", " +
+                "\"topic2\": \"Uniform reflection, diffuse reflection, incident ray, reflected ray, surface normal\", " +
+                "\"topic2Achievement1\": \"Observes the reflections of light on smooth and rough surfaces and shows them with drawings.\", " +
+                "\"topic2Achievement2\": \"It explains the relationship between the incident ray, the reflected ray and the normal to the surface in the reflection of light.\", " +
+                "\"topic3\": \"Transparent materials, translucent materials, non-transparent materials\", " +
+                "\"topic3Achievement1\": \"Classifies substances according to their ability to transmit light.\", " +
+                "\"topic4\": \"Umbra, variables affecting umbra\", " +
+                "\"topic4Achievement1\": \"Observes how the shadow is formed and shows it with simple ray drawings.\", " +
+                "\"topic4Achievement2\": \"He discovers by experimenting what variables affect the shadow.\", " +
+                "\"topic4Achievement3\": \"Shadow plays are mentioned.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit6Grade5Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Biodiversity\", " +
+                "\"topic1Achievement1\": \"Questions the importance of biodiversity for natural life.\", " +
+                "\"topic1Achievement2\": \"Discusses the factors that threaten biodiversity based on research data\", " +
+                "\"topic2\": \"Human and Environment Relationship\", " +
+                "\"topic2Achievement1\": \"The negative effects of environmental pollution on people's health are addressed.\", " +
+                "\"topic2Achievement2\": \"It offers suggestions for solving an environmental problem in its immediate surroundings or in our country.\", " +
+                "\"topic2Achievement3\": \"Discusses the benefits and harms in human-environment interaction using examples.\", " +
+                "\"topic3\": \"Catastrophic Natural Events\", " +
+                "\"topic3Achievement1\": \"Explains destructive natural events caused by natural processes.\", " +
+                "\"topic3Achievement2\": \"Earthquakes, volcanic eruptions, floods, landslides and hurricanes are mentioned without going into detail.\", " +
+                "\"topic3Achievement3\": \"It refers to ways of protection from destructive natural events.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit7Grade5Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Symbols of circuit elements, circuit diagrams\", " +
+                "\"topic1Achievement1\": \"It shows the elements in an electrical circuit with their symbols.\", " +
+                "\"topic1Achievement2\": \"The importance of circuit symbols in terms of common scientific language is stated.\", " +
+                "\"topic1Achievement3\": \"Creates a diagram of the electrical circuit he has drawn\", " +
+                "\"topic2\": \"Number of batteries, number of lamps\", " +
+                "\"topic2Achievement1\": \"Dependent, independent and controlled variable concept groups are explained with examples.\", " +
+                "\"topic2Achievement2\": \"The number of batteries and the number of bulbs are taken into account as independent variables.\", " +
+                "\"topic2Achievement3\": \"Parallel connection is not allowed.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
     public ResponseEntity<Object> getUnit1Grade6Achievement()
     {
         String jsonString = "{\"topic1\": \"Compares the planets in the solar system with each other.\", " +
