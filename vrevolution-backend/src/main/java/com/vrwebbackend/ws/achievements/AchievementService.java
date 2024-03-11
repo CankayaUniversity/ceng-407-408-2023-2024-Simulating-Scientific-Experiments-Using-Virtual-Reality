@@ -276,4 +276,109 @@ public class AchievementService
         Object jsonObject = gson.fromJson(jsonString, Object.class);
         return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
     }
+
+    public ResponseEntity<Object> getUnit2Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Cell\", " +
+                "\"topic1Achievement1\": \"Compares animal and plant cells in terms of their basic parts and functions.\", " +
+                "\"topic1Achievement2\": \"Discusses views on the structure of the cell from past to present, relating them to technological developments.\", " +
+                "\"topic1Achievement3\": \"Explains the cell-tissue-organ-system-organism relationship.\", " +
+                "\"topic2\": \"Mitosis\", " +
+                "\"topic2Achievement1\": \"Explain the importance of mitosis for living things.\", " +
+                "\"topic2Achievement2\": \"Explains that mitosis consists of different stages that follow each other.\", " +
+                "\"topic3\": \"Meiosis\", " +
+                "\"topic3Achievement1\": \"Explain the importance of meiosis for living things.\", " +
+                "\"topic3Achievement2\": \"It shows on the model how meiosis occurs in reproductive mother cells.\", " +
+                "\"topic3Achievement3\": \"Compares the differences between meiosis and mitosis.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit3Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Mass and Weight Relationship\", " +
+                "\"topic1Achievement1\": \"He calls the gravitational force acting on the mass as weight.\", " +
+                "\"topic1Achievement2\": \"Compares the concepts of mass and weight.\", " +
+                "\"topic1Achievement3\": \"Explains gravity as gravity on the basis of celestial bodies.\", " +
+                "\"topic2\": \"Relationship between Force, Work and Energy\", " +
+                "\"topic2Achievement1\": \"It explains that the work done physically is related to the force applied and the distance taken.\", " +
+                "\"topic2Achievement2\": \"It relates energy to the concept of work and classifies it as kinetic and potential energy.\", " +
+                "\"topic2Achievement3\": \"It is stated that potential energy depends on mass and height, and kinetic energy depends on mass and speed.\", " +
+                "\"topic3\": \"Energy Transformations\", " +
+                "\"topic3Achievement1\": \"Based on the transformation of kinetic and potential energy types into each other, it is concluded that energy is conserved.\", " +
+                "\"topic3Achievement2\": \"Explain the effect of friction force on kinetic energy with examples.\", " +
+                "\"topic3Achievement3\": \"The impact of air or water resistance on the design of different vehicles is addressed.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit4Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Particulate Structure of Matter\", " +
+                "\"topic1Achievement1\": \"It tells the structure of the atom and the fundamental particles in its structure.\", " +
+                "\"topic1Achievement2\": \"Questions how ideas about the concept of atom have changed from past to present.\", " +
+                "\"topic1Achievement3\": \"It indicates that the same or different atoms will come together to form a molecule.\", " +
+                "\"topic2\": \"Pure Substances\", " +
+                "\"topic2Achievement1\": \"Element, symbols of elements, compound, compound formulas\", " +
+                "\"topic2Achievement2\": \"Classifies pure substances as elements and compounds and gives examples.\", " +
+                "\"topic2Achievement3\": \"It expresses the names, symbols and some uses of the first 18 elements in the periodic system and common elements (gold, silver, copper, zinc, lead, mercury, platinum, iron and iodine).\", " +
+                "\"topic3\": \"Mixes\", " +
+                "\"topic3Achievement1\": \"Gives examples by classifying mixtures as homogeneous and heterogeneous.\", " +
+                "\"topic3Achievement2\": \"Prepares solutions using solvents and solutes encountered in daily life.\", " +
+                "\"topic3Achievement3\": \"Determines the factors affecting the dissolution rate by experimenting.\", " +
+                "\"topic4\": \"Domestic Waste and Recycling\", " +
+                "\"topic4Achievement1\": \"Distinguishes between recyclable and non-recyclable materials in household waste.\", " +
+                "\"topic4Achievement2\": \"Questions recycling in terms of effective use of resources.\", " +
+                "\"topic4Achievement3\": \"It pays attention to waste control in its immediate surroundings.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit5Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Absorption of Light\", " +
+                "\"topic1Achievement1\": \"He discovers that light can be absorbed by matter as a result of its interaction with matter.\", " +
+                "\"topic1Achievement2\": \"He concludes that white light consists of the combination of all light colors.\", " +
+                "\"topic1Achievement3\": \"It gives examples of innovative applications of solar energy in daily life and technology.\", " +
+                "\"topic2\": \"Mirrors\", " +
+                "\"topic2Achievement1\": \"Observes the types of mirrors and gives examples of their usage areas.\", " +
+                "\"topic2Achievement2\": \"Compares the images formed in flat, concave and convex mirrors.\", " +
+                "\"topic2Achievement3\": \"It is stated that the characteristics of the image of the object in the concave mirror (large / small, inverted / flat) may change depending on the distance of the object from the mirror.\", " +
+                "\"topic3\": \"Refraction of Light and Lenses\", " +
+                "\"topic3Achievement1\": \"By observing the path of light that changes the medium, it associates the cause of the refraction with the change in medium.\", " +
+                "\"topic3Achievement2\": \"Observes the refraction of light experimentally using thin and thick lenses.\", " +
+                "\"topic3Achievement3\": \"Determines the focal points of thin and thick lenses by experimenting.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit6Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"Reproduction, Growth and Development in Humans\", " +
+                "\"topic1Achievement1\": \"Explains the structures and organs that enable human reproduction by showing them on a diagram.\", " +
+                "\"topic1Achievement2\": \"Explains the relationship between sperm, egg, zygote, embryo, fetus and baby.\", " +
+                "\"topic1Achievement3\": \"It discusses the precautions that must be taken for the healthy development of the embryo, based on research data.\", " +
+                "\"topic2\": \"Reproduction, Growth and Development in Plants and Animals\", " +
+                "\"topic2Achievement1\": \"Compares the types of reproduction in plants and animals.\", " +
+                "\"topic2Achievement2\": \"Explains the growth and development processes in plants and animals by giving examples.\", " +
+                "\"topic2Achievement3\": \"Explains the basic factors affecting growth and development in plants and animals.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getUnit7Grade7Achievement()
+    {
+        String jsonString = "{\"topic1\": \"How to Connect Bulbs\", " +
+                "\"topic1Achievement1\": \"Discovers how serial and parallel connection works, and draws a circuit diagram consisting of series and parallel connected bulbs.\", " +
+                "\"topic1Achievement2\": \"Electrical energy sources provide electrical current to electrical circuits and knows that electric current is a type of energy transfer.\", " +
+                "\"topic1Achievement3\": \"He associates the reason for the difference in brightness when bulbs are connected in series and parallel with electrical resistance.\"}";
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
 }

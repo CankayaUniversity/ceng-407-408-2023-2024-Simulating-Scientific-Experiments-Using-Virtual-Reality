@@ -282,4 +282,112 @@ public class QuestionController
     {
         return questionService.getTest3Grade7();
     }
+
+    @GetMapping("/test4grade7")
+    public ResponseEntity<Object> getTest4Grade7()
+    {
+        return questionService.getTest4Grade7();
+    }
+
+    @GetMapping("/test5grade7")
+    public ResponseEntity<Object> getTest5Grade7()
+    {
+        return questionService.getTest5Grade7();
+    }
+
+    @GetMapping("/test6grade7")
+    public ResponseEntity<Object> getTest6Grade7()
+    {
+        return questionService.getTest6Grade7();
+    }
+
+    @GetMapping("/test7grade7")
+    public ResponseEntity<Object> getTest7Grade7()
+    {
+        return questionService.getTest7Grade7();
+    }
+
+    @GetMapping("/test8grade7")
+    public ResponseEntity<Object> getTest8Grade7()
+    {
+        return questionService.getTest8Grade7();
+    }
+
+    @GetMapping("/test9grade7")
+    public ResponseEntity<Object> getTest9Grade7()
+    {
+        return questionService.getTest9Grade7();
+    }
+
+    @GetMapping("/test10grade7")
+    public ResponseEntity<Object> getTest10Grade7()
+    {
+        return questionService.getTest10Grade7();
+    }
+
+    @GetMapping("/test11grade7")
+    public ResponseEntity<Object> getTest11Grade7()
+    {
+        return questionService.getTest11Grade7();
+    }
+
+    @GetMapping("/test12grade7")
+    public ResponseEntity<Object> getTest12Grade7()
+    {
+        return questionService.getTest12Grade7();
+    }
+
+    @GetMapping("/test13grade7")
+    public ResponseEntity<Object> getTest13Grade7()
+    {
+        return questionService.getTest13Grade7();
+    }
+
+    @GetMapping("/test14grade7")
+    public ResponseEntity<Object> getTest14Grade7()
+    {
+        return questionService.getTest14Grade7();
+    }
+
+    @GetMapping("/test15grade7")
+    public ResponseEntity<Object> getTest15Grade7()
+    {
+        return questionService.getTest15Grade7();
+    }
+
+    @GetMapping("/test16grade7")
+    public ResponseEntity<Object> getTest16Grade7()
+    {
+        return questionService.getTest16Grade7();
+    }
+
+    @GetMapping("/test17grade7")
+    public ResponseEntity<Object> getTest17Grade7()
+    {
+        return questionService.getTest17Grade7();
+    }
+
+    @GetMapping("/test18grade7")
+    public ResponseEntity<Object> getTest18Grade7()
+    {
+        return questionService.getTest18Grade7();
+    }
+
+    @GetMapping("/test19grade7")
+    public ResponseEntity<Object> getTest19Grade7()
+    {
+        return questionService.getTest19Grade7();
+    }
+
+    @GetMapping("/test20grade7")
+    public ResponseEntity<Object> getTest20Grade7()
+    {
+        return questionService.getTest20Grade7();
+    }
+
+    @GetMapping("/test21grade7")
+    public ResponseEntity<Object> getTest21Grade7()
+    {
+        return questionService.getTest21Grade7();
+    }
 }

@@ -2692,12 +2692,1080 @@ public class QuestionService
                 "}," +
                 "{" +
                 "\"index\": 5," +
-                "\"text\": \"Soru 15: Uzay teleskobunun uzayda bulunma sebebi nedir?\"," +
+                "\"text\": \"Uzay teleskobunun uzayda bulunma sebebi nedir?\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"Işık kirliğinden etkilenmemesi\", \"text\": \"Işık kirliğinden etkilenmemesi\", \"isCorrect\": true }," +
                 "{ \"option_id\": \"Yer çekimsiz ortamda bulunması\", \"text\": \"Yer çekimsiz ortamda bulunması\", \"isCorrect\": false }," +
                 "{ \"option_id\": \"Kontrol edilmesinin kolay olması\", \"text\": \"Kontrol edilmesinin kolay olması\", \"isCorrect\": false }," +
                 "{ \"option_id\": \"Astronotların kolaylıkla ulaşabilmesi\", \"text\": \"Astronotların kolaylıkla ulaşabilmesi\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest4Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Hücrenin temel kısımlarının içten dışa doğru sıralaması hangi seçenekte doğru verilmiştir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hücre zarı - sitoplazma - çekirdek\", \"text\": \"Hücre zarı - sitoplazma - çekirdek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hücre zarı - çekirdek - sitoplazma\", \"text\": \"Hücre zarı - çekirdek - sitoplazma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çekirdek - sitoplazma - hücre zarı\", \"text\": \"Çekirdek - sitoplazma - hücre zarı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sitoplazma - çekirdek - hücre zarı\", \"text\": \"Sitoplazma - çekirdek - hücre zarı\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Hangi seçenekte verilen organellerden hangisi hem insanda, hem de menekşe bitkisinin hücrelerinde görülür?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kloroplast\", \"text\": \"Kloroplast\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sentrozom\", \"text\": \"Sentrozom\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ribozom\", \"text\": \"Ribozom\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Lizozom\", \"text\": \"Lizozom\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi hücrenin temel kısımlarından biri değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hücre zarı\", \"text\": \"Hücre zarı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hücre duvarı\", \"text\": \"Hüvre duvarı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Çekirdek\", \"text\": \"Çekirdek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sitoplazma\", \"text\": \"Sitoplazma\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Canlıların canlılık özelliği gösteren en küçük yapı birimine ne denir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sitoplazma\", \"text\": \"Sitoplazma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Doku\", \"text\": \"Doku\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Organizma\", \"text\": \"Organizma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hücre\", \"text\": \"Hücre\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Hücreye şekil veren ve seçici geçirgen olan hücrenin hangi kısmıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Endoplazmik retikulum\", \"text\": \"Endoplazmik retikulum\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hücre duvarı\", \"text\": \"Hücre duvarı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hücre zarı\", \"text\": \"Hücre zarı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Çekirdek\", \"text\": \"Çekirdek\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest5Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki hücrelerden hangileri mitoz bölünme geçiremez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Deri hücresi\", \"text\": \"Deri hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sinir hücresi\", \"text\": \"Sinir hücresi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Karaciğer hücresi\", \"text\": \"Karaciğer hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Amip hücresi\", \"text\": \"Amip hücresi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıda verilen özelliklerden hangisi mitoz bölünmeye ait değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kromozom sayısı değişmez.\", \"text\": \"Kromozom sayısı değişmez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Oluşan hücreler ana hücre ile benzer özellikler gösterir.\", \"text\": \"Oluşan hücreler ana hücre ile benzer özellikler gösterir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mitoz bölünme geçiren hücre bir daha bölünemez.\", \"text\": \"Mitoz bölünme geçiren hücre bir daha bölünemez.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mitoz bölünme tek hücreli canlılarda üremeyi sağlar.\", \"text\": \"Mitoz bölünme tek hücreli canlılarda üremeyi sağlar.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Bir hücre ardı ardına 4 mitoz bölünme geçirirse kaç hücre oluşur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"2\", \"text\": \"2\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"4\", \"text\": \"4\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"8\", \"text\": \"8\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"16\", \"text\": \"16\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"İnsan vücut hücrelerinin kromozom sayısı 46'dır. Vücut hücrelerinden biri, iki defa mitoz bölünme geçirdiğinde her bir hücrenin kromozom sayısı kaç olur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"2\", \"text\": \"2\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"4\", \"text\": \"4\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"23\", \"text\": \"23\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"46\", \"text\": \"46\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki olaylardan hangisi mitoz bölünmeyle gerçekleşmez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Fasulye tohumlarının çimlenmesi\", \"text\": \"Fasulye tohumlarının çimlenmesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Civcivin tavuk olması\", \"text\": \"Civcivin tavuk olması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Amip canlısının büyümesi\", \"text\": \"Amip canlısının büyümesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"İnsanın büyümesi\", \"text\": \"İnsanın büyümesi\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest6Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki hücrelerden hangisi mayoz bölünme ile oluşur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Deri hücresi\", \"text\": \"Deri hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kas hücresi\", \"text\": \"Kas hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Epitel hücresi\", \"text\": \"Epitel hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yumurta hücresi\", \"text\": \"Yumurta hücresi\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki hücrelerden hangisi mayoz bölünme geçirebilir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yumurta hücresi\", \"text\": \"Yumurta hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sperm ana hücresi\", \"text\": \"Sperm ana hücresi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yaprak hücresi\", \"text\": \"Yaprak hücresi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Polen hücresi\", \"text\": \"Polen hücresi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi mayoz bölünme sonucu oluşur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Zigot\", \"text\": \"Zigot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Embriyo\", \"text\": \"Embriyo\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sperm\", \"text\": \"Sperm\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sperm ana hücresi\", \"text\": \"Sperm ana hücresi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"2n = 500 kromozomlu bir hücrenin mayoz bölünme sonucu aşağıdakilerden hangisi meydana gelir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"n = 250 kromozomlu 4 hücre\", \"text\": \"n = 250 kromozomlu 4 hücre\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"2n = 250 kromozomlu 4 hücre\", \"text\": \"2n = 250 kromozomlu 4 hücre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"n = 500 kromozomlu 4 hücre\", \"text\": \"n = 500 kromozomlu 4 hücre\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"n = 250 kromozomlu 2 hücre\", \"text\": \"n = 250 kromozomlu 2 hücre\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Mayoz bölünme ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Mayoz bölünme sonucu üreme hücreleri oluşur.\", \"text\": \"Mayoz bölünme sonucu üreme hücreleri oluşur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mayoz bölünme tek hücreli canlılarda üremeyi sağlar\", \"text\": \"Mayoz bölünme tek hücreli canlılarda üremeyi sağlar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mayoz bölünme canlının belirli yaşam dönemlerinde görülür.\", \"text\": \"Mayoz bölünme canlının belirli yaşam dönemlerinde görülür.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mayoz bölünme eşeyli üremenin temelini oluşturur.\", \"text\": \"Mayoz bölünme eşeyli üremenin temelini oluşturur.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest7Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Dünya'da kütlesi 2 kg olan bir cismin ağırlığı nedir? (Yer çekim kuvveti 10 N alınacaktır.)\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"2N\", \"text\": \"2N\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"10N\", \"text\": \"10N\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"20N\", \"text\": \"20N\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"200N\", \"text\": \"200N\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Kütle ve ağırlık hakkında verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kütle değişmeyen madde miktarıdır.\", \"text\": \"Kütle değişmeyen madde miktarıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütle uzayda değişmez.\", \"text\": \"Kütle uzayda değişmez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ağırlık gezegenin büyüklüğüne göre değişir.\", \"text\": \"Ağırlık gezegenin büyüklüğüne göre değişir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cisimlerin kütlesi arttıkça ağırlığı azalır.\", \"text\": \"Cisimlerin kütlesi arttıkça ağırlığı azalır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Kutuplardan ekvatora götürülen bir cismin kütlesi ve ağırlığı nasıl değişir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kütle Değişmez, ağırlık artar\", \"text\": \"Kütle değişmez, ağırlık artar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütle değişmez, ağırlık azalır\", \"text\": \"Kütle değişmez, ağırlık azalır\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kütle artar, ağırlık değişmez\", \"text\": \"Kütle artar, ağırlık değişmez\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kütle azalır, ağırlık değişmez\", \"text\": \"Kütle azalır, ağırlık değişmez\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisi kütle birimi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kilogram\", \"text\": \"Kilogram\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gram\", \"text\": \"Gram\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Newton\", \"text\": \"Newton\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ton\", \"text\": \"Ton\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Dünya'da bulunan bir cismin ağırlığını aşağıdakilerden hangisi etkilemez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kütlesi\", \"text\": \"Kütlesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dünya'nın kütle çekim kuvveti\", \"text\": \"Dünya'nın kütle çekim kuvveti\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin deniz seviyesinde yüksekliği\", \"text\": \"Cismin deniz seviyesinde yüksekliği\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cismin hacmi\", \"text\": \"Cismin hacmi\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest8Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki olaylardan hangisinde fiziksel anlamda iş yapılmamıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Merdivenden çıkan insan\", \"text\": \"Merdivenden çıkan insan\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Halter kaldıran sporcu\", \"text\": \"Halter kaldıran sporcu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çatıdan düşen kiremit\", \"text\": \"Çatıdan düşen kiremit\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elinde çanta durakta bekleyen öğrenci\", \"text\": \"Elinde çanta durakta bekleyen öğrenci\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"İş ile ilgili olarak aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kuvvet her zaman iş yapılmasına neden olur.\", \"text\": \"Kuvvet her zaman iş yapılmasına neden olur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"İş yapılabilmesi için cismin kuvvet yönünde hareket etmesi gerekir.\", \"text\": \"İş yapılabilmesi için cismin kuvvet yönünde hareket etmesi gerekir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Cisme uygulanan kuvvet arttıkça yapılan işte artar.\", \"text\": \"Cisme uygulanan kuvvet arttıkça yapılan işte artar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yapılan iş alınan yolla doğru orantılıdır.\", \"text\": \"Yapılan iş alınan yolla doğru orantılıdır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdaki durumların hangisinde iş yapılmıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Duvara 100 Newton uygulayan çocuk\", \"text\": \"Duvara 100 Newton uygulayan çocuk\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Düz yolda elindeki çantayı sallamadan giden kişi\", \"text\": \"Düz yolda elindeki çantayı sallamadan giden kişi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Düz yolda bisiklet süren kişi\", \"text\": \"Düz yolda bisiklet süren kişi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kitap okuyan kişi\", \"text\": \"Kitap okuyan kişi\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki durumların hangisinde iş yapılmamıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Dağa tırmanan dağcı\", \"text\": \"Dağa tırmanan dağcı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Halteri yukarıda tutan sporcu\", \"text\": \"Halteri yukarıda tutan sporcu\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yerdeki kitapları kitaplığa yerleştiren anne\", \"text\": \"Yerdeki kitapları kitaplığa yerleştiren anne\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Arabayı iterek çalıştıran kişiler\", \"text\": \"Arabayı iterek çalıştıran kişiler\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdakilerden hangisinde yer çekimine karşı iş yapılmıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Düz yolda sabit süratle giden bisikletli\", \"text\": \"Düz yolda sabit süratle giden bisikletli\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sıkıştırılan yay\", \"text\": \"Sıkıştırılan yay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sırtındaki çanta ile merdiven çıkan öğrenci\", \"text\": \"Sırtındaki çanta ile merdiven çıkan öğrenci\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Daldan düşen elma\", \"text\": \"Daldan düşen elma\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest9Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Soru 1: Kaydıraktan kayan bir çocuk için aşağıdaki enerji dönüşümlerinden hangisi vardır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Potansiyel enerji - Kinetik enerji\", \"text\": \"Potansiyel enerji - Kinetik enerji\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kinetik enerji - Potansiyel enerji\", \"text\": \"Kinetik enerji - Potansiyel enerji\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kinetik enerji - Esneklik potansiyel enerji\", \"text\": \"Kinetik enerji - Esneklik potansiyel enerji\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hareket enerjisi - Potansiyel enerji\", \"text\": \"Hareket enerjisi - Potansiyel enerji\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki enerji dönüşümlerinden hangisi diğerlerinden farklıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yaydaki okun fırlaması\", \"text\": \"Yaydaki okun fırlaması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fare kapanının fare yakalaması\", \"text\": \"Fare kapanının fare yakalaması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kurmalı saatin zilinin çalması\", \"text\": \"Kurmalı saatin zilinin çalması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Duvarın yıkılması\", \"text\": \"Duvarın yıkılması\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisinin sahip olduğu enerji diğerlerinden farklıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Barajda duran su\", \"text\": \"Barajda duran su\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Masada duran bardak\", \"text\": \"Masada duran bardak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Havadaki uçak\", \"text\": \"Havadaki uçak\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Dalda duran elma\", \"text\": \"Dalda duran elma\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisinin sahip olduğu enerji diğerlerinden farklıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sıkıştırılmış yay\", \"text\": \"Sıkıştırılmış yay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Şelaleden akan su\", \"text\": \"Şelaleden akan su\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gerilmiş yay\", \"text\": \"Gerilmiş yay\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kuvvet uygulanmış dinamometre\", \"text\": \"Kuvvet uygulanmış dinamometre\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki cisimlerden hangisinde sadece çekim potansiyel enerjiye sahiptir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Hızla giden otomobil\", \"text\": \"Hızla giden otomobil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Havada uçan kuş\", \"text\": \"Havada uçan kuş\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dağlarındaki kar\", \"text\": \"Dağlarındaki kar\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Gerilmiş sapan lastiği\", \"text\": \"Gerilmiş sapan lastiği\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest10Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Maddeyi oluşturan en küçük yapı birimine .................... denir. Yukarıdaki boşluğa aşağıdakilerden hangisi yazılmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Molekül\", \"text\": \"Molekül\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atom\", \"text\": \"Atom\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Çekirdek\", \"text\": \"Çekirdek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Proton\", \"text\": \"Proton\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki parçacıklardan hangisi atomun hacmini oluşturur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Elektron\", \"text\": \"Elektron\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Proton\", \"text\": \"Proton\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çekirdek\", \"text\": \"Çekirdek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Nötron\", \"text\": \"Nötron\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Atomla ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Proton ve nötron atomun çekirdeğinde bulunur.\", \"text\": \"Proton ve nötron atomun çekirdeğinde bulunur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektronlar çekirdek çevresinde çok hızlı hareket eder.\", \"text\": \"Elektronlar çekirdek çevresinde çok hızlı hareket eder.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atomun kimliğini belirleyen parçacık elektrondur.\", \"text\": \"Atomun kimliğini belirleyen parçacık elektrondur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Nötronlar yüksüz parçacıklardır.\", \"text\": \"Nötronlar yüksüz parçacıklardır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Atom hakkında ilk bilimsel görüşü ortaya atan bilim insanı aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Democritus\", \"text\": \"Democritus\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dalton\", \"text\": \"Dalton\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Bohr\", \"text\": \"Bohr\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Thomson\", \"text\": \"Thomson\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Proton sayısı ve elektron sayısına eşit atomlara aşağıdakilerden hangisi denir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"İyon\", \"text\": \"İyon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Katyon\", \"text\": \"Katyon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Anyon\", \"text\": \"Anyon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Nötr atom\", \"text\": \"Nötr atom\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest11Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi saf maddelerin özelliklerinden birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"İçerisinde başka tür tanecik bulunmaz.\", \"text\": \"İçerisinde başka tür tanecik bulunmaz.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Homojendir.\", \"text\": \"Homojendir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tek cins atom içerir.\", \"text\": \"Tek cins atom içerir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yoğunlukları sabittir.\", \"text\": \"Yoğunlukları sabittir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıda verilen element sembollerinden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Bakır - Cu\", \"text\": \"Bakır - Cu\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Altın - Au\", \"text\": \"Altın - Au\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Demir - Fe\", \"text\": \"Demir - Fe\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fosfor - S\", \"text\": \"Fosfor - S\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıda verilen elementlerin sembolleri alfabetik olarak sıralandıklarında son sırada hangisi bulunur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Azot\", \"text\": \"Azot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Neon\", \"text\": \"Neon\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sodyum\", \"text\": \"Sodyum\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Karbon\", \"text\": \"Karbon\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"İnsan vücudunda en fazla bulunan element hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Azot\", \"text\": \"Azot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Oksijen\", \"text\": \"Oksijen\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Karbon\", \"text\": \"Karbon\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kükürt\", \"text\": \"Kükürt\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Elementlerin isimlendirilmesinde ilk harf kullanılmış ise ikinci harf küçük olarak yazılır. Aşağıdaki elementlerden hangisi iki harflidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Azot\", \"text\": \"Azot\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bor\", \"text\": \"Bor\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kükürt\", \"text\": \"Kükürt\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Klor\", \"text\": \"Klor\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest12Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki evsel atıklardan hangisi geri dönüştürülemez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Plastik şişeler\", \"text\": \"Plastik şişeler\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kullanılmış kitaplar\", \"text\": \"Kullanılmış kitaplar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yemek artıkları\", \"text\": \"Yemek artıkları\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Cam şişeler\", \"text\": \"Cam şişeler\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Okulda geri dönüşüm projesi başlatan öğrenciler, aşağıdakilerden hangisini geri dönüşüm kutusuna atmamalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Pil\", \"text\": \"Pil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kağıt\", \"text\": \"Kağıt\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Metal\", \"text\": \"Metal\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yağlı kağıt\", \"text\": \"Yağlı kağıt\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Atıkların geri dönüşümü sırasında aşağıdakilerden hangisi yapılmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Atıklar çöp kutusuna doldurulur.\", \"text\": \"Atıklar çöp kutusuna doldurulur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Atıklar atık aracı ile toplanır.\", \"text\": \"Atıklar atık aracı ile toplanır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıklar geri dönüşüm tesisine götürülür.\", \"text\": \"Atıklar geri dönüşüm tesisine götürülür.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıklar özelliklerine göre sınıflandırılır.\", \"text\": \"Atıklar özelliklerine göre sınıflandırılır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Atıkların geri dönüşüm aşamalarında hangisi yapılmalıdır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Atıklar toprağa gömülmelidir.\", \"text\": \"Atıklar toprağa gömülmelidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıklar toplanarak yakılmalıdır.\", \"text\": \"Atıklar toplanarak yakılmalıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıklar ormanlık alana atılmalıdır.\", \"text\": \"Atıklar ormanlık alana atılmalıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıklardan geri dönüştürülebilecek olanlar toplanır.\", \"text\": \"Atıklardan geri dönüştürülebilecek olanlar toplanır.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Çevreyi koruma bilincinde olan bir kişi aşağıdakilerden hangisini yapmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Toplu taşıma aracıyla seyahat etmez.\", \"text\": \"Toplu taşıma aracıyla seyahat etmez.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Çevreye atık maddeleri atmaz.\", \"text\": \"Çevreye atık maddeleri atmaz.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Aldığı ürünlerin enerji tüketiminin az olmasına dikkat eder.\", \"text\": \"Aldığı ürünlerin enerji tüketiminin az olmasına dikkat eder.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Atıkların geri dönüşümüne katkı sağlar.\", \"text\": \"Atıkların geri dönüşümüne katkı sağlar.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest13Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki olayların hangisinde ışığın soğurulması gerçekleşmez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Saydam maddelerin ışığı geçirmesi\", \"text\": \"Saydam maddelerin ışığı geçirmesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Güneş enerjisinden sıcak su elde etmek\", \"text\": \"Güneş enerjisinden sıcak su elde etmek\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş fırınında yemek pişirme\", \"text\": \"Güneş fırınında yemek pişirme\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bitkilerin fotosentez yapması\", \"text\": \"Bitkilerin fotosentez yapması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Işıkla ilgili olarak verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Işık bir enerjidir.\", \"text\": \"Işık bir enerjidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Işık saydam ortamda yayılabilir.\", \"text\": \"Işık saydam ortamda yayılabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Işığın cisimler tarafından tutulmasına ışığın soğurulması denir.\", \"text\": \"Işığın cisimler tarafından tutulmasına ışığın soğurulması denir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Siyah cisimler ışığın birazını soğurur.\", \"text\": \"Siyah cisimler ışığın birazını soğurur.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıda renkleri verilen kalemlerden hangisi ışığı daha az soğurur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Siyah kalem\", \"text\": \"Siyah kalem\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Beyaz kalem\", \"text\": \"Beyaz kalem\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Kahverengi kalem\", \"text\": \"Kahverengi kalem\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mavi kalem\", \"text\": \"Mavi kalem\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda verilen enerji dönüşümlerinden hangisinde ışık enerjisi hareket enerjisine dönüşür?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Güneş pili\", \"text\": \"Güneş pili\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Güneş fırını\", \"text\": \"Güneş fırını\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Radyometre\", \"text\": \"Radyometre\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Newton çarkı\", \"text\": \"Newton çarkı\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki araçların hangisinde beyaz ışık renklerine ayrılmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yağmur damlası\", \"text\": \"Yağmur damlası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Üçgen prizma\", \"text\": \"Üçgen prizma\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Newton çarkı\", \"text\": \"Newton çarkı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"CD üzerine düşen ışık\", \"text\": \"CD üzerine düşen ışık\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest14Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi ayna çeşidi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Düzlem ayna\", \"text\": \"Düzlem ayna\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çukur ayna\", \"text\": \"Çukur ayna\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tümsek ayna\", \"text\": \"Tümsek ayna\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Makyaj aynası\", \"text\": \"Makyaj aynası\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki aynalardan hangisi virajlarda kullanılır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Düzlem ayna\", \"text\": \"Düzlem ayna\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çukur ayna\", \"text\": \"Çukur ayna\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tümsek ayna\", \"text\": \"Tümsek ayna\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Düzlem ayna\", \"text\": \"Makyaj aynası\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdaki araçların hangisinde çukur ayna kullanılır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Araç dikiz aynası\", \"text\": \"Araç dikiz aynası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"El feneri\", \"text\": \"El feneri\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Periskop\", \"text\": \"Periskop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Mağaza güvenlik aynası\", \"text\": \"Mağaza güvenlik aynası\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıda verilen özelliklerden hangisi tümsek aynanın görüntü özelliği değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Görüntü gerçektir\", \"text\": \"Görüntü gerçektir\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Görüntü simetrik değildir.\", \"text\": \"Görüntü simetrik değildir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Görüntü küçüktür\", \"text\": \"Görüntü küçüktür\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Görüntü düzdür\", \"text\": \"Görüntü düzdür\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Çukur ayna ile ilgili verilen bilgilerden hangisi kesinlikle yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Görüntü düz ve büyük olabilir.\", \"text\": \"Görüntü düz ve büyük olabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Görüntü düz ve küçük olabilir.\", \"text\": \"Görüntü düz ve küçük olabilir.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Görüntü ters ve küçük olabilir.\", \"text\": \"Görüntü ters ve küçük olabilir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Görüntü ters ve büyük olabilir.\", \"text\": \"Görüntü ters ve büyük olabilir.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest15Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Merceklerle ilgili olarak aşağıda verilenlerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Göz kusurlarının tedavisinde kullanılır.\", \"text\": \"Göz kusurlarının tedavisinde kullanılır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Merceklerin odak noktası vardır.\", \"text\": \"Merceklerin odak noktası vardır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Merceklerde paralel gelen ışık ışınları odak noktasında toplanır.\", \"text\": \"Merceklerde paralel gelen ışık ışınları odak noktasında toplanır.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Merceklerin iki odak noktası vardır.\", \"text\": \"Merceklerin iki odak noktası vardır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdakilerden hangisinde mercek kullanılmamıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Periskop\", \"text\": \"Periskop\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Mikroskop\", \"text\": \"Mikroskop\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Projeksiyon cihazı\", \"text\": \"Projeksiyon cihazı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Teleskop\", \"text\": \"Teleskop\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Işığın kırılması hakkında verilen aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Işık az kırıcı ortamdan çok kırıcı ortama geçtiğinde hızı azalır.\", \"text\": \"Işık az kırıcı ortamdan çok kırıcı ortama geçtiğinde hızı azalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Işık ışınları çok yoğun ortamdan az yoğun ortama dik geçtiğinde kırılmaya uğramaz.\", \"text\": \"Işık ışınları çok yoğun ortamdan az yoğun ortama dik geçtiğinde kırılmaya uğramaz.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Havadan suyun içerisine bakan kişi suyu sığ (derin değilmiş) gibi görür.\", \"text\": \"Havadan suyun içerisine bakan kişi suyu sığ (derin değilmiş) gibi görür.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çok yoğun ortamdan az yoğun ortama geçen ışık ışınlarının kırılma açısı geleme açısından küçüktür.\", \"text\": \"Çok yoğun ortamdan az yoğun ortama geçen ışık ışınlarının kırılma açısı geleme açısından küçüktür.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Ormanlık alana bırakılan içi su dolu pet şişeler orman yangınlarına neden olabilir. Bu olayda pet şişe hangi özelliğinden dolayı yangına neden olmuştur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kalın kenarlı mercek görevi görmesi\", \"text\": \"Kalın kenarlı mercek görevi görmesi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İnce kenarlı mercek görevi görmesi\", \"text\": \"İnce kenarlı mercek görevi görmesi\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Işığı yansıtması\", \"text\": \"Işığı yansıtması\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Işığın renklerine ayrılması\", \"text\": \"Işığın renklerine ayrılması\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıda verilen olaylardan hangisinde tam yansıma gerçekleşmez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Serap olayı\", \"text\": \"Serap olayı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fiber optik kablolar\", \"text\": \"Fiber optik kablolar\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Gökkuşağının oluşması\", \"text\": \"Gökkuşağının oluşması\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Endoskopi cihazı\", \"text\": \"Endoskopi cihazı\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest16Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"İnsanlarda üreme ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Üreyemeyen canlı yaşamına devam edemez.\", \"text\": \"Üreyemeyen canlı yaşamına devam edemez.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Üreme canlıların kendine benzer bireyler meydana getirmesidir.\", \"text\": \"Üreme canlıların kendine benzer bireyler meydana getirmesidir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"İnsanlarda üreme eşeyli üremedir.\", \"text\": \"İnsanlarda üreme eşeyli üremedir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ergenlik dönemi ile beraber üreme faaliyeti gerçekleşebilir.\", \"text\": \"Ergenlik dönemi ile beraber üreme faaliyeti gerçekleşebilir.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Döllenmiş yumurtaya zigot denir. Zigotta kromozom sayısı nedir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"23\", \"text\": \"23\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"26\", \"text\": \"26\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"44\", \"text\": \"44\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"46\", \"text\": \"46\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Dişi üreme sisteminde döllenmiş yumurtanın tutunarak gelişimini tamamladığı yer aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yumurta kanalı\", \"text\": \"Yumurta kanalı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yumurtalık\", \"text\": \"Yumurtalık\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Döl yatağı\", \"text\": \"Döl yatağı\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Döl yolu\", \"text\": \"Döl yolu\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Erkek üreme sisteminde mayoz bölünme aşağıdaki yapıların hangisinde olur?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sperm kanalı\", \"text\": \"Sperm kanalı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Salgı bezleri\", \"text\": \"Salgı bezleri\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Penis\", \"text\": \"Penis\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Testis\", \"text\": \"Testis\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Erkek üreme sisteminde sperm ve idrarın dışarı atıldığı kısım aşağıdakilerden hangisidir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Sperm kanalı\", \"text\": \"Sperm kanalı\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Salgı bezleri\", \"text\": \"Salgı bezleri\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Penis\", \"text\": \"Penis\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Testis\", \"text\": \"Testis\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest17Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Bitki ve hayvanlarda üreme için aşağıdakilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Üreyemeyen canlı yaşayamaz.\", \"text\": \"Üreyemeyen canlı yaşayamaz.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Üreme, canlının kendine benzer canlılar oluşturmasıdır.\", \"text\": \"Üreme, canlının kendine benzer canlılar oluşturmasıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Üreme eşeyli ve eşeysiz gerçekleşir.\", \"text\": \"Üreme eşeyli ve eşeysiz gerçekleşir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Eşeysiz üreyen canlılar birbirine tamamen benzer.\", \"text\": \"Eşeysiz üreyen canlılar birbirine tamamen benzer.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki canlılardan hangisi başkalaşım geçirir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Solucan\", \"text\": \"Solucan\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Sinek\", \"text\": \"Sinek\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yılan\", \"text\": \"Yılan\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kertenkele\", \"text\": \"Kertenkele\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi memeli canlı değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yunus\", \"text\": \"Yunus\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yarasa\", \"text\": \"Yarasa\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fare\", \"text\": \"Fare\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hindi\", \"text\": \"Hindi\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdakilerden hangisinin yavru bakımı vardır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Serçe\", \"text\": \"Serçe\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yılan\", \"text\": \"Yılan\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Hamsi\", \"text\": \"Hamsi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Salyangoz\", \"text\": \"Salyangoz\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdaki özelliklerden hangisi memeli canlıların özelliklerinden birisi değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yavrularını sütle besler\", \"text\": \"Yavrularını sütle besler\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Doğurarak çoğalır.\", \"text\": \"Doğurarak çoğalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Derileri kılla kaplıdır.\", \"text\": \"Derileri kılla kaplıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Başkalaşım geçirirler.\", \"text\": \"Başkalaşım geçirirler.\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest18Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdakilerden hangisi tomurcuklanarak üremez?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Deniz anası\", \"text\": \"Deniz anası\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Çiçek\", \"text\": \"Çiçek\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Hidra\", \"text\": \"Hidra\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bira mayası\", \"text\": \"Bira mayası\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdakilerden hangisi yumurta ile çoğalır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kedi\", \"text\": \"Kedi\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Penguen\", \"text\": \"Penguen\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Deve\", \"text\": \"Deve\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Fok\", \"text\": \"Fok\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Aşağıdakilerden hangisi dış döllenme, dış gelişim görülür?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Kartal\", \"text\": \"Kartal\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yarasa\", \"text\": \"Yarasa\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Alabalık\", \"text\": \"Alabalık\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Balina\", \"text\": \"Balina\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki özelliklerden hangisi kuşlara ait değildir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Yavrularına bakar.\", \"text\": \"Yavrularına bakar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yavrularını sütle besler\", \"text\": \"Yavrularını sütle besler\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Vücutları tüyle kaplıdır.\", \"text\": \"Vücutları tüyle kaplıdır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yumurtaları üzerinde kuluçkaya yatar\", \"text\": \"Yumurtaları üzerinde kuluçkaya yatar\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Aşağıdakilerden hangisi çiçeğin yapısında bulunmaz?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Erkek organ\", \"text\": \"Erkek organ\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dişi organ\", \"text\": \"Dişi organ\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Taç yaprak\", \"text\": \"Taç yaprak\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Tohum\", \"text\": \"Tohum\", \"isCorrect\": true }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest19Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Ampullerin bağlama şekliyle ilgili olarak aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Seri bağlı ampullerin sayısı arttıkça ampuller daha parlak yanar.\", \"text\": \"Seri bağlı ampullerin sayısı arttıkça ampuller daha parlak yanar.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Paralel bağlı  ampullerin sayısı arttıkça ampullerin parlaklıkları değişmez.\", \"text\": \"Paralel bağlı  ampullerin sayısı arttıkça ampullerin parlaklıkları değişmez.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Seri bağlı ampullerin sayısı arttıkça devreden geçen akım azalır.\", \"text\": \"Seri bağlı ampullerin sayısı arttıkça devreden geçen akım azalır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Paralel bağlı ampullerden birisi patlarsa diğerleri yanmaya devam eder.\", \"text\": \"Paralel bağlı ampullerden birisi patlarsa diğerleri yanmaya devam eder.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Bir elektrik devresinde aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Elektrik devresinde akımı kontrol eden anahtardır.\", \"text\": \"Elektrik devresinde akımı kontrol eden anahtardır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektrik devresinde, elektrik akımının yönü pilin - kutbundan + kutbuna doğrudur.\", \"text\": \"Elektrik devresinde, elektrik akımının yönü pilin - kutbundan + kutbuna doğrudur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ampul, elektrik devresinde elektrik enerjisini ışık enerjisine çevirir.\", \"text\": \"Ampul, elektrik devresinde elektrik enerjisini ışık enerjisine çevirir.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Birden fazla pil bir araya gelerek bataryayı oluşturur.\", \"text\": \"Birden fazla pil bir araya gelerek bataryayı oluşturur.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Basit elektrik devresi su tesisatına benzetilebilir. Buna göre aşağıdaki eşleştirmelerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Su pompası → Pil\", \"text\": \"Su pompası → Pil\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Kıvrımlı boru  → Direnç\", \"text\": \"Kıvrımlı boru  → Direnç\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Boru → Duy\", \"text\": \"Boru → Duy\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Vana → Anahtar\", \"text\": \"Vana → Anahtar\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Aşağıdaki araçlardan hangisi kimyasal enerjiyi elektrik enerjisine çevirir?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Pil\", \"text\": \"Pil\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ampul\", \"text\": \"Ampul\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Jeneratör\", \"text\": \"Jeneratör\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Dinamo\", \"text\": \"Dinamo\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Direnç ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Direnç direnç ölçer ile ölçülür.\", \"text\": \"Direnç direnç ölçer ile ölçülür.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Direnç birimi Ohm'dur.\", \"text\": \"Direnç birimi Ohm'dur.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Direnç elektrik akımına gösterilen zorluktur.\", \"text\": \"Direnç elektrik akımına gösterilen zorluktur.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Bir elektrik devresinde akım arttıkça direnç azalır.\", \"text\": \"Bir elektrik devresinde akım arttıkça direnç azalır.\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest20Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Aşağıdaki bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Elektrik devresinde seri bağlı pil sayısı artarsa akım artar.\", \"text\": \"Elektrik devresinde seri bağlı pil sayısı artarsa akım artar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektrik devresinde seri bağlı ampul artarsa direnç artar.\", \"text\": \"Elektrik devresinde seri bağlı ampul artarsa direnç artar.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Elektrik devresinde paralel bağlı ampul sayısı artarsa direnç artar.\", \"text\": \"Elektrik devresinde paralel bağlı ampul sayısı artarsa direnç artar.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ampul uçlarına uygulanan gerilim artarsa ampul daha parlak yanar.\", \"text\": \"Ampul uçlarına uygulanan gerilim artarsa ampul daha parlak yanar.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Aşağıdaki yerlerden hangisinde seri bağlı ampuller kullanılmıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Evimizdeki ampuller\", \"text\": \"Evimizdeki ampuller\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yılbaşı ağacındaki ampuller\", \"text\": \"Yılbaşı ağacındaki ampuller\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Sokak lambalarındaki ampuller\", \"text\": \"Sokak lambalarındaki ampuller\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Otomobillerdeki ampuller\", \"text\": \"Otomobillerdeki ampuller\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Ampermetre ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Ampermetrenin direnci çok fazladır.\", \"text\": \"Ampermetrenin direnci çok fazladır.\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Ampermetre devreye seri bağlanır.\", \"text\": \"Ampermetre devreye seri bağlanır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ampermetre devreden geçen akım miktarını ölçer\", \"text\": \"Ampermetre devreden geçen akım miktarını ölçer\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Ampermetrenin de + ve - uçları vardır.\", \"text\": \"Ampermetrenin de + ve - uçları vardır.\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Voltmetre ile ilgili verilen bilgilerden hangisi yanlıştır?\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Voltmetre devreye paralel bağlanır.\", \"text\": \"Voltmetre devreye paralel bağlanır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Voltmetre devredeki potansiyel farkını ölçer.\", \"text\": \"Voltmetre devredeki potansiyel farkını ölçer.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Voltmetre'nin direnci çok fazladır.\", \"text\": \"Voltmetre'nin direnci çok fazladır.\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Voltmetre üzerinden çok fazla akım geçer.\", \"text\": \"Voltmetre üzerinden çok fazla akım geçer.\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Paralel bağlı özdeş ampuller üzerinden eşit akım geçer.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": false }" +
+                "]" +
+                "}" +
+                "]";
+
+        Gson gson = new Gson();
+        Object jsonObject = gson.fromJson(jsonString, Object.class);
+        return ResponseEntity.status(HttpStatus.OK).body(jsonObject);
+    }
+
+    public ResponseEntity<Object> getTest21Grade7()
+    {
+        String jsonString = "[" +
+                "{" +
+                "\"index\": 1," +
+                "\"text\": \"Ampermetre devreye paralel bağlanır.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 2," +
+                "\"text\": \"Seri bağlı ampuller şerit LED'de kullanılır.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 3," +
+                "\"text\": \"Bir iletkenin direnci gerilime bağlı olarak değişir.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": false }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": true }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 4," +
+                "\"text\": \"Direnç elektrik akımına gösterilen zorluktur.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": false }" +
+                "]" +
+                "}," +
+                "{" +
+                "\"index\": 5," +
+                "\"text\": \"Paralel bağlı özdeş ampuller üzerinden eşit akım geçer.\"," +
+                "\"options\": [" +
+                "{ \"option_id\": \"Doğru\", \"text\": \"Doğru\", \"isCorrect\": true }," +
+                "{ \"option_id\": \"Yanlış\", \"text\": \"Yanlış\", \"isCorrect\": false }" +
                 "]" +
                 "}" +
                 "]";
