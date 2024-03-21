@@ -19,7 +19,7 @@ interface UserService {
     suspend fun loginUser(@Body userLogin: LoginUser): Response<UserResponse>
 
     //Quizzes
-    @GET("questions/{testId}")
+    @GET("api/questions/{testId}")
     suspend fun getQuestions(@Path("testId") testId: String):  Response<List<Questions>>
 
     @GET("achievements/{achievementId}")
