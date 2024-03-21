@@ -76,18 +76,34 @@ class QuizDetailsFragment : Fragment(), UnitTestAdapter.OnTestClickListener {
                 TestDetay("test7grade5","unit3grade5achievement","Test 7 - Class 5", "Description for Test 3", "5", "Kolay"),
                 TestDetay("test8grade5","unit3grade5achievement","Test 8 - Class 5", "Description for Test 3", "5", "Orta"),
                 TestDetay("test9grade5","unit3grade5achievement","Test 9 - Class 5", "Description for Test 3", "5", "Zor"),
+                TestDetay("test10grade5","unit4grade5achievement","Test 10 - Class 5", "Description for Test 3", "5", "Kolay")
 
 
             )
             "6" -> listOf(
                 TestDetay("test1grade6","unit1grade6achievement","Test 1 - Class 6", "Description for Test 1", "5", "Kolay"),
                 TestDetay("test2grade6","unit1grade6achievement","Test 2 - Class 6", "Description for Test 2", "5", "Orta"),
-                TestDetay("test3grade6","unit1grade6achievement","Test 3 - Class 6", "Description for Test 3", "5", "Zor")
+                TestDetay("test3grade6","unit1grade6achievement","Test 3 - Class 6", "Description for Test 3", "5", "Zor"),
+                TestDetay("test4grade6","unit2grade6achievement","Test 4 - Class 6", "Description for Test 3", "5", "Kolay"),
+                TestDetay("test5grade6","unit2grade6achievement","Test 5 - Class 6", "Description for Test 3", "5", "Orta"),
+                TestDetay("test6grade6","unit2grade6achievement","Test 6 - Class 6", "Description for Test 3", "5", "Zor"),
+                TestDetay("test7grade6","unit3grade6achievement","Test 7 - Class 6", "Description for Test 3", "5", "Kolay"),
+                TestDetay("test8grade6","unit3grade6achievement","Test 8 - Class 6", "Description for Test 3", "5", "Orta"),
+                TestDetay("test9grade6","unit3grade6achievement","Test 9 - Class 6", "Description for Test 3", "5", "Zor"),
+                TestDetay("test10grade6","unit4grade6achievement","Test 10 - Class 6", "Description for Test 3", "5", "Kolay")
+
             )
             "7" -> listOf(
                 TestDetay("test1grade7","unit1grade7achievement","Test 1 - Class 7", "Description for Test 1", "5", "Kolay"),
                 TestDetay("test2grade7","unit1grade7achievement","Test 2 - Class 7", "Description for Test 2", "5", "Orta"),
-                TestDetay("test3grade7","unit1grade7achievement","Test 3 - Class 7", "Description for Test 3", "5", "Zor")
+                TestDetay("test3grade7","unit1grade7achievement","Test 3 - Class 7", "Description for Test 3", "5", "Zor"),
+                TestDetay("test4grade7","unit2grade7achievement","Test 4 - Class 7", "Description for Test 4", "5", "Kolay"),
+                TestDetay("test5grade7","unit2grade7achievement","Test 5 - Class 7", "Description for Test 5", "5", "Orta"),
+                TestDetay("test6grade7","unit2grade7achievement","Test 6 - Class 7", "Description for Test 6", "5", "Zor"),
+                TestDetay("test7grade7","unit3grade7achievement","Test 7 - Class 7", "Description for Test 7", "5", "Kolay"),
+                TestDetay("test8grade7","unit3grade7achievement","Test 8 - Class 7", "Description for Test 8", "5", "Orta"),
+                TestDetay("test9grade7","unit3grade7achievement","Test 9 - Class 7", "Description for Test 9", "5", "Zor"),
+                TestDetay("test10grade7","unit4grade7achievement","Test 10 - Class 7", "Description for Test 10", "5", "Kolay"),
             )
             else -> emptyList()
         }
