@@ -12,17 +12,17 @@ import retrofit2.http.Path
 
 
 interface UserService {
-    @POST("v1/users")//endpoint
+    @POST("api/v1/users")//endpoint
     suspend fun createUser(@Body userData: User): Response<UserResponse> // body ye data class user ı gönderir.ve Userresponse döner.
 
-    @POST("v1/auth")
+    @POST("api/v1/auth")
     suspend fun loginUser(@Body userLogin: LoginUser): Response<UserResponse>
 
     //Quizzes
     @GET("api/questions/{testId}")
     suspend fun getQuestions(@Path("testId") testId: String):  Response<List<Questions>>
 
-    @GET("achievements/{achievementId}")
+    @GET("api/achievements/{achievementId}")
     suspend fun getAchievements(@Path("achievementId") achievementId: String): Response<AchievementResponse>
 
 
