@@ -12,6 +12,7 @@ struct HomePage: View {
     let studentName: String
     
     @StateObject var menuData = MenuViewmodel()
+    
     @Namespace var animation
     
     var body: some View {

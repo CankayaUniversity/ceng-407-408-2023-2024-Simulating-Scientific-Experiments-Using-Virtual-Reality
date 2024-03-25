@@ -17,12 +17,12 @@ class StudentViewModel: ObservableObject{
         
     didSet{
         if let encoder = try? JSONEncoder().encode(studentList){
-            UserDefaults.standard.set(encoder, forKey: "STUDENT_LIST")
+            UserDefaults.standard.set(encoder, forKey: "STUDENT_LIST1")
         }
     }
     }
     init(){
-        if let data = UserDefaults.standard.data(forKey: "STUDENT_LIST"){
+        if let data = UserDefaults.standard.data(forKey: "STUDENT_LIST1"){
             if let savedItems = try? JSONDecoder().decode([StudentModel].self, from: data){
                 studentList = savedItems
                 print(savedItems)
@@ -34,16 +34,16 @@ class StudentViewModel: ObservableObject{
     
     
     ///REGISTER STUDENT
-    func addStudent(name: String, password: String){
-        let newStudent = StudentModel(name: name, password: password)
+    func addStudent(userName: String, email: String, password: String){
+        let newStudent = StudentModel(userName: userName, email: email, password: password)
         studentList.append(newStudent)
     }
     
     ///WHERE THE REGISTER PAGE, IS ALREADY STUDENT'S ACCOUNT
-    func alreadyStudent(name: String, password: String) -> Bool{
+    func alreadyStudent(userName: String, password: String) -> Bool{
         for student in studentList{
             print(student)
-            if student.name == name{
+            if student.userName == userName{
                 return true
             }
         }
@@ -51,9 +51,9 @@ class StudentViewModel: ObservableObject{
     }
     
     ///WHERE THE LOGIN PAGE, IS CORRECT INFORMATION STUDENT'S ACCOUNT
-    func isEnter(name: String, password: String) -> Bool {
+    func isEnter(userName: String, password: String) -> Bool {
         for student in studentList{
-            if student.name == name && student.password == password{
+            if student.userName == userName && student.password == password{
                 print("Giris islemi basarili!")
                 return true
             }

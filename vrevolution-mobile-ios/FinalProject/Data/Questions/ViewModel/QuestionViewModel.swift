@@ -51,26 +51,10 @@ class QuestionViewModel: ObservableObject{
                       questionOptions: ["A":"Jupiter","B":"Merkür","C":"Venüs","D":"Dünya"],
                       questionCorrectAnswer: "A"),
     ]
-    @Published var rectangleSize : CGFloat
-    @Published var questionCompletedSize : CGFloat
     
-    var questionLenght : CGFloat
-    var addSize : CGFloat
     
-    init(rectangleSize: CGFloat) {
-        self.rectangleSize = rectangleSize
-        self.questionCompletedSize = 0
-        self.questionLenght = CGFloat(questions.count)
-        self.addSize = rectangleSize / questionLenght
-    }
-
    
   
-    func increaseComletedSize() -> CGFloat{
-      
-        return CGFloat(questionCompletedSize + addSize)
-    }
-    
    
     
     func canSubmitQuiz() -> Bool{

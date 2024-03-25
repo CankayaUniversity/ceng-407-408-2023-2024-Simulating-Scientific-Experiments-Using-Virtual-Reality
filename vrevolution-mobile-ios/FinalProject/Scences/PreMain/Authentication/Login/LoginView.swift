@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-
-    @State var password: String = ""
-    @State var name   : String = ""
     
-    @State var isSuccesfulEnter : Bool = false
-    @State var showWarningEnterAlert : Bool = false
+    //Kayıt olma işlemleri için...
+    @StateObject var registerViewModel = RegisterViewModel()
     
-    @StateObject var studentViewModel = StudentViewModel()
+    //Login olma işlemleri için..
+    @StateObject var loginViewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack{
@@ -25,30 +23,34 @@ struct LoginView: View {
                     .padding(.top,30)
                     .padding(.horizontal,20)
                     subMainView
+                
                 VStack{
-                    AccessButton(title: "Log In", onButtonTapAction: loginButtonAction)
+                    NavigationLink{
+                        HomePage(studentName: "")
+                    } label: {
+                        AccessButton(title: "Log In", onButtonTapAction: loginViewModel.loginButtonAction )
+                    }
+                   
                     HStack{
                         Text("Don't have an account ?")
                             .font(.system(size: Fonts.accountTittle.rawValue))
                             .fontWeight(.light)
-                        NavigationLink {
-                            RegisterView().environmentObject(studentViewModel)
+                        NavigationLink{
+                            RegisterView()
+                                .environmentObject(registerViewModel)
+                                
                         }label: {
                             Text("Register")
                                 .font(.system(size: Fonts.accountTittle.rawValue))
                                 .fontWeight(.semibold)
                             .foregroundColor(Color("Renk1"))
                         }
+                        
                     }
                 }
                 .padding(.bottom,20)
             }
-            .navigationDestination(isPresented: $isSuccesfulEnter){
-                HomePage(studentName: name)
-            }
-            .alert("Something is Wrong", isPresented: $showWarningEnterAlert){
-                Button("Ok",role: .cancel){}
-            }message: { Text("The entered username or password is incorrect!") }
+            
         }
     }
     
@@ -64,23 +66,12 @@ struct LoginView: View {
                     .padding(.bottom,25)
             }
             VStack(spacing: 30){
-                LoginTextField(value: $name, textFieldIconName: "envelope", placeHolder: "Email")
-                LoginTextField(value: $password, textFieldIconName: "key.horizontal", placeHolder: "Password")
+                LoginTextField(value: $loginViewModel.email, textFieldIconName: "envelope", placeHolder: "Email")
+                LoginTextField(value: $loginViewModel.password, textFieldIconName: "key.horizontal", placeHolder: "Password")
             }
         }
     }
-    
-    private func loginButtonAction() {
-        isSuccesfulEnter = studentViewModel.isEnter(name: name, password: password)
-        if isSuccesfulEnter == false{
-            showWarningEnterAlert = true
-        }
-    }
+   
 }
 
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}

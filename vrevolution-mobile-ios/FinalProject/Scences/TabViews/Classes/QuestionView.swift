@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuestionView: View {
     @StateObject var questionModelObject = QuestionViewModel(
-        rectangleSize: UIScreen.main.bounds.width
+       
 
     )
     
@@ -35,7 +35,7 @@ struct QuestionView: View {
                         
                         Rectangle()
                             .cornerRadius(10)
-                            .frame(width: questionModelObject.increaseComletedSize() ,height: 10)
+                            .frame(width: 10 ,height: 10)
                             .foregroundColor(Color("CompletedBarFront"))
                             .padding(.horizontal)
                     }
