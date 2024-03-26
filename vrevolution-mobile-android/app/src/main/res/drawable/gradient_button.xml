@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="8dp" /> <!-- Köşe yuvarlama (corner radius) -->
+    <gradient
+        android:startColor="#B00DBF"
+        android:centerColor="#C2BE10CD"
+        android:endColor="#AB220EFF"
+    />
+</shape>

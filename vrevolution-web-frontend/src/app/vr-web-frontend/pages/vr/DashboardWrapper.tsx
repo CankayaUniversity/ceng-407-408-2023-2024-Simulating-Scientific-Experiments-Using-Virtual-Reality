@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react'
-import {getUserCountApi, getUsersWithEmailAndUsernameApi} from "../api/ApiService";
+import {getUserCountApi, getUsersWithEmailAndUsernameApi} from "../../api/ApiService";
 
 interface UserData
 {

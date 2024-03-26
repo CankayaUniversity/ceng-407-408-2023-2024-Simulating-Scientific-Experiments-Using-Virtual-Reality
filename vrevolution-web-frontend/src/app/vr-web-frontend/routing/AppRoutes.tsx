@@ -4,10 +4,8 @@ import {PrivateRoutes} from './PrivateRoutes'
 import {ErrorsPage} from '../../modules/errors/ErrorsPage'
 import {Logout, useAuth} from '../../modules/auth'
 import {App} from '../App'
-import SignUp from "../pages/SignUp";
-import Login from "../pages/Login";
 import {AuthContext} from "../context/AuthContext";
-import {AuthPage} from "../pages/AuthPage";
+import {AuthPage} from "../pages/vr/AuthPage";
 
 const AppRoutes: FC = () =>
 {

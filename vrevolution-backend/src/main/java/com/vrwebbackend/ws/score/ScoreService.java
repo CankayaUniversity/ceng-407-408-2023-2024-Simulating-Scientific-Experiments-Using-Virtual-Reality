@@ -22,13 +22,25 @@ public class ScoreService
 
     public void addScore(ScoreRequest scoreRequest)
     {
-        Score score = new Score();
-        score.setUser(userService.findById(scoreRequest.getUserId()).orElse(null));
-        score.setScore(scoreRequest.getScore());
-        score.setGrade(scoreRequest.getGrade());
-        score.setTestNumber(scoreRequest.getTestNumber());
+        Score score = scoreRepository.findByUserIdAndGradeAndTestNumber(scoreRequest.getUserId(), scoreRequest.getGrade(), scoreRequest.getTestNumber());
+        Score newScore = new Score();
+        newScore.setUser(userService.findById(scoreRequest.getUserId()).orElse(null));
+        newScore.setScore(scoreRequest.getScore());
+        newScore.setGrade(scoreRequest.getGrade());
+        newScore.setTestNumber(scoreRequest.getTestNumber());
 
-        scoreRepository.save(score);
+        if (score == null)
+        {
+            scoreRepository.save(newScore);
+        }
+        else
+        {
+            if (scoreRequest.getScore() > score.getScore() )
+            {
+                scoreRepository.delete(score);
+                scoreRepository.save(newScore);
+            }
+        }
     }
 
     public List<ScoreDTO> getScoresByUserId(Long userId)

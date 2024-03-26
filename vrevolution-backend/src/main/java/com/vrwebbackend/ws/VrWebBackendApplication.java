@@ -19,8 +19,7 @@ public class VrWebBackendApplication
     {
         return new WebMvcConfigurer()
         {
-            public void addCorsMappings(CorsRegistry registry)
-            {
+            public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedMethods("*")
                         .allowedOrigins("http://localhost:3000");

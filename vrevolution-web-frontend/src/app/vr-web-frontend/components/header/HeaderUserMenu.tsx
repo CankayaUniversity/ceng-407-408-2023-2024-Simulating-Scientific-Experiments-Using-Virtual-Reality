@@ -1,7 +1,5 @@
 import {FC, useContext, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {useAuth} from '../../../modules/auth'
-import {Languages} from '../../../../_metronic/partials/layout/header-menus/Languages'
 import {toAbsoluteUrl} from '../../../../_metronic/helpers'
 import {AuthContext} from "../../context/AuthContext";
 
