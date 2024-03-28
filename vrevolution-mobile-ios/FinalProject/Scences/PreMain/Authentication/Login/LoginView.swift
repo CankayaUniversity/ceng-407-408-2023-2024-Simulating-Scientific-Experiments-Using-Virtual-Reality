@@ -49,18 +49,21 @@ struct LoginView: View {
                         
                     }
                 }
-               
-               
-                
                 .padding(.bottom,20)
             }
             .navigationDestination(isPresented: $loginViewModel.isSuccesfullHomePageView){
                 HomePage()
                     .environmentObject(loginViewModel)
             }
-            .alert("Something is Wrong!", isPresented: $loginViewModel.showFalseUserInfoAlert){
+            
+            .alert("Something is Wrong", isPresented: $loginViewModel.showFalseEmailFormatAlert){
+                Button("Ok",role: .cancel){}
+            }message: { Text("The email format is incorrect.") }
+                
+            .alert("Something is Wrong", isPresented: $loginViewModel.showFalseUserInfoAlert){
                 Button("Ok",role: .cancel){}
             }message: { Text("Please check email or password.") }
+                
             
         }
     }

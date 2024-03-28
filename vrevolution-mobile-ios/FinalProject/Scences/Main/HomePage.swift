@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct HomePage: View {
+    
     @EnvironmentObject var loginViewModel : LoginViewModel
     
-    
     @StateObject var menuData = MenuViewmodel()
-    
     @Namespace var animation
     
     var body: some View {
@@ -24,7 +23,8 @@ struct HomePage: View {
             SideMenu(animation: _animation,studentName: loginViewModel.email)
             
             TabView(selection: $menuData.selectedMenu){
-                AllVideosView(studentName: loginViewModel.email)
+                AllVideosView()
+                    .environmentObject(loginViewModel)
                     .tag("All Videos")
                 
                 ClassesView()

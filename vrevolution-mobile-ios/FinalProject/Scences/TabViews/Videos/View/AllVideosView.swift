@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AllVideosView: View {
     
-    var studentName : String = "Christina"
+    @EnvironmentObject var studentInformation : LoginViewModel
+    
     var body: some View {
         NavigationView {
             NavigationStack {
@@ -35,7 +36,7 @@ struct AllVideosView: View {
     private var HeaderView : some View{
         VStack(spacing: 10){
             HStack{
-                Text("Hi, \(studentName)")
+                Text("Hi, \(studentInformation.username)")
                     .font(.system(size: 30))
                 Spacer()
                 Button(action: {}, label: {Image(systemName: "bell.badge") .font(.system(size: 24))

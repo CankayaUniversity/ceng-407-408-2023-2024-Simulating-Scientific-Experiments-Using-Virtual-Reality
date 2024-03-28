@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionView: View {
+struct QuestionsView: View {
     @StateObject var questionModelObject = QuestionViewModel(
        
 
@@ -84,6 +84,6 @@ struct QuestionView: View {
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView()
+        QuestionsView()
     }
 }

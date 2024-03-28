@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuizView: View {
+struct QuizCardView: View {
  
     var body: some View {
        
@@ -55,7 +55,7 @@ struct QuizView: View {
                             Spacer()
                             
                             NavigationLink{
-                                QuestionView()
+                                QuestionsView()
                             } label: {
                                 Text("Test Katıl")
                                     .frame(width: 120, height: 30)
@@ -85,6 +85,6 @@ struct QuizView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        QuizCardView()
     }
 }

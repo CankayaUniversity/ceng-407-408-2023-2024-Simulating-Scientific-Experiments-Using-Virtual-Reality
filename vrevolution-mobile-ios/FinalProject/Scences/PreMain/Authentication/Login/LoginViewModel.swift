@@ -11,9 +11,11 @@ import SwiftUI
 class LoginViewModel : ObservableObject{
     
     @Published var email    : String = ""
+    @Published var username : String = ""
     @Published var password : String = ""
     
-    @Published var showFalseUserInfoAlert: Bool = false
+    @Published var showFalseEmailFormatAlert: Bool = false
+    @Published var showFalseUserInfoAlert   : Bool = false
     @Published var isSuccesfullHomePageView : Bool = false
     
     @Published var networkManager = NetworkManager()
@@ -35,26 +37,30 @@ class LoginViewModel : ObservableObject{
                 }
                 DispatchQueue.main.async {
                     switch result{
+                        
                         case .success(let data):
                         
                         //Kullancı login işlemi başarılı yapıldığında yapılacak işlemler...
-                        print("Kullanıcı giriş isteiği başarı ile tamamlandıç")
+                        print("Kullanıcı giriş isteiği başarı ile tamamlandı.")
+                        
                         if data.status == 400{
-                            print("Email formatı hatalı")
+                            print("Email formatı hatalı!")
+                            if let errorMessage = data.message{
+                                self.showFalseEmailFormatAlert = true
+                                print(errorMessage)
+                                print(self.$showFalseEmailFormatAlert)
+                            }
+                        }else if data.status == 401{
+                            print("Kullanıcı Adı veya şifre hatalı!")
                             if let errorMessage = data.message{
                                 self.showFalseUserInfoAlert = true
                                 print(errorMessage)
                                 print(self.$showFalseUserInfoAlert)
                             }
-                                
-                        
-                        }else if data.status == 401{
-                            print("Hatalı")
-                            
-                            print(data)
                         }else{
-                            print("Başarılı bir şekildeg girş yapıldı.")
-                            self.isSuccesfullHomePageView = true
+                            self.username = data.user?.username ?? ""
+                            print("Başarılı bir şekildeg giriş yapıldı.")
+                                self.isSuccesfullHomePageView = true
                         }
                         
                         

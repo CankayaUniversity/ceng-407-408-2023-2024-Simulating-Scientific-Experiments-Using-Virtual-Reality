@@ -50,7 +50,7 @@ struct ClassesView : View {
                 VStack(spacing: 40){
                     ForEach($classesList) { $item in
                        
-                        NavigationLink(destination: QuizView(),
+                        NavigationLink(destination: QuizCardView(),
                                        label: { ClassButton(title: item.className)})
                         /*
                         ClassButton(title: item.className) {
