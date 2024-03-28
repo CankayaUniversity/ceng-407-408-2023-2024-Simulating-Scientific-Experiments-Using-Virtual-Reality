@@ -74,7 +74,7 @@ class NetworkManager : ObservableObject{
     fileprivate func handleResponse<T: Codable>(data: Data, completion: @escaping ((Result<T, ErrorTypes>) -> ())) where T : Decodable {
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
-            print(result)
+            
             completion(.success(result))
             
         } catch let decodingError as DecodingError {

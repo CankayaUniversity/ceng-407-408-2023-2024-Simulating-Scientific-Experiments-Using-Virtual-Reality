@@ -26,7 +26,8 @@ struct LoginView: View {
                 
                 VStack{
                     NavigationLink{
-                        HomePage(studentName: "")
+                        HomePage()
+                            .environmentObject(loginViewModel)
                     } label: {
                         AccessButton(title: "Log In", onButtonTapAction: loginViewModel.loginButtonAction )
                     }
@@ -48,8 +49,18 @@ struct LoginView: View {
                         
                     }
                 }
+               
+               
+                
                 .padding(.bottom,20)
             }
+            .navigationDestination(isPresented: $loginViewModel.isSuccesfullHomePageView){
+                HomePage()
+                    .environmentObject(loginViewModel)
+            }
+            .alert("Something is Wrong!", isPresented: $loginViewModel.showFalseUserInfoAlert){
+                Button("Ok",role: .cancel){}
+            }message: { Text("Please check email or password.") }
             
         }
     }

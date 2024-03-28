@@ -13,6 +13,9 @@ class LoginViewModel : ObservableObject{
     @Published var email    : String = ""
     @Published var password : String = ""
     
+    @Published var showFalseUserInfoAlert: Bool = false
+    @Published var isSuccesfullHomePageView : Bool = false
+    
     @Published var networkManager = NetworkManager()
     
     func loginButtonAction() {
@@ -25,13 +28,41 @@ class LoginViewModel : ObservableObject{
             endPoint: NetworkPath.Endpoints.login,
             bodyParameters: loginRequestModel.data,
             method: NetworkPath.HTTPMethods.post,
-            completion: { result in
-                switch result{
-                    case .success(let data):
-                    print("Giriş işlemi başarılı ile tamamlandı. Giriş yapılan veri: \(data))")
-                    case .failure(let error):
-                        print("Giriş işlemi başarısız. Hata: \(error.localizedDescription)")
+            completion: { [weak self] result in
+                guard let self = self else {
+                    return
+                    
                 }
+                DispatchQueue.main.async {
+                    switch result{
+                        case .success(let data):
+                        
+                        //Kullancı login işlemi başarılı yapıldığında yapılacak işlemler...
+                        print("Kullanıcı giriş isteiği başarı ile tamamlandıç")
+                        if data.status == 400{
+                            print("Email formatı hatalı")
+                            if let errorMessage = data.message{
+                                self.showFalseUserInfoAlert = true
+                                print(errorMessage)
+                                print(self.$showFalseUserInfoAlert)
+                            }
+                                
+                        
+                        }else if data.status == 401{
+                            print("Hatalı")
+                            
+                            print(data)
+                        }else{
+                            print("Başarılı bir şekildeg girş yapıldı.")
+                            self.isSuccesfullHomePageView = true
+                        }
+                        
+                        
+                        case .failure(let error):
+                            print("Login işlemi başarısız. Hata: \(error.localizedDescription)")
+                    }
+                }
+               
             }
         )
     }

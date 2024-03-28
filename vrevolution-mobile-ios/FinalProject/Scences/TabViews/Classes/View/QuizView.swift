@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizView: View {
-    @State var isPresented : Bool = false
+ 
     var body: some View {
        
         NavigationStack {
@@ -51,7 +51,9 @@ struct QuizView: View {
                             }
                             .font(.system(size: 15))
                             .opacity(0.60)
+                            
                             Spacer()
+                            
                             NavigationLink{
                                 QuestionView()
                             } label: {
