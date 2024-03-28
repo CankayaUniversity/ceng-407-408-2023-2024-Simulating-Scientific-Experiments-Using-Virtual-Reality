@@ -16,16 +16,15 @@ import SwiftUI
 struct ClassModel:  Identifiable{
     var id = UUID()
     var className: String
-    var isPresented: Bool
+
 }
 
-struct ClassesView
-: View {
+struct ClassesView : View {
     
     @State var classesList: [ClassModel] = [
-        ClassModel(className: "5.Sınıf", isPresented: false),
-        ClassModel(className: "6.Sınıf", isPresented: false),
-        ClassModel(className: "7.Sınıf", isPresented: false)
+        ClassModel(className: "5.Sınıf"),
+        ClassModel(className: "6.Sınıf"),
+        ClassModel(className: "7.Sınıf")
     ]
     
     
@@ -45,24 +44,31 @@ struct ClassesView
             Text("Test'e girmek için sınıf seçin;")
                 .foregroundColor(Color.black).opacity(0.75)
                 .padding(.top,10)
+                .padding(.bottom,20)
             
             ScrollView(showsIndicators: false){
                 VStack(spacing: 40){
                     ForEach($classesList) { $item in
+                       
+                        NavigationLink(destination: QuizCardView(),
+                                       label: { ClassButton(title: item.className)})
+                        /*
                         ClassButton(title: item.className) {
-                            withAnimation{
+                          
                                 item.isPresented.toggle()
-                            }
+                            
+                        }.navigationDestination(isPresented: $item
+                            .isPresented){
+                                QuizView()
                         }
-                        if item.isPresented == true {
-                            QuizView()
-                                .transition(.asymmetric(insertion: .scale, removal:.opacity))
-                        }
+                         */
+                        
                     }
                 }
             }
         }
     }
+
 }
 
 

@@ -62,7 +62,7 @@ struct CategoryVideoView: View {
     private var PreviewVideoView : some View{
         ScrollView(.horizontal,showsIndicators: false){
             HStack(spacing: 25){
-                /*
+                
                 ForEach(videoListData.videoList){item in
                     
                     ZStack{
@@ -87,10 +87,10 @@ struct CategoryVideoView: View {
                     }
                  
                 }
-                 */
+                 
             }
         }
-    /*
+    
         .sheet(isPresented: $showVideoDetailView){
             DetailsViewVideo(
                 showVideoDetailView: $showVideoDetailView,
@@ -100,7 +100,7 @@ struct CategoryVideoView: View {
             .presentationDetents([.medium, .large], selection: $detens)
             .interactiveDismissDisabled()
         }
-     */
+     
     }
     
 }

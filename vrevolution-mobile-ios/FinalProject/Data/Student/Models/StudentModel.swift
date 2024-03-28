@@ -12,8 +12,9 @@ struct StudentModel: Identifiable, Codable, Hashable {
     
     //OGRENCI'NIN NAME VE PASSWORD OZELLIKLERI
     var id = UUID()
-    let name: String?
+    let userName: String?
+    let email: String?
     let password: String?
     
-    var course : [VideoModel]?
+   
 }

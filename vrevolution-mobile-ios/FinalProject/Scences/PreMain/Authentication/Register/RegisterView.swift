@@ -9,15 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var name   : String = ""
-    @State var password: String = ""
-    @State var confirmPassword : String = ""
-    @State var isSuccesfulyBackLoginView : Bool = false
-    
-    @State var showPassordConfirmAlert : Bool = false
-    @State var showAlreayAccountAlert : Bool = false
-    
-    @EnvironmentObject var studentViewModel: StudentViewModel
+    @EnvironmentObject var registerViewModel : RegisterViewModel
     
     var body: some View {
         NavigationStack{
@@ -25,26 +17,44 @@ struct RegisterView: View {
                
                 Image("vrevolution")
                     .resizable()
-                    
+
                 
                 VStack(alignment: .leading){
                     Text("Create Account")
                         .font(.system(size: Fonts.mainTitle.rawValue))
+                    
                     VStack(spacing: 25) {
-                        LoginTextField(value: $name, textFieldIconName: "envelope", placeHolder: "Email")
-                        LoginTextField(value: $password, textFieldIconName: "key.horizontal", placeHolder: "Password")
-                        LoginTextField(value: $confirmPassword, textFieldIconName: "key.horizontal", placeHolder: "Confirm Password")
+                        LoginTextField(
+                            value: $registerViewModel.userName,
+                            textFieldIconName: "envelope",
+                            placeHolder: "UserName")
+                        LoginTextField(
+                            value: $registerViewModel.email,
+                            textFieldIconName: "key.horizontal",
+                            placeHolder: "Email")
+                        LoginTextField(
+                            value: $registerViewModel.password,
+                            textFieldIconName: "key.horizontal",
+                            placeHolder: "Confirm Password")
                     }
                 }
+                
+                
                 VStack{
-                    AccessButton(title: "Register",
-                                 onButtonTapAction: registerButtonAction)
+                    
+                    NavigationLink{
+                        LoginView()
+                    }label: {
+                        AccessButton(title: "Register", onButtonTapAction: registerViewModel.registerButtonAction)
+                    }
+                    
                     HStack{
                         Text("Already have an account ?")
                             .font(.system(size: Fonts.accountTittle.rawValue))
                             .fontWeight(.light)
+                        
                         NavigationLink {
-                            LoginView()
+                            LoginView()   
                         }label: {
                             Text("Login")
                                 .font(.system(size: Fonts.accountTittle.rawValue))
@@ -52,39 +62,22 @@ struct RegisterView: View {
                                 .foregroundColor(Color("Renk1"))
                         }
                     }
+                    
                 }
             }
-            .navigationDestination(isPresented: $isSuccesfulyBackLoginView){
-                LoginView()
-            }
-            .alert("Something is Wrong!", isPresented: $showPassordConfirmAlert){
+            .navigationDestination(
+                isPresented: $registerViewModel.isSuccesfullLoginView){ LoginView() }
+            .alert("Something is Wrong!", isPresented: $registerViewModel.showFlaseUsePasswordAlert){
                 Button("Ok",role: .cancel){}
             }message: { Text("The entered passwords must be the same.") }
             
-                .alert("Something is Wrong", isPresented: $showAlreayAccountAlert){
+                .alert("Something is Wrong", isPresented: $registerViewModel.showFalseUsernameAlert){
                     Button("Ok",role: .cancel){}
                 }message: { Text("There is already a user with this name") }
         }
     }
     
-    private func registerButtonAction() {
         
-        if password == confirmPassword{
-            showPassordConfirmAlert = false
-            if studentViewModel.alreadyStudent(name: name, password: password) == false{
-                studentViewModel.addStudent(name: name, password: password)
-                isSuccesfulyBackLoginView = true
-            }else{
-                showAlreayAccountAlert = true
-            }
-        }
-        else {
-            showPassordConfirmAlert = true
-        }
-    }
-}
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
-    }
+    
+  
 }
