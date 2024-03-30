@@ -10,6 +10,9 @@ import com.example.cankaya_final_project.api.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
+import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.model.User
 import com.example.cankaya_final_project.model.UserResponse
 import com.google.gson.Gson
@@ -32,10 +35,15 @@ class RegisterFragment : Fragment() {
     }
 
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.registerButton.setOnClickListener{
             registerUser()
+        }
+        binding.loginTextView.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
     }
 

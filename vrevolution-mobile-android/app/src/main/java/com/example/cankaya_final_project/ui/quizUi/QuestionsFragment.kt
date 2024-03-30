@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.activity.addCallback
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.databinding.FragmentQuestionsBinding
 import com.example.cankaya_final_project.api.RetrofitClient
@@ -36,15 +38,17 @@ class QuestionsFragment : Fragment() {
     }
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val testId = arguments?.getString("testId") ?: return
-
         showQuestion(testId)
-
         binding.continueButton.setOnClickListener {
             onContinueClicked()
+        }
+        // Geri tuşu basıldığında özel davranışı tanımla
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            Toast.makeText(context, "Soruları gördükten sonra geri dönemezsiniz.", Toast.LENGTH_SHORT).show()
         }
     }
 

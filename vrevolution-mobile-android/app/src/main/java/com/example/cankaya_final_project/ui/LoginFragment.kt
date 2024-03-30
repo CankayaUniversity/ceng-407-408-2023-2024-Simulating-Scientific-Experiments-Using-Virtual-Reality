@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.example.cankaya_final_project.MainActivity
+import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.databinding.FragmentLoginBinding
 import com.example.cankaya_final_project.api.RetrofitClient
 import com.example.cankaya_final_project.model.LoginUser
@@ -33,10 +36,6 @@ class LoginFragment : Fragment() {
        binding= FragmentLoginBinding.inflate(inflater, container, false)
 
 
-        binding.loginButton.setOnClickListener{
-            Toast.makeText(requireContext(), "Login button clicked", Toast.LENGTH_SHORT).show()
-        }
-
         return binding.root
     }
 
@@ -45,8 +44,16 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loginButton.setOnClickListener{
             loginUser()
+
         }
+
+        binding.registerTextView.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+
     }
+
+
 
     private fun loginUser() {
         val email = binding.logEmail.text.toString().trim()
@@ -60,8 +67,7 @@ class LoginFragment : Fragment() {
                     val response = RetrofitClient.userService.loginUser(LoginUser(email, password))
                     if (response.isSuccessful) {
                         Toast.makeText(context, "Logged in Successfully", Toast.LENGTH_LONG).show()
-                        val intent = Intent(context, MainActivity::class.java)
-                        startActivity(intent)
+                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     } else {
                         val errorMessage = response.errorBody()?.string() ?: "Unknown error"
                         Toast.makeText(context, "Login Failed: $errorMessage", Toast.LENGTH_LONG).show()

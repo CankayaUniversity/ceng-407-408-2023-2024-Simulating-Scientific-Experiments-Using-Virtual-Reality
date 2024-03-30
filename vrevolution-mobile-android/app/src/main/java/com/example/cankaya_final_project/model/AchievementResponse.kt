@@ -13,5 +13,4 @@ data class AchievementResponse(
     val topic3Achievement1: String,
     val topic3Achievement2: String,
     val topic3Achievement3: String,
-
-)
+    )

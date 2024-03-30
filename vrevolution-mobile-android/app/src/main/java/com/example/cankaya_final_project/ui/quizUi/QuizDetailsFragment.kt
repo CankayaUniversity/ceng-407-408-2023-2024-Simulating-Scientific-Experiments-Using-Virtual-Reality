@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cankaya_final_project.R
@@ -26,6 +27,8 @@ class QuizDetailsFragment : Fragment(), UnitTestAdapter.OnTestClickListener {
          return binding.root
     }
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val classType = arguments?.getString("classType")
@@ -44,7 +47,6 @@ class QuizDetailsFragment : Fragment(), UnitTestAdapter.OnTestClickListener {
         val quizQuestionsFragment = QuestionsFragment().apply {
             arguments = Bundle().apply {
                 putString("testId", testDetay.test_id)
-                // Diğer parametreler buraya eklenebilir.
             }
         }
 

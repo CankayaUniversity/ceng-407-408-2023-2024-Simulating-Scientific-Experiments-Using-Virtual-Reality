@@ -1,7 +1,5 @@
 package com.example.cankaya_final_project.model
 
-
-
 data class Questions(
     val index: Double,//sorunun id indexi
     val text: String,//sorunun texti
