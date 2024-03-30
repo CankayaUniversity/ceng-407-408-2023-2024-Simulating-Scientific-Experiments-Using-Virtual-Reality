@@ -85,30 +85,29 @@ class AchievementDialogFragment : DialogFragment() {
         }
     }
 
-
     private fun formatAchievements(achievements: AchievementResponse?): String {
-        return achievements?.let {
-            """
-            ${it.topic1}
-            1. ${it.topic1Achievement1}
-            2. ${it.topic1Achievement2}
-            3. ${it.topic1Achievement3}
+        return achievements?.let { ach ->
+            listOf(
+                ach.topic1 to listOfNotNull(ach.topic1Achievement1, ach.topic1Achievement2, ach.topic1Achievement3),
+                ach.topic2 to listOfNotNull(ach.topic2Achievement1, ach.topic2Achievement2, ach.topic2Achievement3),
+                ach.topic3 to listOfNotNull(ach.topic3Achievement1, ach.topic3Achievement2, ach.topic3Achievement3)
+            ).mapNotNull { (topic, achievementList) ->
+                if (achievementList.isNotEmpty()) {
+                    val separator = "-".repeat(topic.length+2)
+                    val achievementsFormatted = achievementList.mapIndexed { index, achievement ->
+                        "${index + 1}. $achievement"
+                    }.joinToString("\n")
 
-            ${it.topic2}
-            1. ${it.topic2Achievement1}
-            2. ${it.topic2Achievement2}
-            3. ${it.topic2Achievement3}
-            
-            
-             ${it.topic3}
-            1. ${it.topic3Achievement1}
-            2. ${it.topic3Achievement2}
-            3. ${it.topic3Achievement3}
-
-
-            """.trimIndent()
+                    """
+                |$topic
+                |$separator
+                |$achievementsFormatted
+                """.trimMargin()
+                } else null
+            }.joinToString("\n\n\n").takeIf { it.isNotBlank() }
         } ?: "Başarımlar yüklenemedi."
     }
+
 
 
 
