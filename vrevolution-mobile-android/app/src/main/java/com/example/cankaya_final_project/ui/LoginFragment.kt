@@ -60,20 +60,25 @@ class LoginFragment : Fragment() {
         val password = binding.logPassword.text.toString().trim()
 
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(context, "Email and Password required", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Email and Password required", Toast.LENGTH_SHORT).show()
         } else {
             CoroutineScope(Dispatchers.Main).launch {
                 try {
                     val response = RetrofitClient.userService.loginUser(LoginUser(email, password))
                     if (response.isSuccessful) {
-                        Toast.makeText(context, "Logged in Successfully", Toast.LENGTH_LONG).show()
+                        val sharedPref = activity?.getSharedPreferences("MyApp", AppCompatActivity.MODE_PRIVATE) ?: return@launch
+                        with (sharedPref.edit()) {
+                            putBoolean("isLoggedIn", true)
+                            apply()
+                        }
+                        Toast.makeText(context, "Logged in Successfully", Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     } else {
                         val errorMessage = response.errorBody()?.string() ?: "Unknown error"
-                        Toast.makeText(context, "Login Failed: $errorMessage", Toast.LENGTH_LONG).show()
+                        Toast.makeText(context, "Login Failed: $errorMessage", Toast.LENGTH_SHORT).show()
                     }
                 } catch (e: Exception) {
-                    Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

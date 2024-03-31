@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
@@ -69,7 +70,7 @@ class HomeFragment : Fragment() {
         videoAdapter = VideoAdapter(videoList)
         binding.recViewVideo.adapter = videoAdapter
 
-        // Navigation Drawer'ın menü öğeleri için tıklama işleyicileri ayarla
+
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_profile -> {
@@ -85,7 +86,23 @@ class HomeFragment : Fragment() {
                     findNavController().navigate(R.id.action_homeFragment_to_quizFragment)
                 }
                 R.id.nav_logout -> {
-                    Toast.makeText(activity, "Logged Out", Toast.LENGTH_SHORT).show()
+
+                    AlertDialog.Builder(requireContext())
+                        .setTitle("Çıkış Yap")
+                        .setMessage("Çıkmak istediğinizden emin misiniz?")
+                        .setPositiveButton("Evet") { dialog, which ->
+                            // Kullanıcı evet dediğinde çıkış yapma işlemlerini gerçekleştir
+                            val sharedPref = activity?.getSharedPreferences("MyApp", AppCompatActivity.MODE_PRIVATE) ?: return@setPositiveButton
+                            with(sharedPref.edit()) {
+                                putBoolean("isLoggedIn", false)
+                                commit()
+                            }
+                            // Kullanıcıyı giriş ekranına yönlendir
+                            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
+                            Toast.makeText(activity, "Logged Out", Toast.LENGTH_SHORT).show()
+                        }
+                        .setNegativeButton("Hayır", null) // Kullanıcı hayır dediğinde hiçbir şey yapma
+                        .show()
                 }
                 else -> false
             }

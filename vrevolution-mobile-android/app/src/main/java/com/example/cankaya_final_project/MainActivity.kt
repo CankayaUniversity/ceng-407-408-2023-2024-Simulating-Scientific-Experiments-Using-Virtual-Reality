@@ -1,5 +1,6 @@
 package com.example.cankaya_final_project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.cankaya_final_project.databinding.ActivityMainBinding
 import com.example.cankaya_final_project.ui.HomeFragment
 import com.example.cankaya_final_project.ui.LoginFragment
@@ -31,6 +33,15 @@ class MainActivity : AppCompatActivity(){
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        val sharedPref = getSharedPreferences("MyApp", MODE_PRIVATE)
+        val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+
+        if (isLoggedIn) {
+            // Kullanıcı giriş yapmış, direkt HomeFragment'a yönlendir
+            navController.navigate(R.id.homeFragment)
+        }
 
 
     }
