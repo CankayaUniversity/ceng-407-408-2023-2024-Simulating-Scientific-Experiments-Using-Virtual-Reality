@@ -6,21 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import android.widget.Toolbar
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.cankaya_final_project.R
-import com.example.cankaya_final_project.Video
+import com.example.cankaya_final_project.model.Video
 import com.example.cankaya_final_project.adapters.VideoAdapter
 import com.example.cankaya_final_project.databinding.FragmentHomeBinding
-import com.example.cankaya_final_project.databinding.FragmentQuestionsBinding
-import com.example.cankaya_final_project.ui.quizUi.QuizFragment
-import com.google.android.material.navigation.NavigationView
 
 
 class HomeFragment : Fragment() {
@@ -38,11 +33,11 @@ class HomeFragment : Fragment() {
 
         // Video listesini burada başlatıyoruz
         videoList = listOf(
-            Video("Video Başlığı 1", "Video Açıklaması 1", R.drawable.baseline_smart_display_24),
-            Video("Video Başlığı 2", "Video Açıklaması 2", R.drawable.baseline_smart_display_24),
-            Video("Video Başlığı 3", "Video Açıklaması 3", R.drawable.baseline_smart_display_24),
-            Video("Video Başlığı 4", "Video Açıklaması 4", R.drawable.baseline_smart_display_24),
-            Video("Video Başlığı 5", "Video Açıklaması 5", R.drawable.baseline_smart_display_24),
+            Video("Uzay Ve Gezegenler", "Güneş sistemi ve gezegenlerin özellikleri", R.drawable.baseline_smart_display_24),
+            Video("Sürtünme Kuvveti", "Sürtünme kuvveti ve etkileri", R.drawable.baseline_smart_display_24),
+            Video("Elektrik Devreleri", "Video Açıklaması 3", R.drawable.baseline_smart_display_24),
+            Video("Vücudumuzdaki Sistemler", "Vücudumuzdaki sistemler ve görevleri", R.drawable.baseline_smart_display_24),
+            Video("Kimyasal Olaylar", "Kimyasal tepkimeler", R.drawable.baseline_smart_display_24),
 
         )
         return binding.root
@@ -50,6 +45,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Kullanıcı bu fragment'tayken geri tuşuna basarsa, uygulamayı kapat
+                requireActivity().finish()
+            }
+        })
+
 
         // Toolbar'ı tanımla ve ayarla
         val toolbar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar_home)
@@ -110,6 +113,9 @@ class HomeFragment : Fragment() {
             drawerLayout.closeDrawers()
             true
         }
+
+
+
     }
 
 

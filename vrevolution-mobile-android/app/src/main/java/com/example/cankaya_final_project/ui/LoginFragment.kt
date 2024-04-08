@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.cankaya_final_project.MainActivity
 import com.example.cankaya_final_project.R
@@ -47,9 +49,18 @@ class LoginFragment : Fragment() {
 
         }
 
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Kullanıcı bu fragment'tayken geri tuşuna basarsa, uygulamayı kapat
+                requireActivity().finish()
+            }
+        })
+
         binding.registerTextView.setOnClickListener{
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
+
+
 
     }
 
@@ -72,7 +83,9 @@ class LoginFragment : Fragment() {
                             apply()
                         }
                         Toast.makeText(context, "Logged in Successfully", Toast.LENGTH_SHORT).show()
-                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment, null, NavOptions.Builder()
+                            .setPopUpTo(R.id.loginFragment, true).build())
+
                     } else {
                         val errorMessage = response.errorBody()?.string() ?: "Unknown error"
                         Toast.makeText(context, "Login Failed: $errorMessage", Toast.LENGTH_SHORT).show()

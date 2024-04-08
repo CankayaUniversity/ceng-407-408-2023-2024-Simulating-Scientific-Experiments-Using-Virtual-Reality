@@ -11,6 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.model.User
@@ -63,6 +64,9 @@ class RegisterFragment : Fragment() {
                 val response = RetrofitClient.userService.createUser(User(username, email, password))
                 if (response.isSuccessful) {
                     Toast.makeText(context, response.body()?.message ?: "User created successfully", Toast.LENGTH_LONG).show()
+                    findNavController().navigate(R.id.action_registerFragment_to_loginFragment, null, NavOptions.Builder()
+                        .setPopUpTo(R.id.loginFragment, true).build())
+
                 } else {
                     val errorBody = response.errorBody()?.string()
                     val gson = Gson()
