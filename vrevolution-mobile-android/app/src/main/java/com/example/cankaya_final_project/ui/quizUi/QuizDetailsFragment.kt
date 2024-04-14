@@ -1,13 +1,12 @@
 package com.example.cankaya_final_project.ui.quizUi
 
+import com.example.cankaya_final_project.ui.QuestionsFragment
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.adapters.UnitTestAdapter
 import com.example.cankaya_final_project.databinding.FragmentQuizDetailsBinding

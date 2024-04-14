@@ -101,7 +101,7 @@ class HomeFragment : Fragment() {
                                 commit()
                             }
                             // Kullanıcıyı giriş ekranına yönlendir
-                            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
+                            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                             Toast.makeText(activity, "Logged Out", Toast.LENGTH_SHORT).show()
                         }
                         .setNegativeButton("Hayır", null) // Kullanıcı hayır dediğinde hiçbir şey yapma
