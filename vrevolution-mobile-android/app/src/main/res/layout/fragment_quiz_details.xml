@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgrounquestion"
     tools:context=".ui.quizUi.QuizDetailsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvQuizDetails"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 

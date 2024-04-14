@@ -5,16 +5,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginTop="50dp"
     android:padding="16dp"
-    tools:context=".ui.quizUi.QuestionsFragment">
+    android:background="@drawable/backgrounquestion"
+    tools:context=".ui.QuestionsFragment">
 
     <TextView
         android:id="@+id/question_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
-        android:textSize="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:padding="8dp"
         android:text=""
         android:textAlignment="center" />
@@ -79,20 +82,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Continue"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:padding="16dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="Contınue"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#673AB7"
+        app:elevation="8dp"
         app:icon="@drawable/baseline_arrow_forward_24"
         app:iconPadding="8dp"
-        app:elevation="8dp"
-        android:fontFamily="sans-serif-medium"
-        app:backgroundTint="#673AB7"
-        app:rippleColor="#AAFFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#AAFFFFFF" />
 
 
 </LinearLayout>
