@@ -1,5 +1,6 @@
 package com.example.cankaya_final_project.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -64,6 +65,13 @@ class RegisterFragment : Fragment() {
                 val response = RetrofitClient.userService.createUser(User(username, email, password))
                 if (response.isSuccessful) {
                     Toast.makeText(context, response.body()?.message ?: "User created successfully", Toast.LENGTH_LONG).show()
+                    // Kullanıcı giriş yaptığında veya kaydolduğunda
+                    val sharedPref = activity?.getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE) ?: return@launch
+                    with(sharedPref.edit()) {
+                        putString("username", username) // 'kullaniciAdi' değişkeni kayıt veya giriş sırasında alınan kullanıcı adıdır
+                        apply()
+                    }
+
                     findNavController().navigate(R.id.action_registerFragment_to_loginFragment, null, NavOptions.Builder()
                         .setPopUpTo(R.id.loginFragment, true).build())
 
