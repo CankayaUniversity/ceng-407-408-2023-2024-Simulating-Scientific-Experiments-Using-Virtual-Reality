@@ -28,8 +28,8 @@ class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
@@ -65,15 +65,9 @@ class RegisterFragment : Fragment() {
                 val response = RetrofitClient.userService.createUser(User(username, email, password))
                 if (response.isSuccessful) {
                     Toast.makeText(context, response.body()?.message ?: "User created successfully", Toast.LENGTH_LONG).show()
-                    // Kullanıcı giriş yaptığında veya kaydolduğunda
-                    val sharedPref = activity?.getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE) ?: return@launch
-                    with(sharedPref.edit()) {
-                        putString("username", username) // 'kullaniciAdi' değişkeni kayıt veya giriş sırasında alınan kullanıcı adıdır
-                        apply()
-                    }
 
                     findNavController().navigate(R.id.action_registerFragment_to_loginFragment, null, NavOptions.Builder()
-                        .setPopUpTo(R.id.loginFragment, true).build())
+                            .setPopUpTo(R.id.loginFragment, true).build())
 
                 } else {
                     val errorBody = response.errorBody()?.string()
