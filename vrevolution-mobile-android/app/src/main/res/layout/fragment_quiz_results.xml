@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutQuizResults"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quizresultbackground"
+    tools:context=".ui.quizUi.QuizResultsFragment">
+
+    <TextView
+        android:id="@+id/tvQuizScore"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:text="Score: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollViewResults"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10sp"
+        app:layout_constraintBottom_toTopOf="@id/btnRestartQuiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuizScore"
+        app:layout_constraintVertical_bias="0.578">
+
+        <TextView
+            android:id="@+id/tvQuizResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:shadowColor="@color/white"
+            android:text="Quiz Results Here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#333333" />
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRestartQuiz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="24dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoHome"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="54dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRestartQuiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

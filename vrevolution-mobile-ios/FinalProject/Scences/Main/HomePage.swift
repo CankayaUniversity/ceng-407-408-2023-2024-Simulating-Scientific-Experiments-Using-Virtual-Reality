@@ -9,10 +9,9 @@ import SwiftUI
 
 struct HomePage: View {
     
-    let studentName: String
+    @EnvironmentObject var loginViewModel : LoginViewModel
     
     @StateObject var menuData = MenuViewmodel()
-    
     @Namespace var animation
     
     var body: some View {
@@ -21,10 +20,11 @@ struct HomePage: View {
             //SIDE MENU and HOME_PAGE
             
             //SIDE MENU DEFAULT OLARAK GOZUKMEZ, AMA SHOW_DRAWER TRUE OLURSA GOZUKUR.
-            SideMenu(animation: _animation,studentName: studentName)
+            SideMenu(animation: _animation,studentName: loginViewModel.email)
             
             TabView(selection: $menuData.selectedMenu){
-                AllVideosView(studentName: studentName)
+                AllVideosView()
+                    .environmentObject(loginViewModel)
                     .tag("All Videos")
                 
                 ClassesView()
@@ -56,12 +56,6 @@ struct HomePage: View {
         //Dor Avoiding Re-Declarations...
         .environmentObject(menuData)
         
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePage(studentName: "")
     }
 }
 

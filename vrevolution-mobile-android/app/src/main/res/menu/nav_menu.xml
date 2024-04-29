@@ -8,16 +8,6 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_login"
-            android:icon="@drawable/profile"
-            android:title="Login" />
-        <item
-            android:id="@+id/nav_register"
-            android:icon="@drawable/profile"
-            android:title="Register" />
-
-
-        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/profile"
             android:title="Profile" />

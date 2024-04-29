@@ -66,12 +66,12 @@ struct RegisterView: View {
                 }
             }
             .navigationDestination(
-                isPresented: $registerViewModel.isSuccesfulyBackLoginView){ LoginView() }
-            .alert("Something is Wrong!", isPresented: $registerViewModel.showPassordConfirmAlert){
+                isPresented: $registerViewModel.isSuccesfullLoginView){ LoginView() }
+            .alert("Something is Wrong!", isPresented: $registerViewModel.showFlaseUsePasswordAlert){
                 Button("Ok",role: .cancel){}
             }message: { Text("The entered passwords must be the same.") }
             
-                .alert("Something is Wrong", isPresented: $registerViewModel.showAlreayAccountAlert){
+                .alert("Something is Wrong", isPresented: $registerViewModel.showFalseUsernameAlert){
                     Button("Ok",role: .cancel){}
                 }message: { Text("There is already a user with this name") }
         }

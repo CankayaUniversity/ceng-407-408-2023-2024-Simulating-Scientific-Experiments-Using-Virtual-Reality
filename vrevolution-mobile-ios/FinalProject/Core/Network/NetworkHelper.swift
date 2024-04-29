@@ -12,9 +12,11 @@ struct NetworkPath{
     enum Endpoints: String{
         case login = "api/v1/auth"
         case register = "api/v1/users"
+        case questions = ""
     }
     enum BaseUrL: String{
         case baseUrl = "https://vrevolution.azurewebsites.net/"
+        
     }
     enum HTTPMethods: String{
         case get = "GET"

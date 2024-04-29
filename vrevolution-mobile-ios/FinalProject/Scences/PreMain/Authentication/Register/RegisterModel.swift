@@ -18,4 +18,6 @@ struct RegisterModel: Codable {
 // MARK: - ValidationErrors
 struct ValidationErrors: Codable {
     let email: String?
+    let username: String?
+    let password: String?
 }

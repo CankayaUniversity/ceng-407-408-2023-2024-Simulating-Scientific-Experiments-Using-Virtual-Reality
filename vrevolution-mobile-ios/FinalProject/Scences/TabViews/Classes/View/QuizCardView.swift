@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct QuizView: View {
-    @State var isPresented : Bool = false
+struct QuizCardView: View {
+ 
     var body: some View {
        
         NavigationStack {
@@ -51,9 +51,11 @@ struct QuizView: View {
                             }
                             .font(.system(size: 15))
                             .opacity(0.60)
+                            
                             Spacer()
+                            
                             NavigationLink{
-                                QuestionView()
+                                QuestionsView()
                             } label: {
                                 Text("Test Katıl")
                                     .frame(width: 120, height: 30)
@@ -83,6 +85,6 @@ struct QuizView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        QuizCardView()
     }
 }

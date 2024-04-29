@@ -9,6 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgrounquestion"
     tools:context=".ui.quizUi.QuizFragment"
     android:orientation="vertical">
 
@@ -43,8 +44,9 @@
         android:layout_gravity="start"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Please choose a class ;"
-        android:textColor="#80000000"
+        android:textStyle="bold"
+        android:text="Lütfen sınıfınızı seçin"
+        android:textColor="#A6322C2C"
         android:textSize="20sp" />
 
 
