@@ -12,8 +12,14 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cankaya_final_project.Constants.URL_FIVE
+import com.example.cankaya_final_project.Constants.URL_FOUR
+import com.example.cankaya_final_project.Constants.URL_ONE
+import com.example.cankaya_final_project.Constants.URL_THREE
+import com.example.cankaya_final_project.Constants.URL_TWO
 import com.example.cankaya_final_project.R
 import com.example.cankaya_final_project.model.Video
 import com.example.cankaya_final_project.adapters.VideoAdapter
@@ -28,27 +34,25 @@ class HomeFragment : Fragment(), VideoAdapter.OnItemClickListener {
 
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         // Video listesini burada başlatıyoruz
         videoList = listOf(
-                Video("Uzay Ve Gezegenler", "Güneş sistemi ve gezegenlerin özellikleri", R.drawable.baseline_smart_display_24,R.drawable.silbeni),
-                Video("Sürtünme Kuvveti", "Sürtünme kuvveti ve etkileri", R.drawable.baseline_smart_display_24,R.drawable.srtnemkvvet),
-                Video("Elektrik Devreleri", "Video Açıklaması 3", R.drawable.baseline_smart_display_24,R.drawable.elektrikvideo),
-                Video("Vücudumuzdaki Sistemler", "Vücudumuzdaki sistemler ve görevleri", R.drawable.baseline_smart_display_24,R.drawable.sistemlervideo),
-                Video("Kimyasal Olaylar", "Kimyasal tepkimeler", R.drawable.baseline_smart_display_24,R.drawable.kimyasalolaylar),
+            Video("Uzay Ve Gezegenler", "Güneş sistemi ve gezegenlerin özellikleri", R.drawable.baseline_smart_display_24,R.drawable.silbeni, URL_ONE),
+            Video("Sürtünme Kuvveti", "Sürtünme kuvveti ve etkileri", R.drawable.baseline_smart_display_24,R.drawable.srtnemkvvet,URL_TWO),
+            Video("Elektrik Devreleri", "Elektriksel devre elemanları", R.drawable.baseline_smart_display_24,R.drawable.elektrikvideo,URL_THREE),
+            Video("Vücudumuzdaki Sistemler", "Vücudumuzdaki sistemler ve görevleri", R.drawable.baseline_smart_display_24,R.drawable.sistemlervideo,URL_FOUR),
+            Video("Kimyasal Olaylar", "Kimyasal tepkimeler", R.drawable.baseline_smart_display_24,R.drawable.kimyasalolaylar,URL_FIVE),
 
-                )
+        )
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         val sharedPref = activity?.getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         val username = sharedPref?.getString("username", "NoName") ?: "NoName"
         val headerView = binding.navView.getHeaderView(0)
@@ -79,8 +83,8 @@ class HomeFragment : Fragment(), VideoAdapter.OnItemClickListener {
         val drawerLayout = binding.drawerLayout
         val navigationView = binding.navView
         val toggle = ActionBarDrawerToggle(
-                activity, drawerLayout, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            activity, drawerLayout, toolbar,
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -108,21 +112,21 @@ class HomeFragment : Fragment(), VideoAdapter.OnItemClickListener {
                 R.id.nav_logout -> {
 
                     AlertDialog.Builder(requireContext())
-                            .setTitle("Çıkış Yap")
-                            .setMessage("Çıkmak istediğinizden emin misiniz?")
-                            .setPositiveButton("Evet") { dialog, which ->
-                                // Kullanıcı evet dediğinde çıkış yapma işlemlerini gerçekleştir
-                                val sharedPref = activity?.getSharedPreferences("MyApp", AppCompatActivity.MODE_PRIVATE) ?: return@setPositiveButton
-                                with(sharedPref.edit()) {
-                                    putBoolean("isLoggedIn", false)
-                                    commit()
-                                }
-                                // Kullanıcıyı giriş ekranına yönlendir
-                                findNavController().navigate(R.id.loginFragment)
-                                Toast.makeText(activity, "Logged Out", Toast.LENGTH_SHORT).show()
+                        .setTitle("Çıkış Yap")
+                        .setMessage("Çıkmak istediğinizden emin misiniz?")
+                        .setPositiveButton("Evet") { dialog, which ->
+                            // Kullanıcı evet dediğinde çıkış yapma işlemlerini gerçekleştir
+                            val sharedPref = activity?.getSharedPreferences("MyApp", AppCompatActivity.MODE_PRIVATE) ?: return@setPositiveButton
+                            with(sharedPref.edit()) {
+                                putBoolean("isLoggedIn", false)
+                                commit()
                             }
-                            .setNegativeButton("Hayır", null) // Kullanıcı hayır dediğinde hiçbir şey yapma
-                            .show()
+                            // Kullanıcıyı giriş ekranına yönlendir
+                            findNavController().navigate(R.id.loginFragment)
+                            Toast.makeText(activity, "Logged Out", Toast.LENGTH_SHORT).show()
+                        }
+                        .setNegativeButton("Hayır", null) // Kullanıcı hayır dediğinde hiçbir şey yapma
+                        .show()
                 }
                 else -> false
             }
@@ -148,11 +152,11 @@ class HomeFragment : Fragment(), VideoAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(video: Video) {
-        AlertDialog.Builder(requireContext())
-                .setTitle("Video Yok")
-                .setMessage("Şu an herhangi bir video bulunmuyor.")
-                .setPositiveButton("Tamam", null)
-                .show()
+        val bundle = bundleOf(
+            "videoUrl" to video.videoUrl,
+            "backImage" to video.backImage
+        )
+        findNavController().navigate(R.id.action_homeFragment_to_videoPlayFragment, bundle)
     }
 
 

@@ -73,12 +73,27 @@
         <action
             android:id="@+id/action_homeFragment_self"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_videoPlayFragment"
+            app:destination="@id/videoPlayFragment" />
+        <argument
+            android:name="videoUrl"
+            app:argType="string" />
+        <argument
+            android:name="backImage"
+            app:argType="integer" />
     </fragment>
+
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.cankaya_final_project.ui.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizResultsFragment"
         android:name="com.example.cankaya_final_project.ui.quizUi.QuizResultsFragment"
@@ -90,6 +105,13 @@
         <argument
             android:name="quizScore"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_quizResultsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/videoPlayFragment"
+        android:name="com.example.cankaya_final_project.ui.VideoPlayFragment"
+        android:label="VideoPlayFragment" />
 
 </navigation>
