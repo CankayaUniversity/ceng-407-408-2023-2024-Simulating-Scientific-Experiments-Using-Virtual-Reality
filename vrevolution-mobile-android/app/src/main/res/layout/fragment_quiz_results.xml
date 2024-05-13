@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10sp"
-        app:layout_constraintBottom_toTopOf="@id/btnRestartQuiz"
+        app:layout_constraintBottom_toTopOf="@id/btnGoHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,30 +44,18 @@
             android:textColor="#333333" />
     </ScrollView>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRestartQuiz"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Restart"
-        android:backgroundTint="#FF9800"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="24dp"
-        android:layout_margin="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnGoHome"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnGoHome"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:backgroundTint="#FF9800"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="54dp"
         android:layout_margin="5dp"
-        app:layout_constraintStart_toEndOf="@+id/btnRestartQuiz"
+        android:backgroundTint="#673AB7"
+        android:text="Home"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

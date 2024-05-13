@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#DF704BB3"
+        android:background="@drawable/backgrounquestion"
         android:padding="16dp">
 
         <ImageButton
@@ -20,12 +20,19 @@
             android:background="?android:selectableItemBackground"
             android:contentDescription="close" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/tvAchievements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:padding="8dp" />
 
     </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.cankaya_final_project.ui
 
 import android.graphics.Color
+import android.health.connect.datatypes.units.Length
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -37,8 +38,8 @@ class QuestionsFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentQuestionsBinding.inflate(inflater, container, false)
         return binding.root
@@ -64,10 +65,12 @@ class QuestionsFragment : Fragment() {
     //withContecxt methodu threadler arası geçiş yapmayaı sağlar
     //yani IO thread inde çalışırken  main thread e geçiş yapmayı sağlar
     private fun showQuestion(testId: String) {
+        binding.progressBar.visibility = View.VISIBLE  // Yüklemeye başladığında ProgressBar'ı göster
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val response = RetrofitClient.userService.getQuestions(testId)
                 withContext(Dispatchers.Main) {
+                    binding.progressBar.visibility = View.GONE  // Yükleme tamamlandığında ProgressBar'ı gizle
                     if (response.isSuccessful) {
                         currentQuizQuestions = response.body() ?: emptyList()
                         if (currentQuizQuestions.isNotEmpty()) {
@@ -79,6 +82,7 @@ class QuestionsFragment : Fragment() {
                 }
             } catch (e: Throwable) {
                 withContext(Dispatchers.Main) {
+                    binding.progressBar.visibility = View.GONE  // Hata durumunda da ProgressBar'ı gizle
                     Toast.makeText(context, "Hata: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -86,16 +90,24 @@ class QuestionsFragment : Fragment() {
     }
 
 
-
     private fun displayCurrentQuestion() {
         val currentQuestion = currentQuizQuestions[currentQuestionIndex]
         binding.questionText.text = currentQuestion.text
         val buttons = listOf(
-            binding.optionA,
-            binding.optionB,
-            binding.optionC,
-            binding.optionD
+                binding.optionA,
+                binding.optionB,
+                binding.optionC,
+                binding.optionD
         )
+
+
+
+        // !! Soru bazlı achievemntleri toast olarak gösterir .
+        binding.achievementIcon.setOnClickListener {
+            Toast.makeText(requireContext(), currentQuestion.achievement, Toast.LENGTH_LONG).show()
+        }
+
+
 
         buttons.forEachIndexed { index, button ->
             // Yeni soru için butonların arka planını text_border tasarımına döndür
@@ -111,10 +123,10 @@ class QuestionsFragment : Fragment() {
 
     private fun highlightSelection(selectedButton: Button, isCorrect: Boolean) {
         val buttons = listOf(
-            binding.optionA,
-            binding.optionB,
-            binding.optionC,
-            binding.optionD
+                binding.optionA,
+                binding.optionB,
+                binding.optionC,
+                binding.optionD
         )
 
         // Tüm butonların arka planını orijinal tasarımına döndür
@@ -123,7 +135,7 @@ class QuestionsFragment : Fragment() {
         }
 
         // Yalnızca seçilen butonun arka plan rengini değiştir
-        selectedButton.setBackgroundColor(Color.YELLOW)
+        selectedButton.setBackgroundColor(Color.BLUE)
 
         lastSelectedOptionIsCorrect = isCorrect
     }
@@ -159,7 +171,6 @@ class QuestionsFragment : Fragment() {
 
 
 
-
     //cevap anahtarı sayfası için kullanıbilir
 
     private fun generateResultsString(): String {
@@ -167,7 +178,7 @@ class QuestionsFragment : Fragment() {
         currentQuizQuestions.forEachIndexed { index, question ->
             val questionNumber = index + 1 // Soru numarasını 1'den başlatmak için
             val correctOption = question.options.firstOrNull { it.isCorrect }?.text ?: "Doğru cevap bulunamadı"
-            resultsStringBuilder.append("${questionNumber}. Soru: ${question.text}\nDoğru cevap: $correctOption\n\n")
+            resultsStringBuilder.append("${questionNumber}. Soru: ${question.text}\n➜ Doğru cevap: $correctOption\n\n")
         }
         return resultsStringBuilder.toString()
     }
@@ -186,9 +197,9 @@ class QuestionsFragment : Fragment() {
         }
         // QuizResultsFragment'a doğrudan geçiş yapma
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_host_fragment, quizResultsFragment)
-            .addToBackStack(null)
-            .commit()
+                .replace(R.id.nav_host_fragment, quizResultsFragment)
+                .addToBackStack(null)
+                .commit()
     }
 
 
@@ -199,21 +210,22 @@ class QuestionsFragment : Fragment() {
         lottieAnimationView.playAnimation()
 
         val tvScore = dialogView.findViewById<TextView>(R.id.tvScore)
-        tvScore.text = "Skorunuz: $quizScore"
+        tvScore.text = "Skorunuz: $quizScore / 5"
 
 
         AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .setPositiveButton("Tamam") { _, _ ->
-                // Dialog kapandığında, doğrudan Fragment'tan findNavController() çağrısı yapın.
-                try {
-                    navigateToResultsFragment()
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    Toast.makeText(context, "Navigasyon hatası!", Toast.LENGTH_SHORT).show()
+                .setView(dialogView)
+                .setPositiveButton("Tamam") { _, _ ->
+
+                    // Dialog kapandığında, doğrudan Fragment'tan findNavController() çağrısı yapın.
+                    try {
+                        navigateToResultsFragment()
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(context, "Navigasyon hatası!", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
-            .show()
+                .show()
     }
 
 
