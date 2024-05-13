@@ -1273,6 +1273,7 @@ public class QuestionService
                 "{" +
                 "\"index\": 1," +
                 "\"text\": \"Güneş tutulması hangi olay sonucunda gerçekleşir?\"," +
+                "\"achievement\": \"Güneş, Dünya ve Ay'ın konumlarının nasıl etkileşim içinde olduğunu ve bu konumların Güneş tutulmasını nasıl meydana getirdiğini anlama becerilerini ölçer. Öğrencilerin uzaydaki cisimlerin hareketleri hakkında temel bir kavrayışa sahip olmaları beklenir.\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"Ay'ın Dünya'nın gölgesine girmesi\", \"text\": \"Ay'ın Dünya'nın gölgesine girmesi\", \"isCorrect\": true }," +
                 "{ \"option_id\": \"Ay'ın Dünya ile aynı hizada olması\", \"text\": \"Ay'ın Dünya ile aynı hizada olması\", \"isCorrect\": false }," +
@@ -1283,6 +1284,7 @@ public class QuestionService
                 "{" +
                 "\"index\": 2," +
                 "\"text\": \"Güneş tutulmasında hangi gökyüzü olayı gerçekleşir?\"," +
+                "\"achievement\": \"Güneş tutulmasının tam olarak ne olduğunu ve bu olayın gökyüzünde nasıl gözlemlendiğini anlamalarını değerlendirir. Güneş, Ay ve Dünya'nın birbirleriyle olan etkileşiminin sonuçlarını kavramaları amaçlanır.\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"Gündüz vakti gök karanlıklaşır\", \"text\": \"Gündüz vakti gök karanlıklaşır\", \"isCorrect\": true }," +
                 "{ \"option_id\": \"Gece vakti gök daha aydınlık olur\", \"text\": \"Gece vakti gök daha aydınlık olur\", \"isCorrect\": false }," +
@@ -1293,6 +1295,7 @@ public class QuestionService
                 "{" +
                 "\"index\": 3," +
                 "\"text\": \"Ay tutulması hangi evrede gerçekleşir?\"," +
+                "\"achievement\": \"Ay'ın fazlarını ve bu fazların Ay tutulması ile nasıl ilişkili olduğunu öğrencilerin ne kadar iyi anladığını sorgular. Özellikle Ay'ın Dolunay evresinde olduğu zaman tutulmanın gerçekleşebileceğini bilmeleri gerekmektedir.\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"Yeni ay\", \"text\": \"Yeni ay\", \"isCorrect\": false }," +
                 "{ \"option_id\": \"Dolunay\", \"text\": \"Dolunay\", \"isCorrect\": true }," +
@@ -1303,6 +1306,7 @@ public class QuestionService
                 "{" +
                 "\"index\": 4," +
                 "\"text\": \"Güneş tutulmasını izlemek için ne tür gözlük kullanılmalıdır?\"," +
+                "\"achievement\": \"Güneş tutulmasını güvenli bir şekilde gözlemleme yöntemleri hakkında bilgi sahibi olup olmadıklarını ölçer. Güneş ışınlarının zararlı etkileri ve bu ışınlardan korunma yolları hakkında bilinçlendirme amaçlanır.\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"Güneş gözlüğü\", \"text\": \"Güneş gözlüğü\", \"isCorrect\": false }," +
                 "{ \"option_id\": \"Normal gözlük\", \"text\": \"Normal gözlük\", \"isCorrect\": false }," +
@@ -1313,6 +1317,7 @@ public class QuestionService
                 "{" +
                 "\"index\": 5," +
                 "\"text\": \"Güneş tutulması kaç yılda bir aynı yerde tekrar gerçekleşir?\"," +
+                "\"achievement\": \" Güneş tutulmalarının tekrarlama sıklığını ve bu sıklığın belirli bir yerde nasıl değişebileceğini anlatır. Bu bilgi, öğrencilerin dünya üzerindeki farklı konumların uzay olaylarından nasıl etkilendiğini kavramalarına yardımcı olur.\"," +
                 "\"options\": [" +
                 "{ \"option_id\": \"365 yıl\", \"text\": \"365 yıl\", \"isCorrect\": false }," +
                 "{ \"option_id\": \"200 yıl\", \"text\": \"200 yıl\", \"isCorrect\": false }," +
