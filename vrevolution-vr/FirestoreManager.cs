@@ -12,7 +12,6 @@ public class FirestoreManager : MonoBehaviour
         db = FirebaseFirestore.DefaultInstance;
         Debug.Log("Firestore initialized.");
     }
-
     public void SaveUserData(string userId, string email, string username, string school, string userClass, Dictionary<string, Dictionary<string, object>> experiments)
     {
         DocumentReference userDocRef = db.Collection("users").Document(userId);

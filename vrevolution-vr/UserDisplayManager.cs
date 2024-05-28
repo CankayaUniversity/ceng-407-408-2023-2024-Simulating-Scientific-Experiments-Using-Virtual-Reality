@@ -16,7 +16,7 @@ public class UserDisplayManager : MonoBehaviour
         firestoreManager = FindObjectOfType<FirestoreManager>();
         if (firebaseDatabaseManager == null)
         {
-            Debug.LogError("FirebaseDatabaseManager not found.");
+            Debug.LogError("FirebaseDatabaseManager not found!");
             return;
         }
 
