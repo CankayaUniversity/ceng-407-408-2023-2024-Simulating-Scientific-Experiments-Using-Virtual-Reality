@@ -21,7 +21,6 @@ public class LoginManager : MonoBehaviour
         firestoreManager = FindObjectOfType<FirestoreManager>();
         firebaseDatabaseManager = FindObjectOfType<FirebaseDatabaseManager>();
 
-        // Assuming these fields are properly set either via Inspector or other initialization code
         //emailField = ...;
         //passwordField = ...;
         //loginButton = ...;
@@ -37,8 +36,6 @@ public class LoginManager : MonoBehaviour
 
     private void LoadUserData(string userId)
     {
-        // Load user data and proceed to the main game
-        // For example, you can fetch user data from Firestore and display it in the game
     }
 
     private void Update()
@@ -50,6 +47,7 @@ public class LoginManager : MonoBehaviour
             string password = "334576";
             AttemptLogin(email, password);
         }
+
         if (getAllUsersUpdated)
         {
             getAllUsersUpdated = false;

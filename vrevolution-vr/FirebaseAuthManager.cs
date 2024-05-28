@@ -24,6 +24,7 @@ public class FirebaseAuthManager : MonoBehaviour
             onLoginFailed?.Invoke("Firebase not initialized yet. Please wait.");
             return;
         }
+
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled || task.IsFaulted)
             {

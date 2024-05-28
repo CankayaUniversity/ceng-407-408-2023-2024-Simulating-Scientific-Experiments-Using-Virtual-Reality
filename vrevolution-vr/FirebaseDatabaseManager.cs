@@ -58,6 +58,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
                         users.Add(user);
                     }
                 }
+
                 Debug.Log("Retrieved " + users.Count + " users.");
                 onUsersRetrieved?.Invoke(users);
             }

@@ -22,7 +22,6 @@ public class UserDisplayManager : MonoBehaviour
 
         firebaseDatabaseManager.OnFirebaseInitialized += DisplayUsers;
 
-        // If Firebase is already initialized (which might happen in some cases), display users immediately
         if (firebaseDatabaseManager.isFirebaseInitialized)
         {
             DisplayUsers();
