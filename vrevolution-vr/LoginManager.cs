@@ -1,94 +1,164 @@
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using Firebase.Extensions;
 using UnityEngine.UI;
+using TMPro;
 
 public class LoginManager : MonoBehaviour
 {
-    private InputField emailField;
-    private InputField passwordField;
-    private Button loginButton;
-    private Text errorText;
-
     private FirebaseAuthManager firebaseManager;
-    private FirestoreManager firestoreManager;
     private FirebaseDatabaseManager firebaseDatabaseManager;
 
-    public bool loginButtonUpdate = false;
-    public bool getAllUsersUpdated = false;
+    public GameObject[] LoginObjects;
+    public TMP_InputField passinputField;
 
-    void Start()
+    public bool updatelogin = false;
+    public bool updateUser = false;
+    public bool userChoosed = false;
+    public bool passCheck = false;
+
+    public string className = "7A";
+    public string userName = "ali";
+    public string password = "334576";
+    public string userId;
+
+    public static LoginManager Instance;
+
+    void Awake()
     {
-        firebaseManager = FindObjectOfType<FirebaseAuthManager>();
-        firestoreManager = FindObjectOfType<FirestoreManager>();
-        firebaseDatabaseManager = FindObjectOfType<FirebaseDatabaseManager>();
-
-        //emailField = ...;
-        //passwordField = ...;
-        //loginButton = ...;
-        //errorText = ...;
-
-        // Uncomment and use this if you're adding button listeners
-        //loginButton.onClick.AddListener(() => {
-        //    string email = emailField.text;
-        //    string password = passwordField.text;
-        //    AttemptLogin(email, password);
-        //});
-    }
-
-    private void LoadUserData(string userId)
-    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);    
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     private void Update()
     {
-        if (loginButtonUpdate)
+        if (updatelogin)
         {
-            loginButtonUpdate = false;
-            string email = "benna@benna.com";
-            string password = "334576";
-            AttemptLogin(email, password);
+            updatelogin = false;
+            LogginApp();
         }
+        if (updateUser)
+        {
+            updateUser = false;
+            ChooseClass(this.className);
+        }
+        if (userChoosed)
+        {
+            userChoosed = false;
+            ChooseUser(userName, userId);
+        }
+        if (passCheck)
+        {
+            passCheck = false;
+            ControlUserPassword();
+        }
+    }
 
-        if (getAllUsersUpdated)
-        {
-            getAllUsersUpdated = false;
-            if (firebaseDatabaseManager.isFirebaseInitialized)
-            {
-                firebaseDatabaseManager.GetAllUsers((users) => {
-                    if (users.Count > 0)
-                    {
-                        foreach (var user in users)
-                        {
-                            Debug.Log("User ID: " + user["userId"]);
-                            Debug.Log("Email: " + user["email"]);
-                            Debug.Log("Username: " + user["username"]);
-                            Debug.Log("School: " + user["school"]);
-                            Debug.Log("Class: " + user["class"]);
-                        }
-                    }
-                    else
-                    {
-                        Debug.LogWarning("No users found.");
-                    }
-                }, (error) => {
-                    Debug.LogError("Error retrieving users: " + error);
-                });
-            }
-            else
-            {
-                Debug.LogError("Firebase is not initialized.");
-            }
-        }
+    void Start()
+    {
+        PlayerPrefs.SetString("userId", "");
+        PlayerPrefs.SetString("username", "");
+        PlayerPrefs.SetString("classname", "");
+        PlayerPrefs.SetString("userId", "");
+        PlayerPrefs.SetString("experimentId", "");
+        firebaseManager = FindObjectOfType<FirebaseAuthManager>();
+        firebaseDatabaseManager = FindObjectOfType<FirebaseDatabaseManager>();
+        SetLoginObjects(0);
     }
 
     private void AttemptLogin(string email, string password)
     {
         firebaseManager.Login(email, password, (user) => {
             Debug.Log("Login Successful: " + user.UserId);
-            // Load user data or proceed to the main game
-            LoadUserData(user.UserId);
         }, (error) => {
-            errorText.text = error;
             Debug.LogError("Login Failed: " + error);
         });
+    }
+
+    public void LogginApp()
+    {
+        Debug.Log("LoginApp pressed");
+        SetLoginObjects(1);
+        UserDisplayManager.Instance.DisplayClasses();
+    }
+
+    public void ChooseClass(string className)
+    {
+        SetLoginObjects(2);
+        UserDisplayManager.Instance.DisplayUsers(className);
+        PlayerPrefs.SetString("classname", className);
+    }
+
+    public void ChooseUser(string userName, string userId)
+    {
+        SetLoginObjects(3);
+        passinputField.placeholder.GetComponent<TMP_Text>().text = "Şifrenizi girin";
+        this.userName = userName;
+        this.userId = userId;
+        PlayerPrefs.SetString("userId", userId);
+        PlayerPrefs.SetString("username", userName);
+    }
+
+    void ControlUserPassword()
+    {
+        firebaseDatabaseManager.CheckUserPassword(className, userId, password, (isPasswordCorrect) => {
+            if (isPasswordCorrect)
+            {
+                Debug.Log("Password correct. Proceed with login.");
+                passinputField.placeholder.GetComponent<TMP_Text>().text = "Şifre doğru.";
+                SetLoginObjects(4);
+
+                Debug.Log("User Infos:");
+                Debug.Log(PlayerPrefs.GetString("userId"));
+                Debug.Log(PlayerPrefs.GetString("username"));
+                Debug.Log(PlayerPrefs.GetString("classname"));
+                // Proceed with the next steps, such as logging the user in or navigating to another screen.
+            }
+            else
+            {
+                Debug.Log("Password incorrect. Show error message.");
+                passinputField.placeholder.GetComponent<TMP_Text>().text = "Şifre yanlış.";
+                // Show an error message to the user.
+            }
+        });
+    }
+
+    public void SetLoginObjects(int index)
+    {
+        UserDisplayManager.Instance.DestroyButtons();
+        foreach (GameObject canvas in LoginObjects)
+        {
+            canvas.SetActive(false);
+        }
+        LoginObjects[index].SetActive(true);
+    }
+
+    public void Numpad(string buttonName)
+    {
+        if(buttonName == "back")
+        {
+            ChooseClass(PlayerPrefs.GetString("classname"));
+        }
+        else if(buttonName == "erase")
+        {
+            passinputField.text = passinputField.text.Remove(passinputField.text.Length-1);
+        }
+        else
+        {
+            passinputField.text += buttonName;
+            if (passinputField.text.Length >= 4)
+            {
+                password = passinputField.text;
+                passinputField.text = "";
+                ControlUserPassword();
+            }
+        }
     }
 }

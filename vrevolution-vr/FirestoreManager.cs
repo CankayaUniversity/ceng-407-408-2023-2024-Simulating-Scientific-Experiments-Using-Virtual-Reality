@@ -15,7 +15,7 @@ public class FirestoreManager : MonoBehaviour
 
     public void SaveUserData(string userId, string email, string username, string school, string userClass, Dictionary<string, Dictionary<string, object>> experiments)
     {
-        DocumentReference userDocRef = db.Collection("users").Document(userId);
+        DocumentReference userDocRef = db.Collection("classes").Document(userId);
         Dictionary<string, object> user = new Dictionary<string, object>
         {
             { "email", email },
@@ -45,12 +45,12 @@ public class FirestoreManager : MonoBehaviour
         });
     }
 
-    public void SaveExperimentResult(string userId, string experimentId, object experimentData)
+    public void SaveExperimentResult(string userId, string experimentId, Dictionary<string, object> experimentData)
     {
         DocumentReference experimentDocRef = db.Collection("users").Document(userId).Collection("experiments").Document(experimentId);
         Debug.Log("Saving experiment result to: " + experimentDocRef.Path);
 
-        experimentDocRef.SetAsync(experimentData, options:SetOptions.Overwrite).ContinueWithOnMainThread(task => {
+        experimentDocRef.SetAsync(experimentData, SetOptions.Overwrite).ContinueWithOnMainThread(task => {
             if (task.IsCompletedSuccessfully)
             {
                 Debug.Log("Experiment result saved successfully.");
@@ -58,27 +58,6 @@ public class FirestoreManager : MonoBehaviour
             else
             {
                 Debug.LogError("Failed to save experiment result: " + task.Exception);
-            }
-        });
-    }
-
-    public void SaveSeat(string seatId, bool status, string user)
-    {
-        DocumentReference seatDocRef = db.Collection("seats").Document(seatId);
-        Dictionary<string, object> seat = new Dictionary<string, object>
-        {
-            { "status", status },
-            { "user", user }
-        };
-
-        seatDocRef.SetAsync(seat).ContinueWithOnMainThread(task => {
-            if (task.IsCompletedSuccessfully)
-            {
-                Debug.Log("Seat data saved successfully.");
-            }
-            else
-            {
-                Debug.LogError("Failed to save seat data: " + task.Exception);
             }
         });
     }

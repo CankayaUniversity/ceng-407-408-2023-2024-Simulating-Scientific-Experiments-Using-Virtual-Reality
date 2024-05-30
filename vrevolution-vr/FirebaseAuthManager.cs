@@ -8,14 +8,14 @@ public class FirebaseAuthManager : MonoBehaviour
     private FirebaseAuth auth;
     private bool isInitialized = false;
 
-    void Start()
-    {
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
-            FirebaseApp app = FirebaseApp.DefaultInstance;
-            auth = FirebaseAuth.DefaultInstance;
-            isInitialized = true;
-        });
-    }
+    //void Start()
+    //{
+    //    FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
+    //        FirebaseApp app = FirebaseApp.DefaultInstance;
+    //        auth = FirebaseAuth.DefaultInstance;
+    //        isInitialized = true;
+    //    });
+    //}
 
     public void Login(string email, string password, System.Action<FirebaseUser> onLoginSuccess, System.Action<string> onLoginFailed)
     {
@@ -24,6 +24,7 @@ public class FirebaseAuthManager : MonoBehaviour
             onLoginFailed?.Invoke("Firebase not initialized yet. Please wait.");
             return;
         }
+
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled || task.IsFaulted)
             {
